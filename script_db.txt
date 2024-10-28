@@ -1,0 +1,133 @@
+--Account: Lưu trữ thông tin đăng nhập và quyền của người dùng (khách hàng hoặc nhân viên).
+--Categories: Phân loại sản phẩm theo danh mục (đồ ăn, thức uống, phụ kiện, v.v.).
+--Product: Lưu trữ thông tin về các sản phẩm được bán, có liên kết với Categories.
+--Customer: Quản lý thông tin khách hàng, có liên kết với Account để đăng nhập.
+--Computer: Quản lý các máy tính trong quán.
+--Service: Lưu trữ các dịch vụ khác, như thức ăn và nước uống.
+--Booking: Lưu thông tin đặt chỗ của khách hàng.
+--BookingService và BookingProduct: Bảng trung gian liên kết Booking với Service và Product, để lưu trữ các dịch vụ và sản phẩm được đặt kèm theo mỗi lần đặt chỗ.
+--Payment: Quản lý các khoản thanh toán của khách hàng.
+--Employee: Lưu thông tin của nhân viên làm việc tại quán net.
+
+
+
+-- Tạo cơ sở dữ liệu mới
+CREATE DATABASE GCSManager;
+GO
+
+-- Sử dụng cơ sở dữ liệu vừa tạo
+USE GCSManager;
+GO
+
+-- Tạo bảng Account
+CREATE TABLE Account (
+    AccountID INT PRIMARY KEY IDENTITY,
+    Username NVARCHAR(50) NOT NULL UNIQUE,
+    PasswordHash NVARCHAR(100) NOT NULL,
+    Salt NVARCHAR(50) NOT NULL,
+    Role NVARCHAR(20) NOT NULL, -- (Khách hàng, Nhân viên, Quản lý)
+    IsActive BIT DEFAULT 1,
+    CreateDate DATETIME DEFAULT GETDATE()
+);
+
+-- Tạo bảng Categories
+CREATE TABLE Categories (
+    CategoryID INT PRIMARY KEY IDENTITY,
+    CategoryName NVARCHAR(100) NOT NULL,
+    Description NVARCHAR(200)
+);
+
+-- Tạo bảng Product
+CREATE TABLE Product (
+    ProductID INT PRIMARY KEY IDENTITY,
+    ProductName NVARCHAR(100) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL,
+    Description NVARCHAR(200),
+    StockQuantity INT DEFAULT 0,
+    CategoryID INT,
+    FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
+);
+
+-- Tạo bảng Customer
+CREATE TABLE Customer (
+    CustomerID INT PRIMARY KEY IDENTITY,
+    FullName NVARCHAR(100) NOT NULL,
+    Phone VARCHAR(15),
+    Email VARCHAR(50) UNIQUE,
+    Balance DECIMAL(10, 2) DEFAULT 0,
+    RegisterDate DATETIME DEFAULT GETDATE(),
+    IsActive BIT DEFAULT 1,
+    AccountID INT,
+    FOREIGN KEY (AccountID) REFERENCES Account(AccountID)
+);
+
+-- Tạo bảng Computer
+CREATE TABLE Computer (
+    ComputerID INT PRIMARY KEY IDENTITY,
+    ComputerName NVARCHAR(50) NOT NULL,
+    Status NVARCHAR(20) DEFAULT 'Available', -- (Sẵn sàng, Đang dùng)
+    Location NVARCHAR(100)
+);
+
+-- Tạo bảng Service
+CREATE TABLE Service (
+    ServiceID INT PRIMARY KEY IDENTITY,
+    ServiceName NVARCHAR(100) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL,
+    Description NVARCHAR(200)
+);
+
+-- Tạo bảng Booking
+CREATE TABLE Booking (
+    BookingID INT PRIMARY KEY IDENTITY,
+    CustomerID INT NOT NULL,
+    ComputerID INT NOT NULL,
+    StartTime DATETIME DEFAULT GETDATE(),
+    EndTime DATETIME,
+    TotalAmount DECIMAL(10, 2) DEFAULT 0,
+    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID),
+    FOREIGN KEY (ComputerID) REFERENCES Computer(ComputerID)
+);
+
+-- Tạo bảng BookingService (liên kết giữa Booking và Service)
+CREATE TABLE BookingService (
+    BookingID INT NOT NULL,
+    ServiceID INT NOT NULL,
+    Quantity INT DEFAULT 1,
+    TotalPrice DECIMAL(10, 2),
+    PRIMARY KEY (BookingID, ServiceID),
+    FOREIGN KEY (BookingID) REFERENCES Booking(BookingID),
+    FOREIGN KEY (ServiceID) REFERENCES Service(ServiceID)
+);
+
+-- Tạo bảng BookingProduct (liên kết giữa Booking và Product)
+CREATE TABLE BookingProduct (
+    BookingID INT NOT NULL,
+    ProductID INT NOT NULL,
+    Quantity INT DEFAULT 1,
+    TotalPrice DECIMAL(10, 2),
+    PRIMARY KEY (BookingID, ProductID),
+    FOREIGN KEY (BookingID) REFERENCES Booking(BookingID),
+    FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+);
+
+-- Tạo bảng Payment
+CREATE TABLE Payment (
+    PaymentID INT PRIMARY KEY IDENTITY,
+    CustomerID INT NOT NULL,
+    Amount DECIMAL(10, 2) NOT NULL,
+    PaymentDate DATETIME DEFAULT GETDATE(),
+    PaymentMethod NVARCHAR(50) NOT NULL, -- (Tiền mặt, Thẻ, Ví điện tử)
+    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+);
+
+-- Tạo bảng Employee
+CREATE TABLE Employee (
+    EmployeeID INT PRIMARY KEY IDENTITY,
+    FullName NVARCHAR(100) NOT NULL,
+    Phone VARCHAR(15),
+    Email VARCHAR(50) UNIQUE,
+    Position NVARCHAR(50), -- (Nhân viên, Quản lý)
+    HireDate DATETIME DEFAULT GETDATE(),
+    Salary DECIMAL(10, 2) DEFAULT 0
+);
