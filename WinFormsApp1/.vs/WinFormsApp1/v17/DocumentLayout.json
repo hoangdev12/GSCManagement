@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\models\\gcsmanagercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\models\\gcsmanagercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\views\\admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,65 +51,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GcsmanagerContext.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Models\\GcsmanagerContext.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Models\\GcsmanagerContext.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Models\\GcsmanagerContext.cs",
-              "RelativeToolTip": "WinFormsApp1\\Models\\GcsmanagerContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAA4AAAAAAAAAA==",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\User.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvxMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T05:56:53.317Z",
+              "WhenOpened": "2024-10-28T09:52:17.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Admin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs [Design]",
-              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T02:07:16.574Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Admin.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.Designer.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.Designer.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.Designer.cs",
-              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T02:05:33.539Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Admin.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.cs",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
               "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T02:05:03.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Program.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Program.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Program.cs",
-              "RelativeToolTip": "WinFormsApp1\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T01:59:41.862Z",
+              "WhenOpened": "2024-10-28T09:51:55.478Z",
               "EditorCaption": ""
             }
           ]
