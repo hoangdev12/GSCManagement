@@ -143,3 +143,5 @@ C:\Users\hoang\OneDrive\Desktop\GCSManager\WinFormsApp1\WinFormsApp1\obj\Debug\n
 C:\Users\hoang\OneDrive\Desktop\GCSManager\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.pdb
 C:\Users\hoang\OneDrive\Desktop\GCSManager\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.genruntimeconfig.cache
 C:\Users\hoang\OneDrive\Desktop\GCSManager\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\ref\WinFormsApp1.dll
+C:\Users\hoang\OneDrive\Desktop\GCSManager\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Views.Admin.resources
+C:\Users\hoang\OneDrive\Desktop\GCSManager\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.sourcelink.json
