@@ -7,5 +7,14 @@
     <Compile Update="Views\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
