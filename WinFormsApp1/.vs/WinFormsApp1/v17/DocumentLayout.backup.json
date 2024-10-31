@@ -1,18 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\GCSManager\\WinFormsApp1\\",
+  "WorkspaceRootPath": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\gcsmanager\\winformsapp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\gcsmanager\\winformsapp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\downloads\\new\\gscmanagement\\winformsapp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\gcsmanager\\winformsapp1\\winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\downloads\\new\\gscmanagement\\winformsapp1\\winformsapp1\\views\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\downloads\\new\\gscmanagement\\winformsapp1\\winformsapp1\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\downloads\\new\\gscmanagement\\winformsapp1\\winformsapp1\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\downloads\\new\\gscmanagement\\winformsapp1\\winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\downloads\\new\\gscmanagement\\winformsapp1\\winformsapp1\\views\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\downloads\\new\\gscmanagement\\winformsapp1\\winformsapp1\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\downloads\\new\\gscmanagement\\winformsapp1\\winformsapp1\\models\\gcsmanagercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\models\\gcsmanagercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\downloads\\new\\gscmanagement\\winformsapp1\\winformsapp1\\views\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +46,142 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GCSManager\\WinFormsApp1\\WinFormsApp1\\Program.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Program.cs",
-              "ToolTip": "D:\\GCSManager\\WinFormsApp1\\WinFormsApp1\\Program.cs",
-              "RelativeToolTip": "WinFormsApp1\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Admin.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.cs",
+              "ToolTip": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T12:38:09.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T15:49:52.191Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "D:\\GCSManager\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.cs",
-              "ToolTip": "D:\\GCSManager\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs*",
-              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs*",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAAwKcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Login.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Login.cs",
+              "ToolTip": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Login.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Login.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAzwMUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T12:36:22.821Z",
+              "WhenOpened": "2024-10-31T15:49:35.156Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Admin.cs [Design]",
-              "DocumentMoniker": "D:\\GCSManager\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.cs",
-              "ToolTip": "D:\\GCSManager\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs [Design]*",
-              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs [Design]*",
+              "Title": "SignUp.cs",
+              "DocumentMoniker": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\SignUp.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\SignUp.cs",
+              "ToolTip": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\SignUp.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\SignUp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T12:33:40.541Z",
+              "WhenOpened": "2024-10-31T15:44:47.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Program.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Program.cs",
+              "ToolTip": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Program.cs",
+              "RelativeToolTip": "WinFormsApp1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T15:44:24.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\App.config",
+              "RelativeDocumentMoniker": "WinFormsApp1\\App.config",
+              "ToolTip": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\App.config",
+              "RelativeToolTip": "WinFormsApp1\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-31T15:44:19.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GcsmanagerContext.cs",
+              "DocumentMoniker": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Models\\GcsmanagerContext.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Models\\GcsmanagerContext.cs",
+              "ToolTip": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Models\\GcsmanagerContext.cs",
+              "RelativeToolTip": "WinFormsApp1\\Models\\GcsmanagerContext.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwCsAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T15:43:46.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SignUp.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\SignUp.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\SignUp.cs",
+              "ToolTip": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\SignUp.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\Views\\SignUp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T15:43:31.616Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Login.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Login.cs",
+              "ToolTip": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Login.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T15:43:28.613Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ResetPassword.cs [Design]",
+              "DocumentMoniker": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\ResetPassword.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\ResetPassword.cs",
+              "ToolTip": "D:\\Downloads\\new\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\ResetPassword.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\Views\\ResetPassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T15:43:20.603Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         }
