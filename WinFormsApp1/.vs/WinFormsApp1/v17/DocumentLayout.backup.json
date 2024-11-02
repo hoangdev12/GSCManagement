@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -32,7 +28,7 @@
               "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.cs",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
               "RelativeToolTip": "WinFormsApp1\\Views\\User.cs",
-              "ViewState": "AgIAALEAAAAAAAAAAAAqwLwAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAwwD8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T16:03:26.379Z",
               "IsPinned": true,
@@ -69,25 +65,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Models\\Booking.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Models\\Booking.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Models\\Booking.cs",
-              "RelativeToolTip": "WinFormsApp1\\Models\\Booking.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T16:18:28.832Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "User.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.cs",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs [Design]",
               "RelativeToolTip": "WinFormsApp1\\Views\\User.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T10:15:05.068Z"
+              "WhenOpened": "2024-10-28T10:15:05.068Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

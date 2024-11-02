@@ -20,20 +20,21 @@ namespace WinFormsApp1.Views
         public User()
         {
             InitializeComponent();
-            _context = new GcsmanagerContext(); // Khởi tạo DbContext
-            _cart = new List<BookingProduct>(); // Khởi tạo danh sách giỏ hàng tạm
-            LoadUserData(); // Tải dữ liệu khi form được mở
+            _context = new GcsmanagerContext();
+            _cart = new List<BookingProduct>();
+            LoadUserData(); // Tải dữ liệu khi mở form
+            User_Load_1(this, EventArgs.Empty); // Gọi sự kiện tải trực tiếp
 
-
+            //button1.Click += btn_Click;
+            //button2.Click += btn_Click;
+            //button3.Click += btn_Click;
+            //button4.Click += btn_Click;
+            //button5.Click += btn_Click;
+            //button6.Click += btn_Click;
         }
+
         private void User_Load_1(object sender, EventArgs e)
         {
-            button1.Click += btn_Click;
-            button2.Click += btn_Click;
-            button3.Click += btn_Click;
-            button4.Click += btn_Click;
-            button5.Click += btn_Click;
-            button6.Click += btn_Click;
         }
 
         private void AddBookingProduct(Product product, int quantity)
@@ -49,19 +50,18 @@ namespace WinFormsApp1.Views
 
             if (existingProduct != null)
             {
-                // Nếu có, chỉ cập nhật số lượng và tổng giá
                 existingProduct.Quantity += quantity;
                 existingProduct.TotalPrice += product.Price * quantity;
+                MessageBox.Show($"Cập nhật sản phẩm: {product.ProductName}, Số lượng mới: {existingProduct.Quantity}");
             }
             else
             {
-                // Nếu chưa có, thêm mới vào giỏ hàng
                 var bookingProduct = new BookingProduct
                 {
                     ProductId = product.ProductId,
                     Quantity = quantity,
                     TotalPrice = product.Price * quantity,
-                    BookingId = 0 // Hoặc gán giá trị mặc định khác nếu cần
+                    BookingId = 0
                 };
                 _cart.Add(bookingProduct);
             }
@@ -72,47 +72,50 @@ namespace WinFormsApp1.Views
         private void btn_Click(object sender, EventArgs e)
         {
             Button? clickedButton = sender as Button;
-            if (clickedButton == null) return;
+            if (clickedButton == null || clickedButton.Tag == null) return;
 
-            Product? productToOrder = null;
-
-            switch (clickedButton.Name)
-            {
-                case "button1":
-                    productToOrder = _context.Products.FirstOrDefault(p => p.ProductName == "Pepsi");
-                    break;
-                case "button2":
-                    productToOrder = _context.Products.FirstOrDefault(p => p.ProductName == "Fanta");
-                    break;
-                case "button3":
-                    productToOrder = _context.Products.FirstOrDefault(p => p.ProductName == "Sting");
-                    break;
-                case "button4":
-                    productToOrder = _context.Products.FirstOrDefault(p => p.ProductName == "Pepsi");
-                    break;
-                case "button5":
-                    productToOrder = _context.Products.FirstOrDefault(p => p.ProductName == "Pepsi");
-                    break;
-                case "button6":
-                    productToOrder = _context.Products.FirstOrDefault(p => p.ProductName == "Pepsi");
-                    break;
-            }
-
+            int productId = (int)clickedButton.Tag; // Lấy ProductId từ thuộc tính Tag
+            Product? productToOrder = _context.Products.FirstOrDefault(p => p.ProductId == productId);
             if (productToOrder != null)
             {
-                // Tìm NumericUpDown với Tag là ProductId
-                var numericUpDown = this.Controls
-                .OfType<TabControl>() // Lấy tất cả các TabControl trong Form
-                .SelectMany(tc => tc.TabPages.Cast<TabPage>()) // Duyệt qua tất cả các TabPage
-                .SelectMany(tp => tp.Controls.OfType<Panel>()) // Duyệt qua tất cả các Panel trong từng TabPage
-                .SelectMany(p => p.Controls.OfType<NumericUpDown>()) // Duyệt qua tất cả các NumericUpDown trong từng Panel
-                .FirstOrDefault(n => n.Tag is int tagValue && tagValue == productToOrder.ProductId);
+                NumericUpDown? numericUpDown = null;
 
-                // Kiểm tra và lấy giá trị
-                int quantity = numericUpDown != null ? (int)numericUpDown.Value : 1;
+                // Tìm NumericUpDown trong tbpFoods
+                foreach (FlowLayoutPanel flowPanel in tbpFoods.Controls.OfType<FlowLayoutPanel>())
+                {
+                    foreach (Panel panel in flowPanel.Controls.OfType<Panel>())
+                    {
+                        numericUpDown = panel.Controls.OfType<NumericUpDown>()
+                            .FirstOrDefault(n => (int)n.Tag == productId);
+                        if (numericUpDown != null) break; // Nếu tìm thấy thì thoát khỏi vòng lặp
+                    }
+                    if (numericUpDown != null) break; // Nếu tìm thấy thì thoát khỏi vòng lặp
+                }
 
+                // Nếu không tìm thấy trong tbpFoods, tìm trong tbpDrinks
+                if (numericUpDown == null)
+                {
+                    foreach (FlowLayoutPanel flowPanel in tbpDrinks.Controls.OfType<FlowLayoutPanel>())
+                    {
+                        foreach (Panel panel in flowPanel.Controls.OfType<Panel>())
+                        {
+                            numericUpDown = panel.Controls.OfType<NumericUpDown>()
+                                .FirstOrDefault(n => (int)n.Tag == productId);
+                            if (numericUpDown != null) break; // Nếu tìm thấy thì thoát khỏi vòng lặp
+                        }
+                        if (numericUpDown != null) break; // Nếu tìm thấy thì thoát khỏi vòng lặp
+                    }
+                }
 
-                AddBookingProduct(productToOrder, quantity); // Thêm vào giỏ hàng tạm
+                if (numericUpDown == null)
+                {
+                    MessageBox.Show("Không tìm thấy NumericUpDown cho sản phẩm này.");
+                }
+                else
+                {
+                    int quantity = (int)numericUpDown.Value; // Lấy số lượng
+                    AddBookingProduct(productToOrder, quantity); // Thêm vào giỏ hàng
+                }
             }
         }
 
@@ -123,99 +126,113 @@ namespace WinFormsApp1.Views
             {
                 var productData = _context.Products.ToList();
 
-                // Tạo danh sách PictureBox và các Label tương ứng
-                var pictureBoxesTab1 = new List<PictureBox>
+                // Tạo FlowLayoutPanel cho thực phẩm và đồ uống
+                FlowLayoutPanel flowFoods = new FlowLayoutPanel
                 {
-                    guna2PictureBox1, guna2PictureBox2, guna2PictureBox3,
-                };
-                var pictureBoxesTab2 = new List<PictureBox>
-                {
-                    guna2PictureBox4, guna2PictureBox5, guna2PictureBox6
-                };
-                var productNamesTab1 = new List<Label>
-                {
-                    lblProductName1, lblProductName2, lblProductName3,
-                };
-                var productNamesTab2 = new List<Label>
-                {
-                    lblProductName4, lblProductName5, lblProductName6
-                };
-                var productPricesTab1 = new List<Label>
-                {
-                    lblProductPrice1, lblProductPrice2, lblProductPrice3,
-                };
-                var productPricesTab2 = new List<Label>
-                {
-                    lblProductPrice4, lblProductPrice5, lblProductPrice6
-                };
-                var productDescriptionsTab1 = new List<Label>
-                {
-                    lblProductDes1, lblProductDes2, lblProductDes3,
-                };
-                var productDescriptionsTab2 = new List<Label>
-                {
-                    lblProductDes4, lblProductDes5, lblProductDes6
-                };
-                var numericUpDownsTab1 = new List<NumericUpDown>
-                {
-                    numericUpDown1, numericUpDown2, numericUpDown3
-                };
-                var numericUpDownsTab2 = new List<NumericUpDown>
-                {
-                    numericUpDown4, numericUpDown5, numericUpDown6
+                    AutoSize = true,
+                    FlowDirection = FlowDirection.LeftToRight,
+                    WrapContents = true, // Cho phép wrap để chuyển sang hàng mới
+                    Dock = DockStyle.Fill // Đảm bảo nó lấp đầy không gian có sẵn
                 };
 
-                // Biến đếm riêng cho từng Tab
-                int countTab1 = 0;
-                int countTab2 = 0;
+                FlowLayoutPanel flowDrinks = new FlowLayoutPanel
+                {
+                    AutoSize = true,
+                    FlowDirection = FlowDirection.LeftToRight,
+                    WrapContents = true, // Cho phép wrap để chuyển sang hàng mới
+                    Dock = DockStyle.Fill // Đảm bảo nó lấp đầy không gian có sẵn
+                };
 
                 foreach (var product in productData)
                 {
                     if (!string.IsNullOrEmpty(product.Image))
                     {
-                        // Tạo PictureBox tạm để tải ảnh từ URL
-                        PictureBox tempPictureBox = new PictureBox();
-                        tempPictureBox.Load(product.Image);
-
-                        if (product.CategoryId == 1 && countTab1 < pictureBoxesTab1.Count)
+                        // Tạo và cấu hình PictureBox cho hình ảnh sản phẩm
+                        PictureBox pictureBox = new PictureBox
                         {
-                            // Gán ảnh và thông tin vào các PictureBox và Label tương ứng
-                            pictureBoxesTab1[countTab1].Image = tempPictureBox.Image;
-                            //pictureBoxesTab1[countTab1].Tag = product.ProductId;
-                            productNamesTab1[countTab1].Text = product.ProductName;
-                            productPricesTab1[countTab1].Text = product.Price.ToString();
-                            productDescriptionsTab1[countTab1].Text = product.Description;
+                            Size = new Size(100, 100),
+                            ImageLocation = product.Image,
+                            SizeMode = PictureBoxSizeMode.StretchImage,
+                        };
 
-                            MessageBox.Show(numericUpDownsTab1[countTab1].Tag?.ToString());
-
-                            countTab1++;
-                        }
-                        else if (product.CategoryId == 2 && countTab2 < pictureBoxesTab2.Count)
+                        // Tạo và cấu hình Label cho tên sản phẩm
+                        Label nameLabel = new Label
                         {
-                            // Hiển thị ở Tab 2
-                            pictureBoxesTab2[countTab2].Image = tempPictureBox.Image;
-                            //pictureBoxesTab1[countTab2].Tag = product.ProductId;
-                            productNamesTab2[countTab2].Text = product.ProductName;
-                            productPricesTab2[countTab2].Text = product.Price.ToString();
-                            productDescriptionsTab2[countTab2].Text = product.Description;
+                            Text = product.ProductName,
+                            AutoSize = true,
+                        };
 
-                            numericUpDownsTab2[countTab2].Tag = product.ProductId;
+                        // Tạo và cấu hình Label cho giá sản phẩm
+                        Label priceLabel = new Label
+                        {
+                            Text = $"Price: {product.Price}",
+                            AutoSize = true,
+                        };
 
-                            countTab2++;
+                        // Tạo và cấu hình NumericUpDown cho việc chọn số lượng
+                        NumericUpDown quantitySelector = new NumericUpDown
+                        {
+                            Minimum = 1,
+                            Maximum = 20,
+                            Value = 1,
+                            Tag = product.ProductId, // Gán ProductId vào Tag
+                        };
+
+                        // Tạo và cấu hình Button cho việc thêm sản phẩm vào giỏ hàng
+                        Button addButton = new Button
+                        {
+                            Text = "Add to Cart",
+                            Tag = product.ProductId, // Gán ProductId cho nút
+                        };
+                        addButton.Click += btn_Click; // Gán sự kiện click
+
+                        // Tạo Panel để chứa tất cả các control sản phẩm
+                        Panel productPanel = new Panel
+                        {
+                            Size = new Size(150, 250),
+                            BorderStyle = BorderStyle.FixedSingle,
+                        };
+
+                        // Thêm các control vào productPanel
+                        productPanel.Controls.Add(pictureBox);
+                        productPanel.Controls.Add(nameLabel);
+                        productPanel.Controls.Add(priceLabel);
+                        productPanel.Controls.Add(quantitySelector);
+                        productPanel.Controls.Add(addButton);
+
+                        // Căn chỉnh vị trí của các control
+                        pictureBox.Location = new Point(10, 10);
+                        nameLabel.Location = new Point(10, 120);
+                        priceLabel.Location = new Point(10, 140);
+                        quantitySelector.Location = new Point(10, 160);
+                        addButton.Location = new Point(10, 190);
+
+                        // Thêm productPanel vào FlowLayoutPanel tương ứng dựa trên CategoryID
+                        if (product.CategoryId == 2) // Giả sử CategoryID = 1 là Food
+                        {
+                            flowFoods.Controls.Add(productPanel);
                         }
-
-                        // Dừng vòng lặp nếu đã gán đủ dữ liệu cho tất cả các PictureBox ở cả hai Tab
-                        if (countTab1 >= pictureBoxesTab1.Count && countTab2 >= pictureBoxesTab2.Count)
-                            break;
+                        else if (product.CategoryId == 1) // Giả sử CategoryID = 2 là Drink
+                        {
+                            flowDrinks.Controls.Add(productPanel);
+                        }
                     }
-
                 }
+
+                // Đặt FlowLayoutPanel vào TabPage
+                tbpFoods.Controls.Add(flowFoods);
+                tbpDrinks.Controls.Add(flowDrinks);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message);
+                MessageBox.Show("Error loading data: " + ex.Message);
             }
         }
+
+
+
+
+
 
         private void button4_Click(object sender, EventArgs e)
         {
