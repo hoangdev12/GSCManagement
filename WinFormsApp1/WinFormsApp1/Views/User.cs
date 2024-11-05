@@ -25,12 +25,6 @@ namespace WinFormsApp1.Views
             LoadUserData(); // Tải dữ liệu khi mở form
             User_Load_1(this, EventArgs.Empty); // Gọi sự kiện tải trực tiếp
 
-            //button1.Click += btn_Click;
-            //button2.Click += btn_Click;
-            //button3.Click += btn_Click;
-            //button4.Click += btn_Click;
-            //button5.Click += btn_Click;
-            //button6.Click += btn_Click;
         }
 
         private void User_Load_1(object sender, EventArgs e)
@@ -86,7 +80,7 @@ namespace WinFormsApp1.Views
                     foreach (Panel panel in flowPanel.Controls.OfType<Panel>())
                     {
                         numericUpDown = panel.Controls.OfType<NumericUpDown>()
-                            .FirstOrDefault(n => (int)n.Tag == productId);
+                            .FirstOrDefault(n => (int?)n.Tag == productId);
                         if (numericUpDown != null) break; // Nếu tìm thấy thì thoát khỏi vòng lặp
                     }
                     if (numericUpDown != null) break; // Nếu tìm thấy thì thoát khỏi vòng lặp
@@ -100,7 +94,7 @@ namespace WinFormsApp1.Views
                         foreach (Panel panel in flowPanel.Controls.OfType<Panel>())
                         {
                             numericUpDown = panel.Controls.OfType<NumericUpDown>()
-                                .FirstOrDefault(n => (int)n.Tag == productId);
+                                .FirstOrDefault(n => (int?)n.Tag == productId);
                             if (numericUpDown != null) break; // Nếu tìm thấy thì thoát khỏi vòng lặp
                         }
                         if (numericUpDown != null) break; // Nếu tìm thấy thì thoát khỏi vòng lặp
@@ -228,11 +222,6 @@ namespace WinFormsApp1.Views
                 MessageBox.Show("Error loading data: " + ex.Message);
             }
         }
-
-
-
-
-
 
         private void button4_Click(object sender, EventArgs e)
         {
