@@ -23,6 +23,8 @@ public partial class Customer
 
     public virtual Account? Account { get; set; }
 
+    public string AccountName => Account != null ? Account.Username : string.Empty;
+
     public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
 
     public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();

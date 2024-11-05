@@ -20,4 +20,6 @@ public partial class Product
     public virtual ICollection<BookingProduct> BookingProducts { get; set; } = new List<BookingProduct>();
 
     public virtual Category? Category { get; set; }
+
+    public string CategoryName => Category != null ? Category.CategoryName : string.Empty;
 }
