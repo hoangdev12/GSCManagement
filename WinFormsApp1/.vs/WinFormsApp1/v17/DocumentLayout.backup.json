@@ -1,0 +1,115 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\WinFormsApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\winformsapp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\winformsapp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\winformsapp1\\winformsapp1\\views\\admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\winformsapp1\\winformsapp1\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\WinFormsApp1\\WinFormsApp1\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Models\\Customer.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\WinFormsApp1\\WinFormsApp1\\Models\\Customer.cs",
+              "RelativeToolTip": "WinFormsApp1\\Models\\Customer.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T11:23:32.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Admin.Designer.cs",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.Designer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.Designer.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.Designer.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.Designer.cs",
+              "ViewState": "AgIAADECAAAAAAAAAAAQwEQCAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T10:37:52.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Admin.cs [Design]",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T10:43:19.472Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAIAwwDQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T05:32:49.901Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
