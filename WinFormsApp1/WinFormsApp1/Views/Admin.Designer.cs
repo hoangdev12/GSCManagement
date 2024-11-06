@@ -30,8 +30,21 @@
         {
             components = new System.ComponentModel.Container();
             tabAdmin = new TabControl();
-            s = new TabPage();
-            tabPage2 = new TabPage();
+            tbComputer = new TabPage();
+            panel29 = new Panel();
+            btnLogOut = new Button();
+            panel32 = new Panel();
+            txtTongTien = new TextBox();
+            lblTongTien = new Label();
+            panel31 = new Panel();
+            txtConLai = new TextBox();
+            lblConLai = new Label();
+            panel30 = new Panel();
+            txtDaChoi = new TextBox();
+            lblDaChoi = new Label();
+            txtStatus = new TextBox();
+            flpComputers = new FlowLayoutPanel();
+            tcAccount = new TabPage();
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel13 = new Panel();
             txtAccountId = new TextBox();
@@ -64,7 +77,7 @@
             isActiveDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             createDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             accountBindingSource = new BindingSource(components);
-            tabProduct = new TabPage();
+            tcProduct = new TabPage();
             panel20 = new Panel();
             btnProductEdit = new Button();
             btnProductDelete = new Button();
@@ -97,7 +110,7 @@
             stockQuantityDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             CategoryId = new DataGridViewTextBoxColumn();
             productBindingSource = new BindingSource(components);
-            tabPage4 = new TabPage();
+            tcCustomer = new TabPage();
             panel22 = new Panel();
             txtCustomerID = new TextBox();
             lblCustomerID = new Label();
@@ -126,8 +139,16 @@
             lblCusFullName = new Label();
             flowLayoutPanel2 = new FlowLayoutPanel();
             dgvCustomer = new DataGridView();
+            customerIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            AccountName = new DataGridViewTextBoxColumn();
+            fullNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            phoneDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            emailDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            balanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            registerDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            isActiveDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             customerBindingSource = new BindingSource(components);
-            tabPage5 = new TabPage();
+            tcCategories = new TabPage();
             btnCategoryDelete = new Button();
             btnCategoryEdit = new Button();
             btnCategoryAdd = new Button();
@@ -145,9 +166,9 @@
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
             categoryBindingSource1 = new BindingSource(components);
-            tabPage6 = new TabPage();
+            tcBooking = new TabPage();
             dgvBooking = new DataGridView();
-            tabPage7 = new TabPage();
+            tcPayment = new TabPage();
             panel9 = new Panel();
             dgvPayment = new DataGridView();
             paymentIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -157,22 +178,20 @@
             paymentMethodDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             customerDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             paymentBindingSource = new BindingSource(components);
-            tabComputer = new TabPage();
-            tabPage9 = new TabPage();
+            Employee = new TabPage();
+            tcService = new TabPage();
+            tcServiceBooking = new TabPage();
             textBox2 = new TextBox();
             label1 = new Label();
             textBox1 = new TextBox();
             computerBindingSource = new BindingSource(components);
-            customerIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            AccountName = new DataGridViewTextBoxColumn();
-            fullNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            phoneDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            emailDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            balanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            registerDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            isActiveDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             tabAdmin.SuspendLayout();
-            tabPage2.SuspendLayout();
+            tbComputer.SuspendLayout();
+            panel29.SuspendLayout();
+            panel32.SuspendLayout();
+            panel31.SuspendLayout();
+            panel30.SuspendLayout();
+            tcAccount.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             panel13.SuspendLayout();
             panel15.SuspendLayout();
@@ -184,7 +203,7 @@
             panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAccount).BeginInit();
             ((System.ComponentModel.ISupportInitialize)accountBindingSource).BeginInit();
-            tabProduct.SuspendLayout();
+            tcProduct.SuspendLayout();
             panel20.SuspendLayout();
             flpProduct.SuspendLayout();
             panel18.SuspendLayout();
@@ -196,7 +215,7 @@
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProduct).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).BeginInit();
-            tabPage4.SuspendLayout();
+            tcCustomer.SuspendLayout();
             panel22.SuspendLayout();
             panel7.SuspendLayout();
             panel24.SuspendLayout();
@@ -207,15 +226,15 @@
             panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCustomer).BeginInit();
             ((System.ComponentModel.ISupportInitialize)customerBindingSource).BeginInit();
-            tabPage5.SuspendLayout();
+            tcCategories.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCategory).BeginInit();
             ((System.ComponentModel.ISupportInitialize)categoryBindingSource1).BeginInit();
-            tabPage6.SuspendLayout();
+            tcBooking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBooking).BeginInit();
-            tabPage7.SuspendLayout();
+            tcPayment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPayment).BeginInit();
             ((System.ComponentModel.ISupportInitialize)paymentBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)computerBindingSource).BeginInit();
@@ -223,43 +242,157 @@
             // 
             // tabAdmin
             // 
-            tabAdmin.Controls.Add(s);
-            tabAdmin.Controls.Add(tabPage2);
-            tabAdmin.Controls.Add(tabProduct);
-            tabAdmin.Controls.Add(tabPage4);
-            tabAdmin.Controls.Add(tabPage5);
-            tabAdmin.Controls.Add(tabPage6);
-            tabAdmin.Controls.Add(tabPage7);
-            tabAdmin.Controls.Add(tabComputer);
-            tabAdmin.Controls.Add(tabPage9);
+            tabAdmin.Controls.Add(tbComputer);
+            tabAdmin.Controls.Add(tcAccount);
+            tabAdmin.Controls.Add(tcProduct);
+            tabAdmin.Controls.Add(tcCustomer);
+            tabAdmin.Controls.Add(tcCategories);
+            tabAdmin.Controls.Add(tcBooking);
+            tabAdmin.Controls.Add(tcPayment);
+            tabAdmin.Controls.Add(Employee);
+            tabAdmin.Controls.Add(tcService);
+            tabAdmin.Controls.Add(tcServiceBooking);
             tabAdmin.Location = new Point(12, 12);
             tabAdmin.Name = "tabAdmin";
             tabAdmin.SelectedIndex = 0;
             tabAdmin.Size = new Size(963, 460);
             tabAdmin.TabIndex = 3;
             // 
-            // s
+            // tbComputer
             // 
-            s.AutoScroll = true;
-            s.Location = new Point(4, 29);
-            s.Name = "s";
-            s.Padding = new Padding(3);
-            s.Size = new Size(955, 427);
-            s.TabIndex = 0;
-            s.Text = "tabAdmin";
-            s.UseVisualStyleBackColor = true;
+            tbComputer.AutoScroll = true;
+            tbComputer.Controls.Add(panel29);
+            tbComputer.Controls.Add(flpComputers);
+            tbComputer.Location = new Point(4, 29);
+            tbComputer.Name = "tbComputer";
+            tbComputer.Padding = new Padding(3);
+            tbComputer.Size = new Size(955, 427);
+            tbComputer.TabIndex = 0;
+            tbComputer.Text = "Computer";
+            tbComputer.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // panel29
             // 
-            tabPage2.Controls.Add(flowLayoutPanel1);
-            tabPage2.Controls.Add(panel10);
-            tabPage2.Location = new Point(4, 29);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(955, 427);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Account";
-            tabPage2.UseVisualStyleBackColor = true;
+            panel29.Controls.Add(btnLogOut);
+            panel29.Controls.Add(panel32);
+            panel29.Controls.Add(panel31);
+            panel29.Controls.Add(panel30);
+            panel29.Controls.Add(txtStatus);
+            panel29.Location = new Point(675, 5);
+            panel29.Name = "panel29";
+            panel29.Size = new Size(274, 416);
+            panel29.TabIndex = 1;
+            // 
+            // btnLogOut
+            // 
+            btnLogOut.Location = new Point(120, 318);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(146, 29);
+            btnLogOut.TabIndex = 3;
+            btnLogOut.Text = "LogOut";
+            btnLogOut.UseVisualStyleBackColor = true;
+            btnLogOut.Click += btnLogOut_Click;
+            // 
+            // panel32
+            // 
+            panel32.Controls.Add(txtTongTien);
+            panel32.Controls.Add(lblTongTien);
+            panel32.Location = new Point(3, 219);
+            panel32.Name = "panel32";
+            panel32.Size = new Size(263, 46);
+            panel32.TabIndex = 2;
+            // 
+            // txtTongTien
+            // 
+            txtTongTien.Location = new Point(94, 10);
+            txtTongTien.Name = "txtTongTien";
+            txtTongTien.Size = new Size(165, 27);
+            txtTongTien.TabIndex = 1;
+            // 
+            // lblTongTien
+            // 
+            lblTongTien.AutoSize = true;
+            lblTongTien.Location = new Point(11, 12);
+            lblTongTien.Name = "lblTongTien";
+            lblTongTien.Size = new Size(72, 20);
+            lblTongTien.TabIndex = 0;
+            lblTongTien.Text = "Tổng tiền";
+            // 
+            // panel31
+            // 
+            panel31.Controls.Add(txtConLai);
+            panel31.Controls.Add(lblConLai);
+            panel31.Location = new Point(3, 139);
+            panel31.Name = "panel31";
+            panel31.Size = new Size(263, 46);
+            panel31.TabIndex = 2;
+            // 
+            // txtConLai
+            // 
+            txtConLai.Location = new Point(94, 10);
+            txtConLai.Name = "txtConLai";
+            txtConLai.Size = new Size(165, 27);
+            txtConLai.TabIndex = 1;
+            // 
+            // lblConLai
+            // 
+            lblConLai.AutoSize = true;
+            lblConLai.Location = new Point(11, 12);
+            lblConLai.Name = "lblConLai";
+            lblConLai.Size = new Size(55, 20);
+            lblConLai.TabIndex = 0;
+            lblConLai.Text = "Còn lại";
+            // 
+            // panel30
+            // 
+            panel30.Controls.Add(txtDaChoi);
+            panel30.Controls.Add(lblDaChoi);
+            panel30.Location = new Point(3, 68);
+            panel30.Name = "panel30";
+            panel30.Size = new Size(263, 46);
+            panel30.TabIndex = 1;
+            // 
+            // txtDaChoi
+            // 
+            txtDaChoi.Location = new Point(94, 10);
+            txtDaChoi.Name = "txtDaChoi";
+            txtDaChoi.Size = new Size(165, 27);
+            txtDaChoi.TabIndex = 1;
+            // 
+            // lblDaChoi
+            // 
+            lblDaChoi.AutoSize = true;
+            lblDaChoi.Location = new Point(11, 12);
+            lblDaChoi.Name = "lblDaChoi";
+            lblDaChoi.Size = new Size(60, 20);
+            lblDaChoi.TabIndex = 0;
+            lblDaChoi.Text = "Đã chơi";
+            // 
+            // txtStatus
+            // 
+            txtStatus.Location = new Point(16, 20);
+            txtStatus.Name = "txtStatus";
+            txtStatus.Size = new Size(246, 27);
+            txtStatus.TabIndex = 0;
+            // 
+            // flpComputers
+            // 
+            flpComputers.Location = new Point(5, 5);
+            flpComputers.Name = "flpComputers";
+            flpComputers.Size = new Size(663, 416);
+            flpComputers.TabIndex = 0;
+            // 
+            // tcAccount
+            // 
+            tcAccount.Controls.Add(flowLayoutPanel1);
+            tcAccount.Controls.Add(panel10);
+            tcAccount.Location = new Point(4, 29);
+            tcAccount.Name = "tcAccount";
+            tcAccount.Padding = new Padding(3);
+            tcAccount.Size = new Size(955, 427);
+            tcAccount.TabIndex = 1;
+            tcAccount.Text = "Account";
+            tcAccount.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
             // 
@@ -538,17 +671,17 @@
             // 
             accountBindingSource.DataSource = typeof(Models.Account);
             // 
-            // tabProduct
+            // tcProduct
             // 
-            tabProduct.Controls.Add(panel20);
-            tabProduct.Controls.Add(flpProduct);
-            tabProduct.Controls.Add(panel8);
-            tabProduct.Location = new Point(4, 29);
-            tabProduct.Name = "tabProduct";
-            tabProduct.Size = new Size(955, 427);
-            tabProduct.TabIndex = 2;
-            tabProduct.Text = "Product";
-            tabProduct.UseVisualStyleBackColor = true;
+            tcProduct.Controls.Add(panel20);
+            tcProduct.Controls.Add(flpProduct);
+            tcProduct.Controls.Add(panel8);
+            tcProduct.Location = new Point(4, 29);
+            tcProduct.Name = "tcProduct";
+            tcProduct.Size = new Size(955, 427);
+            tcProduct.TabIndex = 2;
+            tcProduct.Text = "Product";
+            tcProduct.UseVisualStyleBackColor = true;
             // 
             // panel20
             // 
@@ -832,26 +965,26 @@
             // 
             productBindingSource.DataSource = typeof(Models.Product);
             // 
-            // tabPage4
+            // tcCustomer
             // 
-            tabPage4.Controls.Add(panel22);
-            tabPage4.Controls.Add(panel7);
-            tabPage4.Controls.Add(panel24);
-            tabPage4.Controls.Add(btnCusDelete);
-            tabPage4.Controls.Add(btnCusEdit);
-            tabPage4.Controls.Add(panel28);
-            tabPage4.Controls.Add(panel27);
-            tabPage4.Controls.Add(panel26);
-            tabPage4.Controls.Add(panel25);
-            tabPage4.Controls.Add(panel23);
-            tabPage4.Controls.Add(flowLayoutPanel2);
-            tabPage4.Controls.Add(dgvCustomer);
-            tabPage4.Location = new Point(4, 29);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(955, 427);
-            tabPage4.TabIndex = 3;
-            tabPage4.Text = "Customer";
-            tabPage4.UseVisualStyleBackColor = true;
+            tcCustomer.Controls.Add(panel22);
+            tcCustomer.Controls.Add(panel7);
+            tcCustomer.Controls.Add(panel24);
+            tcCustomer.Controls.Add(btnCusDelete);
+            tcCustomer.Controls.Add(btnCusEdit);
+            tcCustomer.Controls.Add(panel28);
+            tcCustomer.Controls.Add(panel27);
+            tcCustomer.Controls.Add(panel26);
+            tcCustomer.Controls.Add(panel25);
+            tcCustomer.Controls.Add(panel23);
+            tcCustomer.Controls.Add(flowLayoutPanel2);
+            tcCustomer.Controls.Add(dgvCustomer);
+            tcCustomer.Location = new Point(4, 29);
+            tcCustomer.Name = "tcCustomer";
+            tcCustomer.Size = new Size(955, 427);
+            tcCustomer.TabIndex = 3;
+            tcCustomer.Text = "Customer";
+            tcCustomer.UseVisualStyleBackColor = true;
             // 
             // panel22
             // 
@@ -1099,25 +1232,90 @@
             dgvCustomer.Size = new Size(635, 428);
             dgvCustomer.TabIndex = 0;
             // 
+            // customerIdDataGridViewTextBoxColumn
+            // 
+            customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
+            customerIdDataGridViewTextBoxColumn.HeaderText = "CustomerId";
+            customerIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
+            customerIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // AccountName
+            // 
+            AccountName.DataPropertyName = "AccountName";
+            AccountName.HeaderText = "AccountName";
+            AccountName.MinimumWidth = 6;
+            AccountName.Name = "AccountName";
+            AccountName.ReadOnly = true;
+            AccountName.Width = 125;
+            // 
+            // fullNameDataGridViewTextBoxColumn
+            // 
+            fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
+            fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
+            fullNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
+            fullNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
+            phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            phoneDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            emailDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // balanceDataGridViewTextBoxColumn
+            // 
+            balanceDataGridViewTextBoxColumn.DataPropertyName = "Balance";
+            balanceDataGridViewTextBoxColumn.HeaderText = "Balance";
+            balanceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            balanceDataGridViewTextBoxColumn.Name = "balanceDataGridViewTextBoxColumn";
+            balanceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // registerDateDataGridViewTextBoxColumn
+            // 
+            registerDateDataGridViewTextBoxColumn.DataPropertyName = "RegisterDate";
+            registerDateDataGridViewTextBoxColumn.HeaderText = "RegisterDate";
+            registerDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            registerDateDataGridViewTextBoxColumn.Name = "registerDateDataGridViewTextBoxColumn";
+            registerDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // isActiveDataGridViewTextBoxColumn1
+            // 
+            isActiveDataGridViewTextBoxColumn1.DataPropertyName = "IsActive";
+            isActiveDataGridViewTextBoxColumn1.HeaderText = "IsActive";
+            isActiveDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            isActiveDataGridViewTextBoxColumn1.Name = "isActiveDataGridViewTextBoxColumn1";
+            isActiveDataGridViewTextBoxColumn1.Width = 125;
+            // 
             // customerBindingSource
             // 
             customerBindingSource.DataSource = typeof(Models.Customer);
             // 
-            // tabPage5
+            // tcCategories
             // 
-            tabPage5.Controls.Add(btnCategoryDelete);
-            tabPage5.Controls.Add(btnCategoryEdit);
-            tabPage5.Controls.Add(btnCategoryAdd);
-            tabPage5.Controls.Add(panel5);
-            tabPage5.Controls.Add(panel4);
-            tabPage5.Controls.Add(panel3);
-            tabPage5.Controls.Add(dgvCategory);
-            tabPage5.Location = new Point(4, 29);
-            tabPage5.Name = "tabPage5";
-            tabPage5.Size = new Size(955, 427);
-            tabPage5.TabIndex = 4;
-            tabPage5.Text = "Categories";
-            tabPage5.UseVisualStyleBackColor = true;
+            tcCategories.Controls.Add(btnCategoryDelete);
+            tcCategories.Controls.Add(btnCategoryEdit);
+            tcCategories.Controls.Add(btnCategoryAdd);
+            tcCategories.Controls.Add(panel5);
+            tcCategories.Controls.Add(panel4);
+            tcCategories.Controls.Add(panel3);
+            tcCategories.Controls.Add(dgvCategory);
+            tcCategories.Location = new Point(4, 29);
+            tcCategories.Name = "tcCategories";
+            tcCategories.Size = new Size(955, 427);
+            tcCategories.TabIndex = 4;
+            tcCategories.Text = "Categories";
+            tcCategories.UseVisualStyleBackColor = true;
             // 
             // btnCategoryDelete
             // 
@@ -1267,15 +1465,15 @@
             // 
             categoryBindingSource1.DataSource = typeof(Models.Category);
             // 
-            // tabPage6
+            // tcBooking
             // 
-            tabPage6.Controls.Add(dgvBooking);
-            tabPage6.Location = new Point(4, 29);
-            tabPage6.Name = "tabPage6";
-            tabPage6.Size = new Size(955, 427);
-            tabPage6.TabIndex = 5;
-            tabPage6.Text = "Booking";
-            tabPage6.UseVisualStyleBackColor = true;
+            tcBooking.Controls.Add(dgvBooking);
+            tcBooking.Location = new Point(4, 29);
+            tcBooking.Name = "tcBooking";
+            tcBooking.Size = new Size(955, 427);
+            tcBooking.TabIndex = 5;
+            tcBooking.Text = "Booking";
+            tcBooking.UseVisualStyleBackColor = true;
             // 
             // dgvBooking
             // 
@@ -1287,16 +1485,16 @@
             dgvBooking.Size = new Size(955, 427);
             dgvBooking.TabIndex = 0;
             // 
-            // tabPage7
+            // tcPayment
             // 
-            tabPage7.Controls.Add(panel9);
-            tabPage7.Controls.Add(dgvPayment);
-            tabPage7.Location = new Point(4, 29);
-            tabPage7.Name = "tabPage7";
-            tabPage7.Size = new Size(955, 427);
-            tabPage7.TabIndex = 6;
-            tabPage7.Text = "Payment";
-            tabPage7.UseVisualStyleBackColor = true;
+            tcPayment.Controls.Add(panel9);
+            tcPayment.Controls.Add(dgvPayment);
+            tcPayment.Location = new Point(4, 29);
+            tcPayment.Name = "tcPayment";
+            tcPayment.Size = new Size(955, 427);
+            tcPayment.TabIndex = 6;
+            tcPayment.Text = "Payment";
+            tcPayment.UseVisualStyleBackColor = true;
             // 
             // panel9
             // 
@@ -1369,23 +1567,32 @@
             // 
             paymentBindingSource.DataSource = typeof(Models.Payment);
             // 
-            // tabComputer
+            // Employee
             // 
-            tabComputer.BackColor = Color.Snow;
-            tabComputer.Location = new Point(4, 29);
-            tabComputer.Name = "tabComputer";
-            tabComputer.Size = new Size(955, 427);
-            tabComputer.TabIndex = 7;
-            tabComputer.Text = "Computer";
+            Employee.Location = new Point(4, 29);
+            Employee.Name = "Employee";
+            Employee.Size = new Size(955, 427);
+            Employee.TabIndex = 8;
+            Employee.Text = "Employee";
+            Employee.UseVisualStyleBackColor = true;
             // 
-            // tabPage9
+            // tcService
             // 
-            tabPage9.Location = new Point(4, 29);
-            tabPage9.Name = "tabPage9";
-            tabPage9.Size = new Size(955, 427);
-            tabPage9.TabIndex = 8;
-            tabPage9.Text = "Employee";
-            tabPage9.UseVisualStyleBackColor = true;
+            tcService.Location = new Point(4, 29);
+            tcService.Name = "tcService";
+            tcService.Size = new Size(955, 427);
+            tcService.TabIndex = 9;
+            tcService.Text = "Service";
+            tcService.UseVisualStyleBackColor = true;
+            // 
+            // tcServiceBooking
+            // 
+            tcServiceBooking.Location = new Point(4, 29);
+            tcServiceBooking.Name = "tcServiceBooking";
+            tcServiceBooking.Size = new Size(955, 427);
+            tcServiceBooking.TabIndex = 10;
+            tcServiceBooking.Text = "ServiceBooking";
+            tcServiceBooking.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -1414,71 +1621,6 @@
             // 
             computerBindingSource.DataSource = typeof(Models.Computer);
             // 
-            // customerIdDataGridViewTextBoxColumn
-            // 
-            customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
-            customerIdDataGridViewTextBoxColumn.HeaderText = "CustomerId";
-            customerIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
-            customerIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // AccountName
-            // 
-            AccountName.DataPropertyName = "AccountName";
-            AccountName.HeaderText = "AccountName";
-            AccountName.MinimumWidth = 6;
-            AccountName.Name = "AccountName";
-            AccountName.ReadOnly = true;
-            AccountName.Width = 125;
-            // 
-            // fullNameDataGridViewTextBoxColumn
-            // 
-            fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
-            fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
-            fullNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
-            fullNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
-            phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
-            phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            phoneDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            emailDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // balanceDataGridViewTextBoxColumn
-            // 
-            balanceDataGridViewTextBoxColumn.DataPropertyName = "Balance";
-            balanceDataGridViewTextBoxColumn.HeaderText = "Balance";
-            balanceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            balanceDataGridViewTextBoxColumn.Name = "balanceDataGridViewTextBoxColumn";
-            balanceDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // registerDateDataGridViewTextBoxColumn
-            // 
-            registerDateDataGridViewTextBoxColumn.DataPropertyName = "RegisterDate";
-            registerDateDataGridViewTextBoxColumn.HeaderText = "RegisterDate";
-            registerDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            registerDateDataGridViewTextBoxColumn.Name = "registerDateDataGridViewTextBoxColumn";
-            registerDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // isActiveDataGridViewTextBoxColumn1
-            // 
-            isActiveDataGridViewTextBoxColumn1.DataPropertyName = "IsActive";
-            isActiveDataGridViewTextBoxColumn1.HeaderText = "IsActive";
-            isActiveDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            isActiveDataGridViewTextBoxColumn1.Name = "isActiveDataGridViewTextBoxColumn1";
-            isActiveDataGridViewTextBoxColumn1.Width = 125;
-            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1488,7 +1630,16 @@
             Name = "Admin";
             Text = "AdminAccount";
             tabAdmin.ResumeLayout(false);
-            tabPage2.ResumeLayout(false);
+            tbComputer.ResumeLayout(false);
+            panel29.ResumeLayout(false);
+            panel29.PerformLayout();
+            panel32.ResumeLayout(false);
+            panel32.PerformLayout();
+            panel31.ResumeLayout(false);
+            panel31.PerformLayout();
+            panel30.ResumeLayout(false);
+            panel30.PerformLayout();
+            tcAccount.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
             panel13.ResumeLayout(false);
             panel13.PerformLayout();
@@ -1506,7 +1657,7 @@
             panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvAccount).EndInit();
             ((System.ComponentModel.ISupportInitialize)accountBindingSource).EndInit();
-            tabProduct.ResumeLayout(false);
+            tcProduct.ResumeLayout(false);
             panel20.ResumeLayout(false);
             flpProduct.ResumeLayout(false);
             panel18.ResumeLayout(false);
@@ -1524,7 +1675,7 @@
             panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvProduct).EndInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
-            tabPage4.ResumeLayout(false);
+            tcCustomer.ResumeLayout(false);
             panel22.ResumeLayout(false);
             panel22.PerformLayout();
             panel7.ResumeLayout(false);
@@ -1543,7 +1694,7 @@
             panel23.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCustomer).EndInit();
             ((System.ComponentModel.ISupportInitialize)customerBindingSource).EndInit();
-            tabPage5.ResumeLayout(false);
+            tcCategories.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel4.ResumeLayout(false);
@@ -1552,9 +1703,9 @@
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCategory).EndInit();
             ((System.ComponentModel.ISupportInitialize)categoryBindingSource1).EndInit();
-            tabPage6.ResumeLayout(false);
+            tcBooking.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvBooking).EndInit();
-            tabPage7.ResumeLayout(false);
+            tcPayment.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvPayment).EndInit();
             ((System.ComponentModel.ISupportInitialize)paymentBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)computerBindingSource).EndInit();
@@ -1564,13 +1715,13 @@
         #endregion
 
         private TabControl tabAdmin;
-        private TabPage tabPage2;
-        private TabPage tabProduct;
-        private TabPage tabPage5;
-        private TabPage tabPage6;
-        private TabPage tabPage7;
-        private TabPage tabPage9;
-        private TabPage tabPage4;
+        private TabPage tcAccount;
+        private TabPage tcProduct;
+        private TabPage tcCategories;
+        private TabPage tcBooking;
+        private TabPage tcPayment;
+        private TabPage Employee;
+        private TabPage tcCustomer;
         private BindingSource computerBindingSource;
         private DataGridView dgvBooking;
         private DataGridViewTextBoxColumn bookingIdDataGridViewTextBoxColumn;
@@ -1628,7 +1779,6 @@
         private DataGridViewTextBoxColumn bookingsDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn paymentsDataGridViewTextBoxColumn;
         private BindingSource bindingSource2;
-        private TabPage tabComputer;
         private Panel panel2;
         private DataGridView dgvCategory;
         private DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
@@ -1640,7 +1790,7 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private TabPage s;
+        private TabPage tbComputer;
         private TextBox textBox2;
         private Label label1;
         private TextBox textBox1;
@@ -1730,5 +1880,20 @@
         private DataGridViewTextBoxColumn balanceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn registerDateDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn isActiveDataGridViewTextBoxColumn1;
+        private Panel panel29;
+        private Panel panel32;
+        private TextBox txtTongTien;
+        private Label lblTongTien;
+        private Panel panel31;
+        private TextBox txtConLai;
+        private Label lblConLai;
+        private Panel panel30;
+        private TextBox txtDaChoi;
+        private Label lblDaChoi;
+        private TextBox txtStatus;
+        private FlowLayoutPanel flpComputers;
+        private Button btnLogOut;
+        private TabPage tcService;
+        private TabPage tcServiceBooking;
     }
 }
