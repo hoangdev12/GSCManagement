@@ -28,7 +28,9 @@ namespace WinFormsApp1.Views
         private BindingSource customerBindingSource = new BindingSource();
         private BindingSource bookingBindingSource = new BindingSource();
         private BindingSource accountBindingSource = new BindingSource();
-        private BindingSource categoryBindingSource1 = new BindingSource();
+        private BindingSource categoryBindingSource = new BindingSource();
+        private BindingSource serviceBindingSource = new BindingSource();
+        private BindingSource serviceBookingBindingSource = new BindingSource();
 
 
         public Admin()
@@ -51,11 +53,11 @@ namespace WinFormsApp1.Views
 
         private void LoadData()
         {
-            // Bookings
+            // Booking
             var booking = _context.Bookings.ToList();
             dgvBooking.DataSource = booking;
 
-            // Payments
+            // Payment
             var payment = _context.Payments.ToList();
             dgvPayment.DataSource = payment;
 
@@ -63,6 +65,7 @@ namespace WinFormsApp1.Views
             var customer = _context.Customers.Include(c => c.Account).ToList();
             customerBindingSource.DataSource = customer;
 
+            // Computer
             LoadComputers();
 
             // Account
@@ -71,15 +74,20 @@ namespace WinFormsApp1.Views
 
             // Category
             var category = _context.Categories.ToList();
-            categoryBindingSource1.DataSource = category;
+            categoryBindingSource.DataSource = category;
 
             // Product
             var product = _context.Products.Include(p => p.Category).ToList();
             productBindingSource.DataSource = product;
             LoadCategoryIDToComboBox();
 
+            // Service
+            var service = _context.Services.ToList();
+            serviceBindingSource.DataSource = service;
 
-            _context.SaveChanges();
+            // Booking Service
+            var serviceBooking = _context.BookingServices.ToList();
+            serviceBookingBindingSource.DataSource = serviceBooking;
         }
 
         // Tải danh sách máy tính
@@ -228,7 +236,6 @@ namespace WinFormsApp1.Views
             }
         }
 
-
         private void BindControls()
         {
             // Xóa binding cho các control trong Account Tab
@@ -262,6 +269,12 @@ namespace WinFormsApp1.Views
             txtCusIsActive.DataBindings.Clear();
             txtAccountName.DataBindings.Clear();
 
+            // Xóa binding cho các control trong Service Tab
+            txtServiceID.DataBindings.Clear();
+            txtServiceName.DataBindings.Clear();
+            txtServicePrice.DataBindings.Clear();
+            txtServiceDes.DataBindings.Clear();
+
             // Account Tab
             txtAccountUserName.DataBindings.Add("Text", accountBindingSource, "Username");
             txtAccountPasswordHash.DataBindings.Add("Text", accountBindingSource, "PasswordHash");
@@ -271,10 +284,9 @@ namespace WinFormsApp1.Views
             txtAccountId.DataBindings.Add("Text", accountBindingSource, "AccountId");
 
             // Category Tab
-            txtCategoryId.DataBindings.Add("Text", categoryBindingSource1, "CategoryID");
-            txtCategoryName.DataBindings.Add("Text", categoryBindingSource1, "CategoryName");
-            txtCategoryDes.DataBindings.Add("Text", categoryBindingSource1, "Description");
-            //cbbCategoryProduct.DataBindings.Add("Text", categoryBindingSource1, "ProductID");
+            txtCategoryId.DataBindings.Add("Text", categoryBindingSource, "CategoryID");
+            txtCategoryName.DataBindings.Add("Text", categoryBindingSource, "CategoryName");
+            txtCategoryDes.DataBindings.Add("Text", categoryBindingSource, "Description");
 
             // Product Tab
             txtProductID.DataBindings.Add("Text", productBindingSource, "ProductID");
@@ -293,6 +305,15 @@ namespace WinFormsApp1.Views
             txtCusRegisterDate.DataBindings.Add("Text", customerBindingSource, "RegisterDate");
             txtCusIsActive.DataBindings.Add("Text", customerBindingSource, "IsActive");
             txtAccountName.DataBindings.Add("Text", customerBindingSource, "AccountName");
+
+            // Service Tab
+            txtServiceID.DataBindings.Add("Text", serviceBindingSource, "ServiceID");
+            txtServiceName.DataBindings.Add("Text", serviceBindingSource, "ServiceName");
+            txtServicePrice.DataBindings.Add("Text", serviceBindingSource, "Price");
+            txtServiceDes.DataBindings.Add("Text", serviceBindingSource, "Description");
+
+            // Booking Service Tab
+
         }
 
         private void CreateBooking(Booking bookings)
@@ -305,6 +326,44 @@ namespace WinFormsApp1.Views
                 EndTime = null,
                 TotalAmount = 0
             };
+        }
+
+        // Computer tab
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            if (selectedComputer != null)
+            {
+                // Cập nhật trạng thái của máy tính trong cơ sở dữ liệu
+                var computerToUpdate = _context.Computers.FirstOrDefault(c => c.ComputerId == selectedComputer.ComputerId);
+                if (computerToUpdate != null)
+                {
+                    computerToUpdate.Status = "Đang tắt"; // Hoặc trạng thái phù hợp khác
+                    _context.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+
+                    // Cập nhật màu sắc của nút tương ứng với máy tính
+                    foreach (Control control in flpComputers.Controls)
+                    {
+                        if (control is Button button && button.Tag is Computer computer && computer.ComputerId == selectedComputer.ComputerId)
+                        {
+                            button.BackColor = Color.LightCoral;
+                            break;
+                        }
+                    }
+
+                    txtStatus.Text = computerToUpdate.Status;
+
+                    // Dừng timer nếu đang chạy
+                    timerUpdate.Stop();
+                    selectedComputer = null;
+                    txtConLai.Text = "N/A";
+                    txtDaChoi.Text = "0:0:0";
+                    txtTongTien.Text = "0";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không có máy tính nào được chọn.");
+            }
         }
 
         private void LoadCategoryIDToComboBox()
@@ -322,45 +381,52 @@ namespace WinFormsApp1.Views
             cbbProductCategory.DisplayMember = "Text";
             cbbProductCategory.ValueMember = "Value";
         }
+
         // Account tab
         private void btnAccountEdit_Click(object sender, EventArgs e)
         {
-            if (!txtAccountUserName.ReadOnly && !txtAccountPasswordHash.ReadOnly && !txtAccountRole.ReadOnly && !txtAccountActive.ReadOnly)
+            if (!txtAccountUserName.ReadOnly && !txtAccountPasswordHash.ReadOnly && !txtAccountRole.ReadOnly)
             {
+                // Clear binding
+                txtAccountUserName.DataBindings.Clear();
+                txtAccountPasswordHash.DataBindings.Clear();
+                txtAccountRole.DataBindings.Clear();
+
                 var account = _context.Accounts.FirstOrDefault(a => a.AccountId.ToString() == txtAccountId.Text);
 
                 if (account != null)
                 {
-                    bool isExist = _context.Accounts.Any(p => p.Username == txtAccountUserName.Text);
+                    // Kiểm tra xem Username đã tồn tại ở tài khoản khác hay chưa
+                    bool isExist = _context.Accounts.Any(a => a.Username == txtAccountUserName.Text && a.AccountId != account.AccountId);
+
                     if (!isExist)
                     {
+                        // Cập nhật thông tin tài khoản
                         account.Username = txtAccountUserName.Text;
                         account.PasswordHash = txtAccountPasswordHash.Text;
                         account.Role = txtAccountRole.Text;
                         account.CreateDate = DateTime.Now;
-
-                        // Active làm chưa được
-
                         _context.SaveChanges();
                         LoadData();
+                        BindControls();
                         MessageBox.Show("Chỉnh sửa thành công!");
                     }
                     else
                     {
-                        MessageBox.Show("Thông tin đã tồn tại!");
+                        MessageBox.Show("Tên tài khoản đã tồn tại!");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Bảng rỗng!");
+                    MessageBox.Show("Không tìm thấy tài khoản!");
                 }
             }
 
+            // Set ReadOnly lại cho các trường sau khi thao tác xong
             txtAccountUserName.ReadOnly = false;
             txtAccountPasswordHash.ReadOnly = false;
             txtAccountRole.ReadOnly = false;
             txtAccountActive.ReadOnly = false;
-
         }
 
         private void btnAccountDelete_Click(object sender, EventArgs e)
@@ -389,49 +455,51 @@ namespace WinFormsApp1.Views
                 MessageBox.Show("Bảng rỗng!");
             }
         }
+
         // Category tab
         private void btnCategoryAdd_Click(object sender, EventArgs e)
         {
-            // Clear data bindings temporarily
-            txtCategoryName.DataBindings.Clear();
-            txtCategoryDes.DataBindings.Clear();
-
-            cbbProductCategory.DataBindings.Clear();
-
-            if (txtCategoryName.ReadOnly == false && txtCategoryDes.ReadOnly == false)
+            if (!txtCategoryName.ReadOnly && !txtCategoryDes.ReadOnly)
             {
+                // Clear data bindings temporarily
+                txtCategoryName.DataBindings.Clear();
+                txtCategoryDes.DataBindings.Clear();
+                cbbProductCategory.DataBindings.Clear();
 
-                bool isExist = _context.Categories.Any(p => p.CategoryName == txtCategoryName.Text);
-                if (!isExist)
+
+                if (!string.IsNullOrWhiteSpace(txtCategoryName.Text))
                 {
-                    // Create new Category object
-                    var newCategory = new Category
+                    bool isExist = _context.Categories.Any(p => p.CategoryName == txtCategoryName.Text);
+                    if (!isExist)
                     {
-                        CategoryName = txtCategoryName.Text,
-                        Description = txtCategoryDes.Text
-                    };
+                        var newCategory = new Category
+                        {
+                            CategoryName = txtCategoryName.Text.Trim(),
+                            Description = txtCategoryDes.Text.Trim()
+                        };
 
-                    // Add the new category to the context
-                    _context.Categories.Add(newCategory);
+                        _context.Categories.Add(newCategory);
 
-                    // Save changes to the database
-                    try
-                    {
-                        _context.SaveChanges();
-                        MessageBox.Show("Tạo thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        // Reload data to refresh displayed categories
-                        LoadData();
-                        BindControls();
+                        try
+                        {
+                            _context.SaveChanges();
+                            MessageBox.Show("Tạo thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadData();
+                            BindControls();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Lỗi khi tạo danh mục: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show($"Error while creating category: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Danh mục đã tồn tại!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Thông tin đã tồn tại!");
+                    MessageBox.Show("Tên danh mục không được để trống!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
 
@@ -466,31 +534,35 @@ namespace WinFormsApp1.Views
 
         private void btnCategoryEdit_Click(object sender, EventArgs e)
         {
-
-            if (txtCategoryName.ReadOnly == false && txtCategoryDes.ReadOnly == false)
+            if (!txtCategoryName.ReadOnly && !txtCategoryDes.ReadOnly)
             {
                 var category = _context.Categories.FirstOrDefault(c => c.CategoryId.ToString() == txtCategoryId.Text);
 
                 if (category != null)
                 {
-                    bool isExist = _context.Categories.Any(c => c.CategoryName == txtCategoryName.Text && c.Description == txtCategoryDes.Text);
+                    // Kiểm tra sự tồn tại của danh mục khác với cùng tên và mô tả
+                    bool isExist = _context.Categories.Any(c =>
+                        c.CategoryName == txtCategoryName.Text &&
+                        c.CategoryId != category.CategoryId);
+
                     if (!isExist)
                     {
+                        // Cập nhật thông tin mới
                         category.CategoryName = txtCategoryName.Text;
                         category.Description = txtCategoryDes.Text;
-                        //category.Products = 
+
                         _context.SaveChanges();
                         LoadData();
                         MessageBox.Show("Chỉnh sửa thành công!");
                     }
                     else
                     {
-                        MessageBox.Show("Thôn tin đã tồn tại!");
+                        MessageBox.Show("Tên hoặc mô tả của danh mục đã tồn tại ở danh mục khác!");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Bảng rỗng!");
+                    MessageBox.Show("Không tìm thấy danh mục!");
                 }
             }
 
@@ -588,8 +660,12 @@ namespace WinFormsApp1.Views
                     var product = _context.Products.FirstOrDefault(p => p.ProductId.ToString() == txtProductID.Text);
                     if (product != null)
                     {
-                        // Kiểm tra tồn tại sản phẩm với cùng tên và CategoryId
-                        bool isExist = _context.Products.Any(p => p.ProductName == txtProductName.Text && p.CategoryId == categoryId);
+                        // Kiểm tra nếu có sản phẩm khác (ID khác) với cùng tên trong cùng danh mục
+                        bool isExist = _context.Products.Any(p =>
+                            p.ProductName == txtProductName.Text &&
+                            p.CategoryId == categoryId &&
+                            p.ProductId != product.ProductId);
+
                         if (!isExist)
                         {
                             // Chuyển đổi giá trị từ textbox với xử lý lỗi
@@ -613,7 +689,7 @@ namespace WinFormsApp1.Views
                         }
                         else
                         {
-                            MessageBox.Show("Thông tin đã tồn tại!");
+                            MessageBox.Show("Sản phẩm với tên và danh mục này đã tồn tại!");
                         }
                     }
                     else
@@ -635,11 +711,6 @@ namespace WinFormsApp1.Views
 
         private void btnProductDelete_Click(object sender, EventArgs e)
         {
-            txtProductName.ReadOnly = false;
-            txtProductDes.ReadOnly = false;
-            txtProductPrice.ReadOnly = false;
-            txtProductStockQuantity.ReadOnly = false;
-
             var product = _context.Products.FirstOrDefault(p => p.ProductId.ToString() == txtProductID.Text);
 
             if (product != null)
@@ -662,25 +733,31 @@ namespace WinFormsApp1.Views
                 MessageBox.Show("Bảng rỗng!");
             }
         }
-        // Customer tab
-        private void btnCusEdit_Click(object sender, EventArgs e)
-        {
-            if (!txtCusFullName.ReadOnly && !txtCusPhone.ReadOnly && !txtCusEmail.ReadOnly && !txtCusBalance.ReadOnly && !txtCusRegisterDate.ReadOnly && !txtCusIsActive.ReadOnly)
-            {
-                var customer = _context.Customers.FirstOrDefault(a => a.CustomerId.ToString() == txtCustomerID.Text);
 
-                if (customer != null)
+        // Service tab
+        private void btnServiceEdit_Click(object sender, EventArgs e)
+        {
+
+            if (!txtServiceName.ReadOnly && !txtServicePrice.ReadOnly && !txtServiceDes.ReadOnly)
+            {
+                var service = _context.Services.FirstOrDefault(s => s.ServiceId.ToString() == txtServiceID.Text);
+                if (service != null)
                 {
-                    customer.FullName = txtCusFullName.Text;
-                    customer.Phone = txtCusPhone.Text;
-                    customer.Email = txtCusEmail.Text;
-                    customer.Balance = decimal.Parse(txtCusBalance.Text);
-                    customer.RegisterDate = DateTime.Now;
-                    customer.Email = txtCusEmail.Text;
-                    // Active chưa làm được
-                    _context.SaveChanges();
-                    LoadData();
-                    MessageBox.Show("Chỉnh sửa thành công!");
+
+                    bool isExist = _context.Services.Any(s => s.ServiceName == txtServiceName.Text);
+                    if (!isExist)
+                    {
+                        service.ServiceName = txtServiceName.Text;
+                        service.Price = decimal.Parse(txtServicePrice.Text);
+                        service.Description = txtServiceDes.Text;
+                        _context.SaveChanges();
+                        LoadData();
+                        MessageBox.Show("Chỉnh sửa thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thông tin đã tồn tại!");
+                    }
                 }
                 else
                 {
@@ -688,51 +765,107 @@ namespace WinFormsApp1.Views
                 }
             }
 
-            txtCusFullName.ReadOnly = false;
-            txtCusPhone.ReadOnly = false;
-            txtCusEmail.ReadOnly = false;
-            txtCusBalance.ReadOnly = false;
-            txtCusRegisterDate.ReadOnly = false;
-            txtCusIsActive.ReadOnly = false;
+            txtServiceName.ReadOnly = false;
+            txtServicePrice.ReadOnly = false;
+            txtServiceDes.ReadOnly = false;
+
         }
 
-        private void btnLogOut_Click(object sender, EventArgs e)
+        private void btnServiceAdd_Click(object sender, EventArgs e)
         {
-            if (selectedComputer != null)
-            {
-                // Cập nhật trạng thái của máy tính trong cơ sở dữ liệu
-                var computerToUpdate = _context.Computers.FirstOrDefault(c => c.ComputerId == selectedComputer.ComputerId);
-                if (computerToUpdate != null)
-                {
-                    computerToUpdate.Status = "Đang tắt"; // Hoặc trạng thái phù hợp khác
-                    _context.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+            // Clear data bindings temporarily
+            txtServiceName.DataBindings.Clear();
+            txtServicePrice.DataBindings.Clear();
+            txtServiceDes.DataBindings.Clear();
 
-                    // Cập nhật màu sắc của nút tương ứng với máy tính
-                    foreach (Control control in flpComputers.Controls)
+            if (txtServiceName.ReadOnly == false && txtServicePrice.ReadOnly == false && txtServiceDes.ReadOnly == false)
+            {
+                if (string.IsNullOrWhiteSpace(txtServiceName.Text))
+                {
+                    MessageBox.Show("Service name cannot be empty!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    var isExist = _context.Services.Any(s => s.ServiceName == txtServiceName.Text);
+
+                    if (!isExist)
                     {
-                        if (control is Button button && button.Tag is Computer computer && computer.ComputerId == selectedComputer.ComputerId)
+                        // Create new Category object
+                        var newService = new Service
                         {
-                            button.BackColor = Color.LightCoral;
-                            break;
+                            ServiceName = txtServiceName.Text,
+                            Price = decimal.Parse(txtServicePrice.Text),
+                            Description = txtServiceDes.Text
+                        };
+
+                        // Add the new category to the context
+                        _context.Services.Add(newService);
+
+                        // Save changes to the database
+                        try
+                        {
+                            MessageBox.Show("Tạo thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            _context.SaveChanges();
+                            LoadData();
+                            BindControls();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error while creating product: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                    else
+                    {
+                        MessageBox.Show("Đã tồn tại!");
+                    }
+                }
+            }
 
-                    txtStatus.Text = computerToUpdate.Status;
+            txtServiceName.ReadOnly = false;
+            txtServicePrice.ReadOnly = false;
+            txtServiceDes.ReadOnly = false;
 
-                    // Dừng timer nếu đang chạy
-                    timerUpdate.Stop();
-                    selectedComputer = null;
-                    txtConLai.Text = "N/A";
-                    txtDaChoi.Text = "0:0:0";
-                    txtTongTien.Text = "0";
+        }
+
+        private void btnServiceDelete_Click(object sender, EventArgs e)
+        {
+            var service = _context.Services.FirstOrDefault(p => p.ServiceId.ToString() == txtServiceID.Text);
+
+            if (service != null)
+            {
+                var result = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Xóa tất cả các bản ghi trong bảng BookingService có ServiceID tương ứng
+                    var relatedBookings = _context.BookingServices.Where(bs => bs.ServiceId == service.ServiceId).ToList();
+                    if (relatedBookings.Any())
+                    {
+                        _context.BookingServices.RemoveRange(relatedBookings);
+                        _context.SaveChanges(); // Lưu các thay đổi trước khi xóa dịch vụ
+                    }
+
+                    // Xóa dịch vụ
+                    _context.Services.Remove(service);
+                    _context.SaveChanges(); // Lưu các thay đổi sau khi xóa dịch vụ
+
+                    // Tìm ID lớn nhất hiện tại sau khi xóa
+                    int maxId = _context.Services.Any() ? _context.Services.Max(p => p.ServiceId) : 0;
+
+                    // Reset lại giá trị IDENTITY
+                    _context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT ('Service', RESEED, {maxId})");
+
+                    LoadData();
+                    MessageBox.Show("Xóa thành công!");
                 }
             }
             else
             {
-                MessageBox.Show("Không có máy tính nào được chọn.");
+                MessageBox.Show("Không tìm thấy dịch vụ!");
             }
         }
-
 
     }
 }

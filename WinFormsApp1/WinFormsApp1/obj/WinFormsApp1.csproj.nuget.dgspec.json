@@ -1,20 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GSCM view admin\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "D:\\IT\\Lap Trinh Truc Quan\\CLONE BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "D:\\GSCM view admin\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "D:\\IT\\Lap Trinh Truc Quan\\CLONE BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GSCM view admin\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "D:\\IT\\Lap Trinh Truc Quan\\CLONE BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "D:\\GSCM view admin\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
-        "packagesPath": "C:\\Users\\hoang\\.nuget\\packages\\",
-        "outputPath": "D:\\GSCM view admin\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "projectPath": "D:\\IT\\Lap Trinh Truc Quan\\CLONE BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\add\\.nuget\\packages\\",
+        "outputPath": "D:\\IT\\Lap Trinh Truc Quan\\CLONE BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\IT\\Ti xoa sau\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\hoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\add\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,6 +29,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+          "D:\\IT\\Ti xoa sau\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -114,7 +121,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
