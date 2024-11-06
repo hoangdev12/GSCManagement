@@ -58,9 +58,10 @@ namespace WinFormsApp1.Views
                     BookingId = 0
                 };
                 _cart.Add(bookingProduct);
+                MessageBox.Show($"Đã thêm sản phẩm '{product.ProductName}' với số lượng {quantity} vào giỏ hàng!");
             }
 
-            MessageBox.Show($"Đã thêm sản phẩm '{product.ProductName}' với số lượng {quantity} vào giỏ hàng!");
+
         }
 
         private void btn_Click(object sender, EventArgs e)
@@ -137,6 +138,14 @@ namespace WinFormsApp1.Views
                     Dock = DockStyle.Fill // Đảm bảo nó lấp đầy không gian có sẵn
                 };
 
+                FlowLayoutPanel flowServices = new FlowLayoutPanel
+                {
+                    AutoSize = true,
+                    FlowDirection = FlowDirection.LeftToRight,
+                    WrapContents = true, // Cho phép wrap để chuyển sang hàng mới
+                    Dock = DockStyle.Fill // Đảm bảo nó lấp đầy không gian có sẵn
+                };
+
                 foreach (var product in productData)
                 {
                     if (!string.IsNullOrEmpty(product.Image))
@@ -202,13 +211,17 @@ namespace WinFormsApp1.Views
                         addButton.Location = new Point(10, 190);
 
                         // Thêm productPanel vào FlowLayoutPanel tương ứng dựa trên CategoryID
-                        if (product.CategoryId == 2) // Giả sử CategoryID = 1 là Food
+                        if (product.CategoryId == 2) // CategoryID = 2 là Food
                         {
                             flowFoods.Controls.Add(productPanel);
                         }
-                        else if (product.CategoryId == 1) // Giả sử CategoryID = 2 là Drink
+                        else if (product.CategoryId == 1) // CategoryID = 1 là Drink
                         {
                             flowDrinks.Controls.Add(productPanel);
+                        }
+                        else if (product.CategoryId == 3)
+                        {
+                            flowServices.Controls.Add(productPanel);
                         }
                     }
                 }
@@ -216,6 +229,7 @@ namespace WinFormsApp1.Views
                 // Đặt FlowLayoutPanel vào TabPage
                 tbpFoods.Controls.Add(flowFoods);
                 tbpDrinks.Controls.Add(flowDrinks);
+                tbpService.Controls.Add(flowServices);
             }
             catch (Exception ex)
             {
@@ -237,11 +251,26 @@ namespace WinFormsApp1.Views
                     return;
                 }
 
+                // Kiểm tra sự tồn tại của CustomerId và ComputerId
+                var existingCustomer = _context.Customers.FirstOrDefault(c => c.CustomerId == 1);
+                if (existingCustomer == null)
+                {
+                    MessageBox.Show("CustomerId không tồn tại. Vui lòng chọn một CustomerId hợp lệ.");
+                    return;
+                }
+
+                var existingComputer = _context.Computers.FirstOrDefault(c => c.ComputerId == 1);
+                if (existingComputer == null)
+                {
+                    MessageBox.Show("ComputerId không tồn tại. Vui lòng chọn một ComputerId hợp lệ.");
+                    return;
+                }
+
                 // Tạo một Booking mới và lưu vào cơ sở dữ liệu
                 var newBooking = new Booking
                 {
-                    CustomerId = 8/* Gán giá trị cho CustomerID ở đây */,
-                    ComputerId = 8/* Gán giá trị cho ComputerID ở đây */,
+                    CustomerId = 1, // Gán giá trị cho CustomerID
+                    ComputerId = 1, // Gán giá trị cho ComputerID
                     StartTime = DateTime.Now, // Hoặc giá trị thời gian bắt đầu phù hợp
                     EndTime = DateTime.Now.AddHours(1), // Thay đổi nếu cần
                     TotalAmount = _cart.Sum(bp => bp.TotalPrice) // Tính tổng số tiền
@@ -263,9 +292,22 @@ namespace WinFormsApp1.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi lưu giỏ hàng: " + ex.InnerException?.Message ?? ex.Message);
+                MessageBox.Show("Lỗi khi lưu giỏ hàng: " + ex.ToString());
             }
         }
 
+        private void btnCart_Click(object sender, EventArgs e)
+        {
+            // Kiểm tra giỏ hàng có sản phẩm không
+            if (_cart.Count == 0)
+            {
+                MessageBox.Show("Giỏ hàng trống!");
+                return;
+            }
+
+            // Mở CartForm và truyền giỏ hàng cùng với context
+            CartForm cartForm = new CartForm(_cart, _context);
+            cartForm.ShowDialog();
+        }
     }
 }

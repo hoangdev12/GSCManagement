@@ -297,3 +297,4 @@ C:\Users\Asus\Source\Repos\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net
 C:\Users\Asus\Source\Repos\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\ref\WinFormsApp1.dll
 C:\Users\Asus\Source\Repos\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Views.User.resources
 C:\Users\Asus\Source\Repos\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Properties.Resources.resources
+C:\Users\Asus\Source\Repos\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Views.CartForm.resources
