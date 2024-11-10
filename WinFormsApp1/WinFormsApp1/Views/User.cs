@@ -23,97 +23,12 @@ namespace WinFormsApp1.Views
             _context = new GcsmanagerContext();
             _cart = new List<BookingProduct>();
             LoadUserData(); // Tải dữ liệu khi mở form
-            User_Load_1(this, EventArgs.Empty); // Gọi sự kiện tải trực tiếp
-
+            
         }
 
         private void User_Load_1(object sender, EventArgs e)
         {
         }
-
-        private void AddBookingProduct(Product product, int quantity)
-        {
-            if (quantity <= 0)
-            {
-                MessageBox.Show("Số lượng sản phẩm phải lớn hơn 0!");
-                return;
-            }
-
-            // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
-            var existingProduct = _cart.FirstOrDefault(bp => bp.ProductId == product.ProductId);
-
-            if (existingProduct != null)
-            {
-                existingProduct.Quantity += quantity;
-                existingProduct.TotalPrice += product.Price * quantity;
-                MessageBox.Show($"Cập nhật sản phẩm: {product.ProductName}, Số lượng mới: {existingProduct.Quantity}");
-            }
-            else
-            {
-                var bookingProduct = new BookingProduct
-                {
-                    ProductId = product.ProductId,
-                    Quantity = quantity,
-                    TotalPrice = product.Price * quantity,
-                    BookingId = 0
-                };
-                _cart.Add(bookingProduct);
-                MessageBox.Show($"Đã thêm sản phẩm '{product.ProductName}' với số lượng {quantity} vào giỏ hàng!");
-            }
-
-
-        }
-
-        private void btn_Click(object sender, EventArgs e)
-        {
-            Button? clickedButton = sender as Button;
-            if (clickedButton == null || clickedButton.Tag == null) return;
-
-            int productId = (int)clickedButton.Tag; // Lấy ProductId từ thuộc tính Tag
-            Product? productToOrder = _context.Products.FirstOrDefault(p => p.ProductId == productId);
-            if (productToOrder != null)
-            {
-                NumericUpDown? numericUpDown = null;
-
-                // Tìm NumericUpDown trong tbpFoods
-                foreach (FlowLayoutPanel flowPanel in tbpFoods.Controls.OfType<FlowLayoutPanel>())
-                {
-                    foreach (Panel panel in flowPanel.Controls.OfType<Panel>())
-                    {
-                        numericUpDown = panel.Controls.OfType<NumericUpDown>()
-                            .FirstOrDefault(n => (int?)n.Tag == productId);
-                        if (numericUpDown != null) break; // Nếu tìm thấy thì thoát khỏi vòng lặp
-                    }
-                    if (numericUpDown != null) break; // Nếu tìm thấy thì thoát khỏi vòng lặp
-                }
-
-                // Nếu không tìm thấy trong tbpFoods, tìm trong tbpDrinks
-                if (numericUpDown == null)
-                {
-                    foreach (FlowLayoutPanel flowPanel in tbpDrinks.Controls.OfType<FlowLayoutPanel>())
-                    {
-                        foreach (Panel panel in flowPanel.Controls.OfType<Panel>())
-                        {
-                            numericUpDown = panel.Controls.OfType<NumericUpDown>()
-                                .FirstOrDefault(n => (int?)n.Tag == productId);
-                            if (numericUpDown != null) break; // Nếu tìm thấy thì thoát khỏi vòng lặp
-                        }
-                        if (numericUpDown != null) break; // Nếu tìm thấy thì thoát khỏi vòng lặp
-                    }
-                }
-
-                if (numericUpDown == null)
-                {
-                    MessageBox.Show("Không tìm thấy NumericUpDown cho sản phẩm này.");
-                }
-                else
-                {
-                    int quantity = (int)numericUpDown.Value; // Lấy số lượng
-                    AddBookingProduct(productToOrder, quantity); // Thêm vào giỏ hàng
-                }
-            }
-        }
-
 
         private void LoadUserData()
         {
@@ -146,6 +61,27 @@ namespace WinFormsApp1.Views
                     Dock = DockStyle.Fill // Đảm bảo nó lấp đầy không gian có sẵn
                 };
 
+                dgvCart.AutoGenerateColumns = false; // Đặt AutoGenerateColumns thành false
+
+                // Thêm cột ProductName cho DataGridView
+                DataGridViewTextBoxColumn productNameColumn = new DataGridViewTextBoxColumn();
+                productNameColumn.DataPropertyName = "ProductName"; // Tên thuộc tính trong nguồn dữ liệu
+                productNameColumn.HeaderText = "Tên Sản Phẩm/Dịch Vụ";
+                dgvCart.Columns.Add(productNameColumn);
+
+                // Thêm cột Quantity
+                DataGridViewTextBoxColumn quantityColumn = new DataGridViewTextBoxColumn();
+                quantityColumn.DataPropertyName = "Quantity"; // Tên thuộc tính trong nguồn dữ liệu
+                quantityColumn.HeaderText = "Số Lượng";
+                dgvCart.Columns.Add(quantityColumn);
+
+                // Thêm cột TotalPrice
+                DataGridViewTextBoxColumn totalPriceColumn = new DataGridViewTextBoxColumn();
+                totalPriceColumn.DataPropertyName = "TotalPrice"; // Tên thuộc tính trong nguồn dữ liệu
+                totalPriceColumn.HeaderText = "Tổng Tiền";
+                dgvCart.Columns.Add(totalPriceColumn);
+
+
                 foreach (var product in productData)
                 {
                     if (!string.IsNullOrEmpty(product.Image))
@@ -154,7 +90,7 @@ namespace WinFormsApp1.Views
                         PictureBox pictureBox = new PictureBox
                         {
                             Size = new Size(100, 100),
-                            ImageLocation = product.Image,
+                            ImageLocation = Path.Combine(Application.StartupPath, "Resource", "Img", product.Image),
                             SizeMode = PictureBoxSizeMode.StretchImage,
                         };
 
@@ -184,6 +120,7 @@ namespace WinFormsApp1.Views
                         // Tạo và cấu hình Button cho việc thêm sản phẩm vào giỏ hàng
                         Button addButton = new Button
                         {
+                            Size = new Size(120, 50),
                             Text = "Add to Cart",
                             Tag = product.ProductId, // Gán ProductId cho nút
                         };
@@ -237,11 +174,83 @@ namespace WinFormsApp1.Views
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btn_Click(object sender, EventArgs e)
         {
+            Button? clickedButton = sender as Button;
+            if (clickedButton == null || clickedButton.Tag == null) return;
+
+            int productId = (int)clickedButton.Tag;
+            Product? productToOrder = _context.Products.FirstOrDefault(p => p.ProductId == productId);
+            if (productToOrder != null)
+            {
+                NumericUpDown? quantitySelector = null;
+
+                // Tìm NumericUpDown trong tbpFoods, tbpDrinks, và tbpService
+                foreach (TabPage tabPage in new[] { tbpFoods, tbpDrinks, tbpService })
+                {
+                    foreach (FlowLayoutPanel flowPanel in tabPage.Controls.OfType<FlowLayoutPanel>())
+                    {
+                        foreach (Panel panel in flowPanel.Controls.OfType<Panel>())
+                        {
+                            quantitySelector = panel.Controls.OfType<NumericUpDown>()
+                                .FirstOrDefault(n => (int?)n.Tag == productId);
+                            if (quantitySelector != null) break;
+                        }
+                        if (quantitySelector != null) break;
+                    }
+                    if (quantitySelector != null) break;
+                }
+
+                if (quantitySelector == null)
+                {
+                    MessageBox.Show("Không tìm thấy số lượng cho sản phẩm này.");
+                }
+                else
+                {
+                    int quantity = (int)quantitySelector.Value;
+                    AddBookingProduct(productToOrder, quantity);
+                    LoadCartData();
+                }
+            }
         }
 
-        private void btnSaveCart_Click(object sender, EventArgs e)
+
+        private void AddBookingProduct(Product product, int quantity)
+        {
+            if (quantity <= 0)
+            {
+                MessageBox.Show("Số lượng sản phẩm phải lớn hơn 0!");
+                return;
+            }
+
+            // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
+            var existingProduct = _cart.FirstOrDefault(bp => bp.ProductId == product.ProductId);
+
+            if (existingProduct != null)
+            {
+                existingProduct.Quantity += quantity;
+                existingProduct.TotalPrice += product.Price * quantity;
+                MessageBox.Show($"Cập nhật sản phẩm: {product.ProductName}, Số lượng mới: {existingProduct.Quantity}");
+            }
+            else
+            {
+                var bookingProduct = new BookingProduct
+                {
+                    ProductId = product.ProductId,
+                    Quantity = quantity,
+                    TotalPrice = product.Price * quantity,
+                    //BookingId = 0
+                };
+                _cart.Add(bookingProduct);
+            
+                MessageBox.Show($"Đã thêm sản phẩm '{product.ProductName}' với số lượng {quantity} vào giỏ hàng!");
+            }
+            // Cập nhật lại tổng tiền trong lblTotalAll
+            lblTotalAll.Text = _cart.Sum(bp => bp.TotalPrice).ToString();
+
+        }
+
+        private void btnBuy_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -287,7 +296,11 @@ namespace WinFormsApp1.Views
                 }
 
                 _context.SaveChanges(); // Lưu BookingProducts vào cơ sở dữ liệu
+
                 _cart.Clear(); // Xóa giỏ hàng sau khi lưu thành công
+                LoadCartData();
+                lblTotalAll.Text = "0";
+
                 MessageBox.Show("Đã lưu giỏ hàng thành công!");
             }
             catch (Exception ex)
@@ -296,18 +309,26 @@ namespace WinFormsApp1.Views
             }
         }
 
-        private void btnCart_Click(object sender, EventArgs e)
+        private void LoadCartData()
         {
-            // Kiểm tra giỏ hàng có sản phẩm không
-            if (_cart.Count == 0)
-            {
-                MessageBox.Show("Giỏ hàng trống!");
-                return;
-            }
+            var cartData = _cart
+        .Select(bp => new
+        {
+            ProductName = _context.Products.FirstOrDefault(p => p.ProductId == bp.ProductId)?.ProductName ?? "Sản phẩm không xác định",
+            bp.Quantity,
+            bp.TotalPrice
+        })
+        .ToList();
 
-            // Mở CartForm và truyền giỏ hàng cùng với context
-            CartForm cartForm = new CartForm(_cart, _context);
-            cartForm.ShowDialog();
+            // Liên kết dữ liệu vào DataGridView
+            dgvCart.DataSource = cartData;
         }
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+        }
+
+        
     }
 }

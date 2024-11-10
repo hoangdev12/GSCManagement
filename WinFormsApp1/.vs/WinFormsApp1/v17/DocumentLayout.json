@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\views\\cartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\cartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\views\\cartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\cartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
@@ -36,7 +28,7 @@
               "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.cs",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
               "RelativeToolTip": "WinFormsApp1\\Views\\User.cs",
-              "ViewState": "AgIAAOYAAAAAAAAAAAAuwDEBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABQBAAAAAAAAAAApwC0BAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T16:03:26.379Z",
               "IsPinned": true,
@@ -69,31 +61,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CartForm.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\CartForm.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\CartForm.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\CartForm.cs",
-              "RelativeToolTip": "WinFormsApp1\\Views\\CartForm.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAQwE4AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T07:05:38.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CartForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\CartForm.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\CartForm.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\CartForm.cs [Design]",
-              "RelativeToolTip": "WinFormsApp1\\Views\\CartForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T07:04:59.559Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
