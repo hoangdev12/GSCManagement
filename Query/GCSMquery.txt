@@ -1,0 +1,94 @@
+﻿
+VALUES (1, 2, '2024-11-01 10:00:00', '2024-11-01 12:00:00', 200.00);
+
+
+INSERT INTO Product (ProductName, Price, Description, Image,USE GCSManager;
+
+-- Cập nhật CategoryID thành 2 cho tất cả sản phẩm trong bảng Product
+INSERT INTO Categories(CategoryName,Description)
+VALUES('Thức ăn', 'Nóng giòn thơm ngon !')
+
+
+
+INSERT INTO Account (Username, PasswordHash, Salt, Role, IsActive, CreateDate)
+VALUES ('exampleUser', 'hashedPassword', 'randomSalt', 'Khách hàng', 1, GETDATE());
+
+INSERT INTO Customer(FullName, Phone, Email, Balance, RegisterDate, IsActive, AccountID)
+VALUES ('Lam Dang Gia Kien', 0908470628, 'giakien0401@gmail.com', 0.2, GETDATE(), 1, 1);
+
+INSERT INTO Computer (ComputerName, Status, Location)
+VALUES ('13', 'Sẵn sàng', '2nd Floor');
+
+INSERT INTO Computer (ComputerName, Status, Location)
+VALUES ('11', 'Sẵn sàng', '1st Floor');
+
+INSERT INTO Booking (CustomerId, ComputerId, StartTime, EndTime, TotalAmount)
+ StockQuantity, CategoryID)
+VALUES ('Sprite', 12000, N'Soda tươi mát', 'sprite.jpg', 13, 1);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Sting', 11000, N'Soda màu đỏ ', 'sting.jpg', 11, 1);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Coca', 10000, N'Coca cola', 'coca.png', 2, 1);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Pepsi', 14000, N'Coca ver 2', 'pepsi.jpg', 2, 1);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Fanta', 10000, N'Soda vị cam', 'fanta.jpg', 33, 1);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'C2', 10000, N'Trà ', 'c2.jpg', 90, 1);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Monster', 10000, N'Nước tăng lực', 'olong.jpg', 12, 1);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Redbull', 10000, N'Nước tăng lực', 'olong.jpg', 34, 1);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Number 1', 10000, N'Nước tăng lực', 'olong.jpg', 81, 1);
+
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Cơm chiên', 30000, N'Cơm chiên nóng', 'com.jpg', 8, 2);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Phở', 40000, N'Phở cùng nước hầm xương đậm đà', 'pho.jpg', 18, 2);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Mì xào', 35000, N'Mì xào Táo quân', 'mi.jpg', 25, 2);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Nui xào', 32000, N'Giòn ngon', 'nui.jpg', 46, 2);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Bánh tráng trộn', 20000, N'Cay, nhiều khô bò', 'btt.jpg', 7, 2);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Bánh mì', 20000, N'Giòn ngon', 'banhmi.jpg', 43, 2);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Bánh cuốn', 20000, N'Thơm ngon', 'banhcuon.jpg', 43, 2);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Bánh canh', 20000, N'Yummy', 'banhcanh.jpg', 23, 2);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Bánh bao', 20000, N'Nóng thơm', 'banhbao.jpg', 12, 2);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Hủ tiếu', 20000, N'Quá đã', 'hutieu.jpg', 17, 2);
+
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Chăn', 20000, N'Rất ấm', 'chan.jpg', 6, 3);
+
+INSERT INTO Product (ProductName, Price, Description, Image, StockQuantity, CategoryID)
+VALUES (N'Thuốc lá', 18000, N'Thất tình thì hút 1 bao', 'cigarette.jpg', 15, 3);
+
+
+INSERT INTO Categories(CategoryName, Description)
+VALUES (N'Service', N'Tất cả các loại dịch vụ')
+
