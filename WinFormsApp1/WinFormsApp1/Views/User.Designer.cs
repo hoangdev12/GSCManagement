@@ -50,6 +50,7 @@
             dataPurchase = new Guna.UI2.WinForms.Guna2DataGridView();
             tbpService = new TabPage();
             pnlStatus = new Guna.UI2.WinForms.Guna2Panel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblTotalAll = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvCart = new DataGridView();
             btnLogOut = new Guna.UI2.WinForms.Guna2Button();
@@ -60,7 +61,6 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             tbcUser.SuspendLayout();
             tbpPurchase.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataPurchase).BeginInit();
@@ -111,6 +111,7 @@
             tbpFoods.TabIndex = 0;
             tbpFoods.Text = "Foods";
             tbpFoods.UseVisualStyleBackColor = true;
+            tbpFoods.Click += tbpFoods_Click;
             // 
             // tbpDrinks
             // 
@@ -214,6 +215,17 @@
             pnlStatus.ShadowDecoration.CustomizableEdges = customizableEdges12;
             pnlStatus.Size = new Size(343, 739);
             pnlStatus.TabIndex = 0;
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.White;
+            guna2HtmlLabel1.Location = new Point(96, 551);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(86, 22);
+            guna2HtmlLabel1.TabIndex = 11;
+            guna2HtmlLabel1.Text = "TOTAL ALL:";
             // 
             // lblTotalAll
             // 
@@ -362,17 +374,6 @@
             label1.TabIndex = 0;
             label1.Text = "label1";
             // 
-            // guna2HtmlLabel1
-            // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.ForeColor = Color.White;
-            guna2HtmlLabel1.Location = new Point(96, 551);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(86, 22);
-            guna2HtmlLabel1.TabIndex = 11;
-            guna2HtmlLabel1.Text = "TOTAL ALL:";
-            // 
             // User
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -382,7 +383,6 @@
             Controls.Add(tbcUser);
             Name = "User";
             Text = "User";
-            Load += User_Load_1;
             tbcUser.ResumeLayout(false);
             tbpPurchase.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataPurchase).EndInit();

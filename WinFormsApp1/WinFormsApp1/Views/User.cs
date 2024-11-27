@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsApp1.Models;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+
 
 namespace WinFormsApp1.Views
 {
@@ -23,11 +23,7 @@ namespace WinFormsApp1.Views
             _context = new GcsmanagerContext();
             _cart = new List<BookingProduct>();
             LoadUserData(); // Tải dữ liệu khi mở form
-            
-        }
 
-        private void User_Load_1(object sender, EventArgs e)
-        {
         }
 
         private void LoadUserData()
@@ -80,6 +76,28 @@ namespace WinFormsApp1.Views
                 totalPriceColumn.DataPropertyName = "TotalPrice"; // Tên thuộc tính trong nguồn dữ liệu
                 totalPriceColumn.HeaderText = "Tổng Tiền";
                 dgvCart.Columns.Add(totalPriceColumn);
+
+                DataGridViewTextBoxColumn productIdColumn = new DataGridViewTextBoxColumn
+                {
+                    Name = "ProductId",
+                    DataPropertyName = "ProductId",
+                    HeaderText = "Product ID",
+                    Visible = false // Đặt cột này thành ẩn
+                };
+                dgvCart.Columns.Add(productIdColumn);
+
+
+                // Thêm cột Delete
+                DataGridViewButtonColumn deleteColumn = new DataGridViewButtonColumn
+                {
+                    Name = "DeleteColumn",
+                    HeaderText = "Delete",
+                    Text = "Delete",
+                    UseColumnTextForButtonValue = true
+                };
+                dgvCart.Columns.Add(deleteColumn);
+
+                dgvCart.CellClick += dgvCart_CellClick;
 
 
                 foreach (var product in productData)
@@ -214,6 +232,23 @@ namespace WinFormsApp1.Views
             }
         }
 
+        private void dgvCart_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvCart.Columns["DeleteColumn"].Index && e.RowIndex >= 0)
+            {
+                var productId = (int)dgvCart.Rows[e.RowIndex].Cells["ProductId"].Value;
+                var productToRemove = _cart.FirstOrDefault(bp => bp.ProductId == productId);
+
+                if (productToRemove != null)
+                {
+                    _cart.Remove(productToRemove);
+                    LoadCartData(); // Cập nhật lại DataGridView
+                    lblTotalAll.Text = _cart.Sum(bp => bp.TotalPrice).ToString(); // Cập nhật tổng tiền
+                }
+            }
+        }
+
+
 
         private void AddBookingProduct(Product product, int quantity)
         {
@@ -242,7 +277,7 @@ namespace WinFormsApp1.Views
                     //BookingId = 0
                 };
                 _cart.Add(bookingProduct);
-            
+
                 MessageBox.Show($"Đã thêm sản phẩm '{product.ProductName}' với số lượng {quantity} vào giỏ hàng!");
             }
             // Cập nhật lại tổng tiền trong lblTotalAll
@@ -314,6 +349,7 @@ namespace WinFormsApp1.Views
             var cartData = _cart
         .Select(bp => new
         {
+            ProductId = bp.ProductId,
             ProductName = _context.Products.FirstOrDefault(p => p.ProductId == bp.ProductId)?.ProductName ?? "Sản phẩm không xác định",
             bp.Quantity,
             bp.TotalPrice
@@ -322,6 +358,7 @@ namespace WinFormsApp1.Views
 
             // Liên kết dữ liệu vào DataGridView
             dgvCart.DataSource = cartData;
+
         }
 
 
@@ -329,6 +366,9 @@ namespace WinFormsApp1.Views
         {
         }
 
-        
+        private void tbpFoods_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
