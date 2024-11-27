@@ -1,20 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Source\\Repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "D:\\IT\\Lap Trinh Truc Quan\\CLONE BTL\\Add\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Source\\Repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "D:\\IT\\Lap Trinh Truc Quan\\CLONE BTL\\Add\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Source\\Repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "D:\\IT\\Lap Trinh Truc Quan\\CLONE BTL\\Add\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Users\\Asus\\Source\\Repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Source\\Repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "projectPath": "D:\\IT\\Lap Trinh Truc Quan\\CLONE BTL\\Add\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\add\\.nuget\\packages\\",
+        "outputPath": "D:\\IT\\Lap Trinh Truc Quan\\CLONE BTL\\Add\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\IT\\Ti xoa sau\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\add\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,6 +29,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+          "D:\\IT\\Ti xoa sau\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

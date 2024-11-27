@@ -38,7 +38,7 @@ public partial class GcsmanagerContext : DbContext
     public virtual DbSet<Service> Services { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=KIEN;Database=GCSManager;Trusted_Connection=True;TrustServerCertificate=true;");
+        => optionsBuilder.UseSqlServer("Server=HAISON;Database=GCSManager;Trusted_Connection=True;TrustServerCertificate=true;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
