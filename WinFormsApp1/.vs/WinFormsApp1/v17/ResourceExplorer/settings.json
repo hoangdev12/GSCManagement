@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"CustomColumnOrderings":{"name":0,"file-path":1,"file-name":2,"neutral-value":3,"neutral-comment":4,"type":5},"ShowValidationErrors":true,"SelectedResourceGroups":["C:\\Users\\Asus\\Source\\Repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.resx","C:\\Users\\Asus\\Source\\Repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.resx"],"VisibleColumnKeys":["name","neutral-value"]}
+=======
+{"CustomColumnOrderings":{"name":0,"file-path":1,"file-name":2,"neutral-value":3,"neutral-comment":4,"type":5},"ShowValidationErrors":true,"SelectedResourceGroups":["D:\\IT\\Lap Trinh Truc Quan\\CLONE BTL\\Add\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.resx"],"VisibleColumnKeys":["name","neutral-value"]}
+>>>>>>> ca16cd4c5b9a0ca0b6f0ac3368c2cb4ddb5300d5

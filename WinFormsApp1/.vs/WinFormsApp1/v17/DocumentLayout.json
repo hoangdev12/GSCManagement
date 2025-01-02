@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\models\\gcsmanagercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\models\\gcsmanagercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\asus\\source\\repos\\gscmanagement\\winformsapp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.cs",
               "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
               "RelativeToolTip": "WinFormsApp1\\Views\\User.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAmwBoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAYwBAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T16:03:26.379Z",
               "IsPinned": true,
@@ -65,13 +73,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "User.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs [Design]",
-              "RelativeToolTip": "WinFormsApp1\\Views\\User.cs [Design]",
+              "Title": "GcsmanagerContext.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Models\\GcsmanagerContext.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Models\\GcsmanagerContext.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Models\\GcsmanagerContext.cs",
+              "RelativeToolTip": "WinFormsApp1\\Models\\GcsmanagerContext.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAuwCoAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T10:15:05.068Z"
+              "WhenOpened": "2024-12-01T10:13:01.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Program.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Program.cs",
+              "RelativeToolTip": "WinFormsApp1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T10:11:09.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T10:09:49.035Z",
+              "EditorCaption": ""
             }
           ]
         }

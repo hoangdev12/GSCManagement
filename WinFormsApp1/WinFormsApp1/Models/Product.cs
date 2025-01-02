@@ -21,5 +21,7 @@ public partial class Product
 
     public virtual Category? Category { get; set; }
 
-    public string? Image {  get; set; }
+    public string CategoryName => Category != null ? Category.CategoryName : string.Empty;
+
+    public string? Image { get; set; }
 }
