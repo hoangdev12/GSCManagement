@@ -111,6 +111,7 @@
             CategoryId = new DataGridViewTextBoxColumn();
             productBindingSource = new BindingSource(components);
             tcCustomer = new TabPage();
+            btnAddBalance = new Button();
             panel22 = new Panel();
             txtCustomerID = new TextBox();
             lblCustomerID = new Label();
@@ -230,6 +231,7 @@
             label1 = new Label();
             textBox1 = new TextBox();
             computerBindingSource = new BindingSource(components);
+            txtAddBalance = new TextBox();
             tabAdmin.SuspendLayout();
             tbComputer.SuspendLayout();
             panel29.SuspendLayout();
@@ -1050,6 +1052,8 @@
             // 
             // tcCustomer
             // 
+            tcCustomer.Controls.Add(txtAddBalance);
+            tcCustomer.Controls.Add(btnAddBalance);
             tcCustomer.Controls.Add(panel22);
             tcCustomer.Controls.Add(panel7);
             tcCustomer.Controls.Add(panel24);
@@ -1066,6 +1070,16 @@
             tcCustomer.TabIndex = 3;
             tcCustomer.Text = "Customer";
             tcCustomer.UseVisualStyleBackColor = true;
+            // 
+            // btnAddBalance
+            // 
+            btnAddBalance.Location = new Point(799, 388);
+            btnAddBalance.Name = "btnAddBalance";
+            btnAddBalance.Size = new Size(151, 29);
+            btnAddBalance.TabIndex = 4;
+            btnAddBalance.Text = "Add Balance";
+            btnAddBalance.UseVisualStyleBackColor = true;
+            btnAddBalance.Click += btnAddBalance_Click;
             // 
             // panel22
             // 
@@ -1217,7 +1231,7 @@
             // lblCusBalance
             // 
             lblCusBalance.AutoSize = true;
-            lblCusBalance.Location = new Point(3, 13);
+            lblCusBalance.Location = new Point(5, 10);
             lblCusBalance.Name = "lblCusBalance";
             lblCusBalance.Size = new Size(64, 20);
             lblCusBalance.TabIndex = 0;
@@ -2117,6 +2131,13 @@
             // 
             computerBindingSource.DataSource = typeof(Models.Computer);
             // 
+            // txtAddBalance
+            // 
+            txtAddBalance.Location = new Point(644, 388);
+            txtAddBalance.Name = "txtAddBalance";
+            txtAddBalance.Size = new Size(149, 27);
+            txtAddBalance.TabIndex = 5;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -2172,6 +2193,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvProduct).EndInit();
             ((System.ComponentModel.ISupportInitialize)productBindingSource).EndInit();
             tcCustomer.ResumeLayout(false);
+            tcCustomer.PerformLayout();
             panel22.ResumeLayout(false);
             panel22.PerformLayout();
             panel7.ResumeLayout(false);
@@ -2462,5 +2484,7 @@
         private DataGridViewTextBoxColumn balanceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn registerDateDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn isActiveDataGridViewTextBoxColumn1;
+        private Button btnAddBalance;
+        private TextBox txtAddBalance;
     }
 }

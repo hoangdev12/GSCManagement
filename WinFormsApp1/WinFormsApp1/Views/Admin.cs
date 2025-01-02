@@ -922,5 +922,46 @@ namespace WinFormsApp1.Views
                 MessageBox.Show("Không tìm thấy dịch vụ!");
             }
         }
+
+        private void btnAddBalance_Click(object sender, EventArgs e)
+        {
+            // Lấy CustomerID từ TextBox txtCustomerID
+            if (!decimal.TryParse(txtCustomerID.Text, out decimal customerId))
+            {
+                MessageBox.Show("Mã khách hàng không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Tìm khách hàng trong cơ sở dữ liệu
+            var customer = _context.Customers.FirstOrDefault(b => b.CustomerId == customerId);
+            if (customer == null)
+            {
+                MessageBox.Show("Không tìm thấy khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Kiểm tra số tiền nạp vào từ txtCusBalance
+            if (!decimal.TryParse(txtAddBalance.Text, out decimal amount) || amount <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập số tiền hợp lệ để nạp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCusBalance.Focus();
+                return;
+            }
+
+            // Cập nhật số dư tài khoản
+            customer.Balance += amount;
+            _context.SaveChanges();
+
+            // Hiển thị thông báo thành công và cập nhật giao diện
+            MessageBox.Show($"Nạp tiền thành công! Số dư hiện tại: {customer.Balance:C}",
+                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Cập nhật lại giao diện
+            txtCusBalance.Text = "";
+            txtCusBalance.Text = customer.Balance?.ToString("F2");
+        }
+
+
+
     }
 }

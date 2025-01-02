@@ -491,3 +491,5 @@ D:\IT\Lap Trinh Truc Quan\CLONE BTL\Add\GSCManagement\WinFormsApp1\WinFormsApp1\
 D:\IT\Lap Trinh Truc Quan\CLONE BTL\Add\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.pdb
 D:\IT\Lap Trinh Truc Quan\CLONE BTL\Add\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.genruntimeconfig.cache
 D:\IT\Lap Trinh Truc Quan\CLONE BTL\Add\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\ref\WinFormsApp1.dll
+C:\Users\Asus\Source\Repos\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Views.Register.resources
+C:\Users\Asus\Source\Repos\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Views.Login.resources

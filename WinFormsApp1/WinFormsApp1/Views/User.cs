@@ -328,6 +328,22 @@ namespace WinFormsApp1.Views
                 {
                     bookingProduct.BookingId = newBooking.BookingId; // Gán BookingID vừa tạo
                     _context.BookingProducts.Add(bookingProduct);
+
+                    // Tìm sản phẩm trong cơ sở dữ liệu
+                    var product = _context.Products.FirstOrDefault(p => p.ProductId == bookingProduct.ProductId);
+                    if (product != null)
+                    {
+                        // Kiểm tra tồn kho trước khi trừ
+                        if (product.StockQuantity >= bookingProduct.Quantity)
+                        {
+                            product.StockQuantity -= bookingProduct.Quantity; // Trừ số lượng mua
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Sản phẩm {product.ProductName} không đủ số lượng trong kho!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
                 }
 
                 _context.SaveChanges(); // Lưu BookingProducts vào cơ sở dữ liệu
