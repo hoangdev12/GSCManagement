@@ -12,6 +12,7 @@ using WinFormsApp1.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Data.Entity.Infrastructure;
 using Button = System.Windows.Forms.Button;
+using Microsoft.Identity.Client.NativeInterop;
 
 namespace WinFormsApp1.Views
 {
@@ -52,7 +53,6 @@ namespace WinFormsApp1.Views
             txtAccountUserName.DataBindings.Clear();
             txtAccountPasswordHash.DataBindings.Clear();
             txtAccountRole.DataBindings.Clear();
-            txtAccountActive.DataBindings.Clear();
             txtAccountCreateDate.DataBindings.Clear();
             txtAccountId.DataBindings.Clear();
 
@@ -76,7 +76,6 @@ namespace WinFormsApp1.Views
             txtCusEmail.DataBindings.Clear();
             txtCusBalance.DataBindings.Clear();
             txtCusRegisterDate.DataBindings.Clear();
-            txtCusIsActive.DataBindings.Clear();
             txtAccountName.DataBindings.Clear();
 
             // Xóa binding cho các control trong Service Tab
@@ -95,7 +94,6 @@ namespace WinFormsApp1.Views
             txtAccountUserName.DataBindings.Add("Text", accountBindingSource, "Username");
             txtAccountPasswordHash.DataBindings.Add("Text", accountBindingSource, "PasswordHash");
             txtAccountRole.DataBindings.Add("Text", accountBindingSource, "Role");
-            txtAccountActive.DataBindings.Add("Text", accountBindingSource, "IsActive");
             txtAccountCreateDate.DataBindings.Add("Text", accountBindingSource, "CreateDate");
             txtAccountId.DataBindings.Add("Text", accountBindingSource, "AccountId");
 
@@ -113,14 +111,17 @@ namespace WinFormsApp1.Views
             cbbProductCategory.DataBindings.Add("Text", productBindingSource, "CategoryName");
 
             // Customer Tab
-            txtCustomerID.DataBindings.Add("Text", customerBindingSource, "CustomerID");
-            txtCusFullName.DataBindings.Add("Text", customerBindingSource, "FullName");
-            txtCusPhone.DataBindings.Add("Text", customerBindingSource, "Phone");
-            txtCusEmail.DataBindings.Add("Text", customerBindingSource, "Email");
-            txtCusBalance.DataBindings.Add("Text", customerBindingSource, "Balance");
-            txtCusRegisterDate.DataBindings.Add("Text", customerBindingSource, "RegisterDate");
-            txtCusIsActive.DataBindings.Add("Text", customerBindingSource, "IsActive");
-            txtAccountName.DataBindings.Add("Text", customerBindingSource, "AccountName");
+            var customer = _context.Customers.FirstOrDefault(c => c.IsActive == true); // Binding những khách hàng còn hoạt động
+            if (customer != null)
+            {
+                txtCustomerID.DataBindings.Add("Text", customerBindingSource, "CustomerID");
+                txtCusFullName.DataBindings.Add("Text", customerBindingSource, "FullName");
+                txtCusPhone.DataBindings.Add("Text", customerBindingSource, "Phone");
+                txtCusEmail.DataBindings.Add("Text", customerBindingSource, "Email");
+                txtCusBalance.DataBindings.Add("Text", customerBindingSource, "Balance");
+                txtCusRegisterDate.DataBindings.Add("Text", customerBindingSource, "RegisterDate");
+                txtAccountName.DataBindings.Add("Text", customerBindingSource, "AccountName");
+            }
 
             // Service Tab
             txtServiceID.DataBindings.Add("Text", serviceBindingSource, "ServiceID");
@@ -146,14 +147,14 @@ namespace WinFormsApp1.Views
             dgvPayment.DataSource = payment;
 
             // Customer
-            var customer = _context.Customers.Include(c => c.Account).ToList();
+            var customer = _context.Customers.Where(c => c.IsActive == true).ToList();
             customerBindingSource.DataSource = customer;
 
             // Computer
             LoadComputers();
 
             // Account
-            var account = _context.Accounts.ToList();
+            var account = _context.Accounts.Where(a => a.IsActive == true).ToList();
             accountBindingSource.DataSource = account;
 
             // Category
@@ -202,7 +203,7 @@ namespace WinFormsApp1.Views
                     selectedComputer = computer;
 
                     // Lấy thông tin Booking cho máy tính được nhấn
-                    var booking = _context.Bookings.FirstOrDefault(b => b.ComputerId == computer.ComputerId);
+                    var booking = _context.Bookings.FirstOrDefault(b => b.ComputerId == computer.ComputerId && b.IsActive == true);
                     if (booking != null)
                     {
                         computer.Status = "Đang mở"; // Cập nhật trạng thái thành "Available"
@@ -362,11 +363,17 @@ namespace WinFormsApp1.Views
             // Cập nhật thời gian còn lại
             TimeSpan updatedRemainingTime = remainingTime - durationPlayed;
 
-            customer.Balance = customer.Balance - decimal.Parse(totalMoney.ToString());
+            if (customer.Balance > 0)
+            {
+                customer.Balance = customer.Balance - decimal.Parse(totalMoney.ToString());
+            }
+            else
+            {
+                customer.Balance = 0;
+            }
             // Lưu thay đổi vào cơ sở dữ liệu
             //_context.SaveChanges();
         }
-
 
         private void TimerUpdate_Tick(object sender, EventArgs e)
         {
@@ -383,6 +390,10 @@ namespace WinFormsApp1.Views
                 {
                     computerToUpdate.Status = "Đang tắt"; // Hoặc trạng thái phù hợp khác
                     UpdateCustomerBalance(); // Trừ tiền vào tài khoản người dùng
+                    // Update booking
+                    var booking = _context.Bookings.FirstOrDefault(b => b.ComputerId == computerToUpdate.ComputerId);
+                    booking.EndTime = DateTime.Now;
+                    booking.IsActive = false;
                     _context.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
 
                     // Cập nhật màu sắc của nút tương ứng với máy tính
@@ -412,10 +423,6 @@ namespace WinFormsApp1.Views
         }
 
         // Booking tab
-        private void CreateNewBooking()
-        {
-            //var booking = _context.Bookings.Where
-        }
 
         // Account tab
         private void btnAccountEdit_Click(object sender, EventArgs e)
@@ -441,6 +448,10 @@ namespace WinFormsApp1.Views
                         account.PasswordHash = txtAccountPasswordHash.Text;
                         account.Role = txtAccountRole.Text;
                         account.CreateDate = DateTime.Now;
+
+                        var customer = _context.Customers.FirstOrDefault(c => c.AccountId == account.AccountId);
+                        customer.FullName = txtAccountUserName.Text;
+
                         _context.SaveChanges();
                         LoadData();
                         BindControls();
@@ -461,7 +472,6 @@ namespace WinFormsApp1.Views
             txtAccountUserName.ReadOnly = false;
             txtAccountPasswordHash.ReadOnly = false;
             txtAccountRole.ReadOnly = false;
-            txtAccountActive.ReadOnly = false;
         }
 
         private void btnAccountDelete_Click(object sender, EventArgs e)
@@ -475,11 +485,8 @@ namespace WinFormsApp1.Views
 
                 if (result == DialogResult.Yes)
                 {
-                    _context.Accounts.Remove(account);
-                    var maxId = _context.Products.Any() ? _context.Accounts.Max(p => p.AccountId) : 0;
+                    account.IsActive = false;
 
-                    // Reset lại IDENTITY về ID lỡn nhất còn lại sau khi xóa
-                    _context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT ('Account', RESEED, {maxId})");
                     _context.SaveChanges();
 
                     LoadData();
@@ -961,7 +968,13 @@ namespace WinFormsApp1.Views
             txtCusBalance.Text = customer.Balance?.ToString("F2");
         }
 
-
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            this.Hide();  // Ẩn form đăng nhập (LoginForm)
+            Register registerForm = new Register();
+            registerForm.FormClosed += (s, args) => this.Show();  // Đảm bảo form ban đầu sẽ hiển thị lại khi form đăng ký đóng
+            registerForm.Show();  // Mở form người dùng
+        }
 
     }
 }

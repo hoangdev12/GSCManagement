@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,11 +21,6 @@ namespace WinFormsApp1.Views
             InitializeComponent();
         }
 
-        private void Register_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCreate_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtUserName.Text) && !string.IsNullOrWhiteSpace(txtPassword.Text) && !string.IsNullOrWhiteSpace(txtPhoneNum.Text))
@@ -32,12 +28,17 @@ namespace WinFormsApp1.Views
                 bool isExist = _context.Accounts.Any(p => p.Username == txtUserName.Text);
                 if (!isExist)
                 {
+                    // Reset lại IDENTITY về ID lỡn nhất còn lại sau khi xóa
+                    var maxId = _context.Products.Any() ? _context.Accounts.Max(p => p.AccountId) : 0;
+                    _context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT ('Account', RESEED, {maxId})");
+
                     var newUser = new Account
                     {
                         Username = txtUserName.Text,
                         PasswordHash = txtPassword.Text,
                         Role = "Khách hàng",
                         Salt = "123",
+                        IsActive = true
                     };
 
                     _context.Accounts.Add(newUser);
@@ -46,13 +47,15 @@ namespace WinFormsApp1.Views
                     try
                     {
                         // Lưu Account trước để AccountId được khởi tạo
-
+                        
 
                         var newCustomer = new Customer
                         {
-                            FullName = txtUserName.Text,
-                            Phone = txtPhoneNum.Text,
+                            FullName = newUser.Username,
                             AccountId = newUser.AccountId,
+                            IsActive = newUser.IsActive,
+                            Phone = txtPhoneNum.Text,
+                            Email = txtEmail.Text
                         };
 
                         _context.Customers.Add(newCustomer);

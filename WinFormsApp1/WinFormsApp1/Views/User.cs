@@ -16,14 +16,16 @@ namespace WinFormsApp1.Views
     public partial class User : Form
     {
         private GcsmanagerContext _context;
+        private int userID, computerID;
         private List<BookingProduct> _cart; // Danh sách tạm để lưu sản phẩm
-        public User()
+        public User(int _userID, int _computerID)
         {
             InitializeComponent();
             _context = new GcsmanagerContext();
             _cart = new List<BookingProduct>();
             LoadUserData(); // Tải dữ liệu khi mở form
-
+            userID = _userID;
+            computerID = _computerID;
         }
 
         private void LoadUserData()
@@ -248,8 +250,6 @@ namespace WinFormsApp1.Views
             }
         }
 
-
-
         private void AddBookingProduct(Product product, int quantity)
         {
             if (quantity <= 0)
@@ -273,8 +273,7 @@ namespace WinFormsApp1.Views
                 {
                     ProductId = product.ProductId,
                     Quantity = quantity,
-                    TotalPrice = product.Price * quantity,
-                    //BookingId = 0
+                    TotalPrice = product.Price * quantity
                 };
                 _cart.Add(bookingProduct);
 
@@ -296,28 +295,28 @@ namespace WinFormsApp1.Views
                 }
 
                 // Kiểm tra sự tồn tại của CustomerId và ComputerId
-                var existingCustomer = _context.Customers.FirstOrDefault(c => c.CustomerId == 1);
+                var existingCustomer = _context.Customers.FirstOrDefault(c => c.CustomerId == userID);
                 if (existingCustomer == null)
                 {
                     MessageBox.Show("CustomerId không tồn tại. Vui lòng chọn một CustomerId hợp lệ.");
                     return;
                 }
 
-                var existingComputer = _context.Computers.FirstOrDefault(c => c.ComputerId == 1);
+                var existingComputer = _context.Computers.FirstOrDefault(c => c.ComputerId == computerID);
                 if (existingComputer == null)
                 {
                     MessageBox.Show("ComputerId không tồn tại. Vui lòng chọn một ComputerId hợp lệ.");
                     return;
                 }
 
+                decimal? _TotalAmount = _cart.Sum(bp => bp.TotalPrice);
+
                 // Tạo một Booking mới và lưu vào cơ sở dữ liệu
                 var newBooking = new Booking
                 {
-                    CustomerId = 1, // Gán giá trị cho CustomerID
-                    ComputerId = 1, // Gán giá trị cho ComputerID
-                    StartTime = DateTime.Now, // Hoặc giá trị thời gian bắt đầu phù hợp
-                    EndTime = DateTime.Now.AddHours(1), // Thay đổi nếu cần
-                    TotalAmount = _cart.Sum(bp => bp.TotalPrice) // Tính tổng số tiền
+                    CustomerId = userID, // Gán giá trị cho CustomerID
+                    ComputerId = computerID, // Gán giá trị cho ComputerID
+                    TotalAmount = _TotalAmount // Tính tổng số tiền
                 };
 
                 _context.Bookings.Add(newBooking);
@@ -374,16 +373,6 @@ namespace WinFormsApp1.Views
 
             // Liên kết dữ liệu vào DataGridView
             dgvCart.DataSource = cartData;
-
-        }
-
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void tbpFoods_Click(object sender, EventArgs e)
-        {
 
         }
     }

@@ -58,13 +58,11 @@
             panel16 = new Panel();
             txtAccountRole = new TextBox();
             lblRole = new Label();
-            panel11 = new Panel();
-            txtAccountActive = new TextBox();
-            lblActive = new Label();
             panel12 = new Panel();
             txtAccountCreateDate = new TextBox();
             lblCreateDate = new Label();
             panel17 = new Panel();
+            btnRegister = new Button();
             btnAccountEdit = new Button();
             btnAccountDelete = new Button();
             panel10 = new Panel();
@@ -111,6 +109,7 @@
             CategoryId = new DataGridViewTextBoxColumn();
             productBindingSource = new BindingSource(components);
             tcCustomer = new TabPage();
+            txtAddBalance = new TextBox();
             btnAddBalance = new Button();
             panel22 = new Panel();
             txtCustomerID = new TextBox();
@@ -121,9 +120,6 @@
             panel24 = new Panel();
             txtCusPhone = new TextBox();
             lblCusPhone = new Label();
-            panel28 = new Panel();
-            txtCusIsActive = new TextBox();
-            lblCusIsActive = new Label();
             panel27 = new Panel();
             txtCusRegisterDate = new TextBox();
             lblCusRegisterDate = new Label();
@@ -231,7 +227,6 @@
             label1 = new Label();
             textBox1 = new TextBox();
             computerBindingSource = new BindingSource(components);
-            txtAddBalance = new TextBox();
             tabAdmin.SuspendLayout();
             tbComputer.SuspendLayout();
             panel29.SuspendLayout();
@@ -244,7 +239,6 @@
             panel15.SuspendLayout();
             panel14.SuspendLayout();
             panel16.SuspendLayout();
-            panel11.SuspendLayout();
             panel12.SuspendLayout();
             panel17.SuspendLayout();
             panel10.SuspendLayout();
@@ -266,7 +260,6 @@
             panel22.SuspendLayout();
             panel7.SuspendLayout();
             panel24.SuspendLayout();
-            panel28.SuspendLayout();
             panel27.SuspendLayout();
             panel26.SuspendLayout();
             panel25.SuspendLayout();
@@ -472,7 +465,6 @@
             flowLayoutPanel1.Controls.Add(panel15);
             flowLayoutPanel1.Controls.Add(panel14);
             flowLayoutPanel1.Controls.Add(panel16);
-            flowLayoutPanel1.Controls.Add(panel11);
             flowLayoutPanel1.Controls.Add(panel12);
             flowLayoutPanel1.Controls.Add(panel17);
             flowLayoutPanel1.Location = new Point(613, 6);
@@ -584,37 +576,11 @@
             lblRole.TabIndex = 0;
             lblRole.Text = "Role:";
             // 
-            // panel11
-            // 
-            panel11.Controls.Add(txtAccountActive);
-            panel11.Controls.Add(lblActive);
-            panel11.Location = new Point(3, 223);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(444, 49);
-            panel11.TabIndex = 5;
-            // 
-            // txtAccountActive
-            // 
-            txtAccountActive.Location = new Point(188, 10);
-            txtAccountActive.Name = "txtAccountActive";
-            txtAccountActive.ReadOnly = true;
-            txtAccountActive.Size = new Size(125, 27);
-            txtAccountActive.TabIndex = 5;
-            // 
-            // lblActive
-            // 
-            lblActive.AutoSize = true;
-            lblActive.Location = new Point(3, 13);
-            lblActive.Name = "lblActive";
-            lblActive.Size = new Size(53, 20);
-            lblActive.TabIndex = 0;
-            lblActive.Text = "Active:";
-            // 
             // panel12
             // 
             panel12.Controls.Add(txtAccountCreateDate);
             panel12.Controls.Add(lblCreateDate);
-            panel12.Location = new Point(3, 278);
+            panel12.Location = new Point(3, 223);
             panel12.Name = "panel12";
             panel12.Size = new Size(444, 49);
             panel12.TabIndex = 5;
@@ -638,16 +604,26 @@
             // 
             // panel17
             // 
+            panel17.Controls.Add(btnRegister);
             panel17.Controls.Add(btnAccountEdit);
             panel17.Controls.Add(btnAccountDelete);
-            panel17.Location = new Point(3, 333);
+            panel17.Location = new Point(3, 278);
             panel17.Name = "panel17";
-            panel17.Size = new Size(438, 74);
+            panel17.Size = new Size(334, 74);
             panel17.TabIndex = 6;
+            // 
+            // btnRegister
+            // 
+            btnRegister.Location = new Point(115, 13);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(103, 40);
+            btnRegister.TabIndex = 8;
+            btnRegister.Text = "Register";
+            btnRegister.Click += btnRegister_Click;
             // 
             // btnAccountEdit
             // 
-            btnAccountEdit.Location = new Point(58, 13);
+            btnAccountEdit.Location = new Point(6, 13);
             btnAccountEdit.Name = "btnAccountEdit";
             btnAccountEdit.Size = new Size(103, 40);
             btnAccountEdit.TabIndex = 7;
@@ -656,10 +632,10 @@
             // 
             // btnAccountDelete
             // 
-            btnAccountDelete.Location = new Point(188, 13);
+            btnAccountDelete.Location = new Point(224, 13);
             btnAccountDelete.Name = "btnAccountDelete";
             btnAccountDelete.Size = new Size(103, 40);
-            btnAccountDelete.TabIndex = 8;
+            btnAccountDelete.TabIndex = 9;
             btnAccountDelete.Text = "Delete";
             btnAccountDelete.Click += btnAccountDelete_Click;
             // 
@@ -1057,7 +1033,6 @@
             tcCustomer.Controls.Add(panel22);
             tcCustomer.Controls.Add(panel7);
             tcCustomer.Controls.Add(panel24);
-            tcCustomer.Controls.Add(panel28);
             tcCustomer.Controls.Add(panel27);
             tcCustomer.Controls.Add(panel26);
             tcCustomer.Controls.Add(panel25);
@@ -1071,11 +1046,20 @@
             tcCustomer.Text = "Customer";
             tcCustomer.UseVisualStyleBackColor = true;
             // 
+            // txtAddBalance
+            // 
+            txtAddBalance.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtAddBalance.Location = new Point(647, 361);
+            txtAddBalance.Multiline = true;
+            txtAddBalance.Name = "txtAddBalance";
+            txtAddBalance.Size = new Size(149, 44);
+            txtAddBalance.TabIndex = 5;
+            // 
             // btnAddBalance
             // 
-            btnAddBalance.Location = new Point(799, 388);
+            btnAddBalance.Location = new Point(821, 361);
             btnAddBalance.Name = "btnAddBalance";
-            btnAddBalance.Size = new Size(151, 29);
+            btnAddBalance.Size = new Size(129, 44);
             btnAddBalance.TabIndex = 4;
             btnAddBalance.Text = "Add Balance";
             btnAddBalance.UseVisualStyleBackColor = true;
@@ -1158,32 +1142,6 @@
             lblCusPhone.Size = new Size(53, 20);
             lblCusPhone.TabIndex = 0;
             lblCusPhone.Text = "Phone:";
-            // 
-            // panel28
-            // 
-            panel28.Controls.Add(txtCusIsActive);
-            panel28.Controls.Add(lblCusIsActive);
-            panel28.Location = new Point(644, 341);
-            panel28.Name = "panel28";
-            panel28.Size = new Size(306, 41);
-            panel28.TabIndex = 3;
-            // 
-            // txtCusIsActive
-            // 
-            txtCusIsActive.Location = new Point(127, 10);
-            txtCusIsActive.Name = "txtCusIsActive";
-            txtCusIsActive.ReadOnly = true;
-            txtCusIsActive.Size = new Size(152, 27);
-            txtCusIsActive.TabIndex = 1;
-            // 
-            // lblCusIsActive
-            // 
-            lblCusIsActive.AutoSize = true;
-            lblCusIsActive.Location = new Point(3, 13);
-            lblCusIsActive.Name = "lblCusIsActive";
-            lblCusIsActive.Size = new Size(53, 20);
-            lblCusIsActive.TabIndex = 0;
-            lblCusIsActive.Text = "Active:";
             // 
             // panel27
             // 
@@ -1293,7 +1251,7 @@
             // 
             flowLayoutPanel2.Location = new Point(644, 3);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(306, 379);
+            flowLayoutPanel2.Size = new Size(306, 342);
             flowLayoutPanel2.TabIndex = 1;
             // 
             // dgvCustomer
@@ -2131,13 +2089,6 @@
             // 
             computerBindingSource.DataSource = typeof(Models.Computer);
             // 
-            // txtAddBalance
-            // 
-            txtAddBalance.Location = new Point(644, 388);
-            txtAddBalance.Name = "txtAddBalance";
-            txtAddBalance.Size = new Size(149, 27);
-            txtAddBalance.TabIndex = 5;
-            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -2166,8 +2117,6 @@
             panel14.PerformLayout();
             panel16.ResumeLayout(false);
             panel16.PerformLayout();
-            panel11.ResumeLayout(false);
-            panel11.PerformLayout();
             panel12.ResumeLayout(false);
             panel12.PerformLayout();
             panel17.ResumeLayout(false);
@@ -2200,8 +2149,6 @@
             panel7.PerformLayout();
             panel24.ResumeLayout(false);
             panel24.PerformLayout();
-            panel28.ResumeLayout(false);
-            panel28.PerformLayout();
             panel27.ResumeLayout(false);
             panel27.PerformLayout();
             panel26.ResumeLayout(false);
@@ -2294,9 +2241,6 @@
         private Panel panel16;
         private TextBox txtAccountRole;
         private Label lblRole;
-        private Panel panel11;
-        private TextBox txtAccountActive;
-        private Label lblActive;
         private Panel panel12;
         private TextBox txtAccountCreateDate;
         private Label lblCreateDate;
@@ -2382,9 +2326,6 @@
         private Panel panel22;
         private TextBox txtCustomerID;
         private Label lblCustomerID;
-        private Panel panel28;
-        private TextBox txtCusIsActive;
-        private Label lblCusIsActive;
         private TextBox txtCusRegisterDate;
         private Label lblCusRegisterDate;
         private TextBox txtCusBalance;
@@ -2486,5 +2427,6 @@
         private DataGridViewTextBoxColumn isActiveDataGridViewTextBoxColumn1;
         private Button btnAddBalance;
         private TextBox txtAddBalance;
+        private Button btnRegister;
     }
 }

@@ -31,36 +31,24 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tbcUser = new Guna.UI2.WinForms.Guna2TabControl();
             tbpFoods = new TabPage();
             tbpDrinks = new TabPage();
             tbpPurchase = new TabPage();
             dataPurchase = new Guna.UI2.WinForms.Guna2DataGridView();
             tbpService = new TabPage();
+            btnBuy = new Guna.UI2.WinForms.Guna2Button();
+            btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             pnlStatus = new Guna.UI2.WinForms.Guna2Panel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblTotalAll = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvCart = new DataGridView();
-            btnLogOut = new Guna.UI2.WinForms.Guna2Button();
-            btnBuy = new Guna.UI2.WinForms.Guna2Button();
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
             tbcUser.SuspendLayout();
             tbpPurchase.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataPurchase).BeginInit();
@@ -111,7 +99,6 @@
             tbpFoods.TabIndex = 0;
             tbpFoods.Text = "Foods";
             tbpFoods.UseVisualStyleBackColor = true;
-            tbpFoods.Click += tbpFoods_Click;
             // 
             // tbpDrinks
             // 
@@ -195,6 +182,41 @@
             tbpService.Text = "Service";
             tbpService.UseVisualStyleBackColor = true;
             // 
+            // btnBuy
+            // 
+            btnBuy.CustomizableEdges = customizableEdges1;
+            btnBuy.DisabledState.BorderColor = Color.DarkGray;
+            btnBuy.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBuy.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBuy.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBuy.FillColor = Color.FromArgb(33, 42, 57);
+            btnBuy.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBuy.ForeColor = Color.White;
+            btnBuy.Location = new Point(69, 613);
+            btnBuy.Name = "btnBuy";
+            btnBuy.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnBuy.Size = new Size(225, 56);
+            btnBuy.TabIndex = 6;
+            btnBuy.Text = "Buy";
+            btnBuy.Click += btnBuy_Click_1;
+            // 
+            // btnLogOut
+            // 
+            btnLogOut.CustomizableEdges = customizableEdges3;
+            btnLogOut.DisabledState.BorderColor = Color.DarkGray;
+            btnLogOut.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLogOut.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLogOut.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLogOut.FillColor = Color.FromArgb(33, 42, 57);
+            btnLogOut.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogOut.ForeColor = Color.White;
+            btnLogOut.Location = new Point(69, 675);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnLogOut.Size = new Size(225, 56);
+            btnLogOut.TabIndex = 8;
+            btnLogOut.Text = "Log Out";
+            // 
             // pnlStatus
             // 
             pnlStatus.BackColor = Color.FromArgb(33, 42, 57);
@@ -203,16 +225,10 @@
             pnlStatus.Controls.Add(dgvCart);
             pnlStatus.Controls.Add(btnLogOut);
             pnlStatus.Controls.Add(btnBuy);
-            pnlStatus.Controls.Add(guna2TextBox3);
-            pnlStatus.Controls.Add(guna2TextBox2);
-            pnlStatus.Controls.Add(guna2TextBox1);
-            pnlStatus.Controls.Add(label3);
-            pnlStatus.Controls.Add(label2);
-            pnlStatus.Controls.Add(label1);
-            pnlStatus.CustomizableEdges = customizableEdges11;
+            pnlStatus.CustomizableEdges = customizableEdges5;
             pnlStatus.Location = new Point(1143, 4);
             pnlStatus.Name = "pnlStatus";
-            pnlStatus.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            pnlStatus.ShadowDecoration.CustomizableEdges = customizableEdges6;
             pnlStatus.Size = new Size(343, 739);
             pnlStatus.TabIndex = 0;
             // 
@@ -249,131 +265,6 @@
             dgvCart.Size = new Size(332, 377);
             dgvCart.TabIndex = 9;
             // 
-            // btnLogOut
-            // 
-            btnLogOut.CustomizableEdges = customizableEdges1;
-            btnLogOut.DisabledState.BorderColor = Color.DarkGray;
-            btnLogOut.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnLogOut.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnLogOut.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnLogOut.FillColor = Color.FromArgb(33, 42, 57);
-            btnLogOut.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogOut.ForeColor = Color.White;
-            btnLogOut.Location = new Point(69, 675);
-            btnLogOut.Name = "btnLogOut";
-            btnLogOut.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnLogOut.Size = new Size(225, 56);
-            btnLogOut.TabIndex = 8;
-            btnLogOut.Text = "Log Out";
-            // 
-            // btnBuy
-            // 
-            btnBuy.CustomizableEdges = customizableEdges3;
-            btnBuy.DisabledState.BorderColor = Color.DarkGray;
-            btnBuy.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnBuy.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnBuy.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBuy.FillColor = Color.FromArgb(33, 42, 57);
-            btnBuy.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBuy.ForeColor = Color.White;
-            btnBuy.Location = new Point(69, 613);
-            btnBuy.Name = "btnBuy";
-            btnBuy.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnBuy.Size = new Size(225, 56);
-            btnBuy.TabIndex = 6;
-            btnBuy.Text = "Buy";
-            btnBuy.Click += btnBuy_Click_1;
-            // 
-            // guna2TextBox3
-            // 
-            guna2TextBox3.CustomizableEdges = customizableEdges5;
-            guna2TextBox3.DefaultText = "";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Segoe UI", 9F);
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(96, 102);
-            guna2TextBox3.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PasswordChar = '\0';
-            guna2TextBox3.PlaceholderText = "";
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox3.Size = new Size(157, 29);
-            guna2TextBox3.TabIndex = 5;
-            // 
-            // guna2TextBox2
-            // 
-            guna2TextBox2.CustomizableEdges = customizableEdges7;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(96, 56);
-            guna2TextBox2.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox2.Size = new Size(157, 29);
-            guna2TextBox2.TabIndex = 4;
-            // 
-            // guna2TextBox1
-            // 
-            guna2TextBox1.CustomizableEdges = customizableEdges9;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(96, 11);
-            guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2TextBox1.Size = new Size(157, 29);
-            guna2TextBox1.TabIndex = 3;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(14, 111);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 20);
-            label3.TabIndex = 2;
-            label3.Text = "label3";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(14, 65);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(14, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
-            // 
             // User
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -400,17 +291,11 @@
         private Guna.UI2.WinForms.Guna2DataGridView dataPurchase;
         private TabPage tbpService;
         private TabPage tbpDrinks;
-        private Guna.UI2.WinForms.Guna2Panel pnlStatus;
-        private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Button btnBuy;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private DataGridView dgvCart;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalAll;
+        private Guna.UI2.WinForms.Guna2Button btnLogOut;
+        private Guna.UI2.WinForms.Guna2Panel pnlStatus;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalAll;
+        private DataGridView dgvCart;
     }
 }

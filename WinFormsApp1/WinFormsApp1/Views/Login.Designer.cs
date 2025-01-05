@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             label1 = new Label();
             label2 = new Label();
             tbxUserName = new TextBox();
@@ -38,38 +39,45 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(143, 62);
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Image = (Image)resources.GetObject("label1.Image");
+            label1.Location = new Point(353, 151);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(97, 23);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "User Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(143, 133);
+            label2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Image = (Image)resources.GetObject("label2.Image");
+            label2.Location = new Point(358, 213);
             label2.Name = "label2";
-            label2.Size = new Size(50, 20);
+            label2.Size = new Size(92, 25);
             label2.TabIndex = 1;
-            label2.Text = "label2";
+            label2.Text = "Password";
             // 
             // tbxUserName
             // 
-            tbxUserName.Location = new Point(397, 66);
+            tbxUserName.Location = new Point(488, 147);
             tbxUserName.Name = "tbxUserName";
             tbxUserName.Size = new Size(125, 27);
             tbxUserName.TabIndex = 2;
             // 
             // tbxPass
             // 
-            tbxPass.Location = new Point(397, 133);
+            tbxPass.Location = new Point(488, 214);
             tbxPass.Name = "tbxPass";
             tbxPass.Size = new Size(125, 27);
             tbxPass.TabIndex = 3;
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(342, 314);
+            btnLogin.Location = new Point(418, 285);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(94, 29);
             btnLogin.TabIndex = 4;
@@ -81,7 +89,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(661, 449);
             Controls.Add(btnLogin);
             Controls.Add(tbxPass);
             Controls.Add(tbxUserName);

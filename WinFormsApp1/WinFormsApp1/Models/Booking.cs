@@ -17,6 +17,8 @@ public partial class Booking
 
     public decimal? TotalAmount { get; set; }
 
+    public bool? IsActive { get; set; }
+
     public virtual ICollection<BookingProduct> BookingProducts { get; set; } = new List<BookingProduct>();
 
     public virtual ICollection<BookingService> BookingServices { get; set; } = new List<BookingService>();
