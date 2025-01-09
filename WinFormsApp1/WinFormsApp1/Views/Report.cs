@@ -20,6 +20,7 @@ namespace WinFormsApp1.Views
             InitializeComponent();
             InitializeComboBoxes();
             CreateColumnChart(DateTime.Now.Year, DateTime.Now.Month);
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         // Khởi tạo ComboBox với các giá trị năm và tháng

@@ -28,159 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            tbcUser = new Guna.UI2.WinForms.Guna2TabControl();
-            tbpFoods = new TabPage();
-            tbpDrinks = new TabPage();
-            tbpPurchase = new TabPage();
-            dataPurchase = new Guna.UI2.WinForms.Guna2DataGridView();
-            tbpService = new TabPage();
             btnBuy = new Guna.UI2.WinForms.Guna2Button();
             btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             pnlStatus = new Guna.UI2.WinForms.Guna2Panel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblTotalAll = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvCart = new DataGridView();
-            tbcUser.SuspendLayout();
-            tbpPurchase.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataPurchase).BeginInit();
+            tbpService = new TabPage();
+            tbpDrinks = new TabPage();
+            tbpFoods = new TabPage();
+            tbcUser = new Guna.UI2.WinForms.Guna2TabControl();
             pnlStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCart).BeginInit();
+            tbcUser.SuspendLayout();
             SuspendLayout();
-            // 
-            // tbcUser
-            // 
-            tbcUser.AccessibleName = "";
-            tbcUser.Alignment = TabAlignment.Left;
-            tbcUser.Controls.Add(tbpFoods);
-            tbcUser.Controls.Add(tbpDrinks);
-            tbcUser.Controls.Add(tbpPurchase);
-            tbcUser.Controls.Add(tbpService);
-            tbcUser.Dock = DockStyle.Left;
-            tbcUser.ItemSize = new Size(180, 40);
-            tbcUser.Location = new Point(0, 0);
-            tbcUser.Name = "tbcUser";
-            tbcUser.SelectedIndex = 0;
-            tbcUser.Size = new Size(1137, 747);
-            tbcUser.TabButtonHoverState.BorderColor = Color.Empty;
-            tbcUser.TabButtonHoverState.FillColor = Color.FromArgb(40, 52, 70);
-            tbcUser.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F);
-            tbcUser.TabButtonHoverState.ForeColor = Color.White;
-            tbcUser.TabButtonHoverState.InnerColor = Color.FromArgb(40, 52, 70);
-            tbcUser.TabButtonIdleState.BorderColor = Color.Empty;
-            tbcUser.TabButtonIdleState.FillColor = Color.FromArgb(33, 42, 57);
-            tbcUser.TabButtonIdleState.Font = new Font("Segoe UI Semibold", 10F);
-            tbcUser.TabButtonIdleState.ForeColor = Color.FromArgb(156, 160, 167);
-            tbcUser.TabButtonIdleState.InnerColor = Color.FromArgb(33, 42, 57);
-            tbcUser.TabButtonSelectedState.BorderColor = Color.Empty;
-            tbcUser.TabButtonSelectedState.FillColor = Color.FromArgb(29, 37, 49);
-            tbcUser.TabButtonSelectedState.Font = new Font("Segoe UI Semibold", 10F);
-            tbcUser.TabButtonSelectedState.ForeColor = Color.White;
-            tbcUser.TabButtonSelectedState.InnerColor = Color.FromArgb(76, 132, 255);
-            tbcUser.TabButtonSize = new Size(180, 40);
-            tbcUser.TabIndex = 0;
-            tbcUser.TabMenuBackColor = Color.FromArgb(33, 42, 57);
-            // 
-            // tbpFoods
-            // 
-            tbpFoods.AccessibleName = "";
-            tbpFoods.Location = new Point(184, 4);
-            tbpFoods.Name = "tbpFoods";
-            tbpFoods.Padding = new Padding(3);
-            tbpFoods.Size = new Size(949, 739);
-            tbpFoods.TabIndex = 0;
-            tbpFoods.Text = "Foods";
-            tbpFoods.UseVisualStyleBackColor = true;
-            // 
-            // tbpDrinks
-            // 
-            tbpDrinks.Location = new Point(184, 4);
-            tbpDrinks.Name = "tbpDrinks";
-            tbpDrinks.Padding = new Padding(3);
-            tbpDrinks.Size = new Size(949, 739);
-            tbpDrinks.TabIndex = 1;
-            tbpDrinks.Text = "Drinks";
-            tbpDrinks.UseVisualStyleBackColor = true;
-            // 
-            // tbpPurchase
-            // 
-            tbpPurchase.Controls.Add(dataPurchase);
-            tbpPurchase.Location = new Point(184, 4);
-            tbpPurchase.Name = "tbpPurchase";
-            tbpPurchase.Padding = new Padding(3);
-            tbpPurchase.Size = new Size(949, 739);
-            tbpPurchase.TabIndex = 3;
-            tbpPurchase.Text = "Purchase";
-            tbpPurchase.UseVisualStyleBackColor = true;
-            // 
-            // dataPurchase
-            // 
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dataPurchase.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataPurchase.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataPurchase.ColumnHeadersHeight = 4;
-            dataPurchase.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dataPurchase.DefaultCellStyle = dataGridViewCellStyle3;
-            dataPurchase.GridColor = Color.FromArgb(231, 229, 255);
-            dataPurchase.Location = new Point(0, 0);
-            dataPurchase.Name = "dataPurchase";
-            dataPurchase.RowHeadersVisible = false;
-            dataPurchase.RowHeadersWidth = 51;
-            dataPurchase.Size = new Size(1026, 648);
-            dataPurchase.TabIndex = 0;
-            dataPurchase.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            dataPurchase.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dataPurchase.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dataPurchase.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dataPurchase.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dataPurchase.ThemeStyle.BackColor = Color.White;
-            dataPurchase.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            dataPurchase.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            dataPurchase.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataPurchase.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
-            dataPurchase.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dataPurchase.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataPurchase.ThemeStyle.HeaderStyle.Height = 4;
-            dataPurchase.ThemeStyle.ReadOnly = false;
-            dataPurchase.ThemeStyle.RowsStyle.BackColor = Color.White;
-            dataPurchase.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataPurchase.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
-            dataPurchase.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            dataPurchase.ThemeStyle.RowsStyle.Height = 29;
-            dataPurchase.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataPurchase.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            // 
-            // tbpService
-            // 
-            tbpService.Location = new Point(184, 4);
-            tbpService.Name = "tbpService";
-            tbpService.Padding = new Padding(3);
-            tbpService.Size = new Size(949, 739);
-            tbpService.TabIndex = 5;
-            tbpService.Text = "Service";
-            tbpService.UseVisualStyleBackColor = true;
             // 
             // btnBuy
             // 
@@ -216,6 +83,7 @@
             btnLogOut.Size = new Size(225, 56);
             btnLogOut.TabIndex = 8;
             btnLogOut.Text = "Log Out";
+            btnLogOut.Click += btnLogOut_Click;
             // 
             // pnlStatus
             // 
@@ -265,6 +133,69 @@
             dgvCart.Size = new Size(332, 377);
             dgvCart.TabIndex = 9;
             // 
+            // tbpService
+            // 
+            tbpService.Location = new Point(184, 4);
+            tbpService.Name = "tbpService";
+            tbpService.Padding = new Padding(3);
+            tbpService.Size = new Size(949, 739);
+            tbpService.TabIndex = 5;
+            tbpService.Text = "Service";
+            tbpService.UseVisualStyleBackColor = true;
+            // 
+            // tbpDrinks
+            // 
+            tbpDrinks.Location = new Point(184, 4);
+            tbpDrinks.Name = "tbpDrinks";
+            tbpDrinks.Padding = new Padding(3);
+            tbpDrinks.Size = new Size(949, 739);
+            tbpDrinks.TabIndex = 1;
+            tbpDrinks.Text = "Drinks";
+            tbpDrinks.UseVisualStyleBackColor = true;
+            // 
+            // tbpFoods
+            // 
+            tbpFoods.AccessibleName = "";
+            tbpFoods.Location = new Point(184, 4);
+            tbpFoods.Name = "tbpFoods";
+            tbpFoods.Padding = new Padding(3);
+            tbpFoods.Size = new Size(949, 739);
+            tbpFoods.TabIndex = 0;
+            tbpFoods.Text = "Foods";
+            tbpFoods.UseVisualStyleBackColor = true;
+            // 
+            // tbcUser
+            // 
+            tbcUser.AccessibleName = "";
+            tbcUser.Alignment = TabAlignment.Left;
+            tbcUser.Controls.Add(tbpFoods);
+            tbcUser.Controls.Add(tbpDrinks);
+            tbcUser.Controls.Add(tbpService);
+            tbcUser.Dock = DockStyle.Left;
+            tbcUser.ItemSize = new Size(180, 40);
+            tbcUser.Location = new Point(0, 0);
+            tbcUser.Name = "tbcUser";
+            tbcUser.SelectedIndex = 0;
+            tbcUser.Size = new Size(1137, 747);
+            tbcUser.TabButtonHoverState.BorderColor = Color.Empty;
+            tbcUser.TabButtonHoverState.FillColor = Color.FromArgb(40, 52, 70);
+            tbcUser.TabButtonHoverState.Font = new Font("Segoe UI Semibold", 10F);
+            tbcUser.TabButtonHoverState.ForeColor = Color.White;
+            tbcUser.TabButtonHoverState.InnerColor = Color.FromArgb(40, 52, 70);
+            tbcUser.TabButtonIdleState.BorderColor = Color.Empty;
+            tbcUser.TabButtonIdleState.FillColor = Color.FromArgb(33, 42, 57);
+            tbcUser.TabButtonIdleState.Font = new Font("Segoe UI Semibold", 10F);
+            tbcUser.TabButtonIdleState.ForeColor = Color.FromArgb(156, 160, 167);
+            tbcUser.TabButtonIdleState.InnerColor = Color.FromArgb(33, 42, 57);
+            tbcUser.TabButtonSelectedState.BorderColor = Color.Empty;
+            tbcUser.TabButtonSelectedState.FillColor = Color.FromArgb(29, 37, 49);
+            tbcUser.TabButtonSelectedState.Font = new Font("Segoe UI Semibold", 10F);
+            tbcUser.TabButtonSelectedState.ForeColor = Color.White;
+            tbcUser.TabButtonSelectedState.InnerColor = Color.FromArgb(76, 132, 255);
+            tbcUser.TabButtonSize = new Size(180, 40);
+            tbcUser.TabIndex = 0;
+            tbcUser.TabMenuBackColor = Color.FromArgb(33, 42, 57);
+            // 
             // User
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -274,28 +205,23 @@
             Controls.Add(tbcUser);
             Name = "User";
             Text = "User";
-            tbcUser.ResumeLayout(false);
-            tbpPurchase.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataPurchase).EndInit();
             pnlStatus.ResumeLayout(false);
             pnlStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCart).EndInit();
+            tbcUser.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2TabControl tbcUser;
-        private TabPage tbpFoods;
-        private TabPage tbpPurchase;
-        private Guna.UI2.WinForms.Guna2DataGridView dataPurchase;
-        private TabPage tbpService;
-        private TabPage tbpDrinks;
         private Guna.UI2.WinForms.Guna2Button btnBuy;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Panel pnlStatus;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalAll;
         private DataGridView dgvCart;
+        private TabPage tbpService;
+        private TabPage tbpDrinks;
+        private TabPage tbpFoods;
+        private Guna.UI2.WinForms.Guna2TabControl tbcUser;
     }
 }

@@ -72,6 +72,7 @@
             // 
             tbxPass.Location = new Point(488, 214);
             tbxPass.Name = "tbxPass";
+            tbxPass.PasswordChar = '*';
             tbxPass.Size = new Size(125, 27);
             tbxPass.TabIndex = 3;
             // 

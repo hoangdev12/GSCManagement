@@ -650,7 +650,6 @@ D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\
 D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
 D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
-D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Form1.resources
 D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Properties.Resources.resources
 D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Views.Admin.resources
 D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Views.Login.resources
@@ -679,3 +678,6 @@ D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\
 D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\RBush.dll
 D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
 D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\System.IO.Packaging.dll
+D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\QRCoder.dll
+D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.CreateQRCode.resources
+D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.demo.resources

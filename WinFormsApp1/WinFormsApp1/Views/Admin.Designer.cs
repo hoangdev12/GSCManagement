@@ -227,6 +227,7 @@
             label1 = new Label();
             textBox1 = new TextBox();
             computerBindingSource = new BindingSource(components);
+            btnChart = new Button();
             tabAdmin.SuspendLayout();
             tbComputer.SuspendLayout();
             panel29.SuspendLayout();
@@ -1509,6 +1510,7 @@
             // 
             // panel45
             // 
+            panel45.Controls.Add(btnChart);
             panel45.Controls.Add(dgvBooking);
             panel45.Location = new Point(3, 3);
             panel45.Name = "panel45";
@@ -1521,7 +1523,7 @@
             dgvBooking.Location = new Point(0, 3);
             dgvBooking.Name = "dgvBooking";
             dgvBooking.RowHeadersWidth = 51;
-            dgvBooking.Size = new Size(946, 415);
+            dgvBooking.Size = new Size(852, 415);
             dgvBooking.TabIndex = 0;
             // 
             // tcPayment
@@ -2089,6 +2091,16 @@
             // 
             computerBindingSource.DataSource = typeof(Models.Computer);
             // 
+            // btnChart
+            // 
+            btnChart.Location = new Point(858, 3);
+            btnChart.Name = "btnChart";
+            btnChart.Size = new Size(88, 415);
+            btnChart.TabIndex = 1;
+            btnChart.Text = "Chart";
+            btnChart.UseVisualStyleBackColor = true;
+            btnChart.Click += btnChart_Click;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -2428,5 +2440,6 @@
         private Button btnAddBalance;
         private TextBox txtAddBalance;
         private Button btnRegister;
+        private Button btnChart;
     }
 }

@@ -21,6 +21,7 @@ namespace WinFormsApp1.Views
         public User(int _userID, int _computerID)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             _context = new GcsmanagerContext();
             _cart = new List<BookingProduct>();
             LoadUserData(); // Tải dữ liệu khi mở form
@@ -351,7 +352,7 @@ namespace WinFormsApp1.Views
                 LoadCartData();
                 lblTotalAll.Text = "0";
 
-                MessageBox.Show("Đã lưu giỏ hàng thành công!");
+                MessageBox.Show("Đã mua thành công!");
             }
             catch (Exception ex)
             {
@@ -373,6 +374,46 @@ namespace WinFormsApp1.Views
 
             // Liên kết dữ liệu vào DataGridView
             dgvCart.DataSource = cartData;
+
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            var customer = _context.Customers.FirstOrDefault(c => c.CustomerId == userID);
+
+            if (customer != null)
+            {
+                // Cập nhật trạng thái đăng nhập
+                customer.IsActive = false; 
+                
+
+                MessageBox.Show("Bạn đã đăng xuất thành công!");
+
+                var booking = _context.Bookings
+            .Where(b => b.CustomerId == userID && b.EndTime == null)
+            .OrderByDescending(b => b.StartTime)
+            .FirstOrDefault();
+
+                if (booking != null)
+                {
+                    // Cập nhật EndTime
+                    booking.EndTime = DateTime.Now;
+                    _context.SaveChanges();
+                }
+
+                _context.SaveChanges();
+
+                // Đóng hoặc chuyển hướng người dùng
+                this.Close(); 
+                var loginForm = new Login(); // Giả sử bạn có LoginForm
+                loginForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy thông tin người dùng.");
+            }
+
+
 
         }
     }

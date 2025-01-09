@@ -20,6 +20,7 @@ namespace WinFormsApp1.Views
         public Login()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -28,31 +29,42 @@ namespace WinFormsApp1.Views
 
             if (user != null)
             {
-                Random random = new Random();
-                int result = random.Next(1, 5); // Lấy số ngẫu nhiên từ 1 đến 5
-
-                MessageBox.Show("Dang nhap thanh cong!");
-                // Đăng nhập thành công, mở form UserForm và đóng LoginForm
-
-                User userForm = new User(user.AccountId, result); // Lấy ID tài khoản để dễ dàng truy xuất sau này
-                userForm.Show();  // Mở form người dùng
-                this.Hide();  // Ẩn form đăng nhập (LoginForm)
-
-                // Tạo booking mới để lưu trữ thông tin người dùng
-
-                
-
-                var customer = _context.Customers.FirstOrDefault(c => c.AccountId == user.AccountId);
-                // Lưu thông tin đăng nhập vào bảng LoginHistory
-                var newBooking = new Booking
+                if(user.Role == "Khách hàng")
                 {
-                    CustomerId = customer.CustomerId,
-                    //ComputerId = selectedComputer.ComputerId,
-                    ComputerId = result,
-                    StartTime = DateTime.Now
-                };
-                _context.Bookings.Add(newBooking);
-                _context.SaveChanges();
+                    Random random = new Random();
+                    int result = random.Next(1, 5); // Lấy số ngẫu nhiên từ 1 đến 5
+
+                    MessageBox.Show("Dang nhap thanh cong!");
+                    // Đăng nhập thành công, mở form UserForm và đóng LoginForm
+                    this.Hide();  // Ẩn form đăng nhập (LoginForm)
+
+                    User userForm = new User(user.AccountId, result); // Lấy ID tài khoản để dễ dàng truy xuất sau này
+                    userForm.Show();  // Mở form người dùng
+
+                    // Tạo booking mới để lưu trữ thông tin người dùng
+
+
+
+                    var customer = _context.Customers.FirstOrDefault(c => c.AccountId == user.AccountId);
+                    // Lưu thông tin đăng nhập vào bảng LoginHistory
+                    var newBooking = new Booking
+                    {
+                        CustomerId = customer.CustomerId,
+                        //ComputerId = selectedComputer.ComputerId,
+                        ComputerId = result,
+                        StartTime = DateTime.Now
+                    };
+                    _context.Bookings.Add(newBooking);
+                    _context.SaveChanges();
+                }    
+                else if (user.Role == "ADMIN")
+                {
+                    this.Hide();
+
+                    Admin admin = new Admin();
+                    admin.Show();
+                }
+                
 
             } else
             {

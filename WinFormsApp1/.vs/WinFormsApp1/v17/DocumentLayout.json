@@ -3,24 +3,48 @@
   "WorkspaceRootPath": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\winformsapp1\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\winformsapp1\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\report.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,26 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\user.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,83 +62,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Admin.cs [Design]",
-              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.cs",
-              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs [Design]",
-              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T05:01:36.709Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Register.cs [Design]",
-              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Register.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Register.cs",
-              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Register.cs [Design]",
-              "RelativeToolTip": "WinFormsApp1\\Views\\Register.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T04:55:10.582Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Report.Designer.cs",
-              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Report.Designer.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Report.Designer.cs",
-              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Report.Designer.cs",
-              "RelativeToolTip": "WinFormsApp1\\Views\\Report.Designer.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAIAwwEgAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T04:43:19.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Report.cs [Design]",
-              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Report.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Report.cs",
-              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Report.cs [Design]",
-              "RelativeToolTip": "WinFormsApp1\\Views\\Report.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T04:42:48.919Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Report.cs",
-              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Report.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Report.cs",
-              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Report.cs",
-              "RelativeToolTip": "WinFormsApp1\\Views\\Report.cs",
-              "ViewState": "AgIAAKcAAAAAAAAAAAAwwMEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T03:37:55.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.Designer.cs",
-              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.Designer.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.Designer.cs",
-              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.Designer.cs",
-              "RelativeToolTip": "WinFormsApp1\\Views\\User.Designer.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAIAwwNkAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T03:15:59.065Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -177,79 +106,156 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Program.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Program.cs",
-              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Program.cs",
-              "RelativeToolTip": "WinFormsApp1\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Admin.Designer.cs",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.Designer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.Designer.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.Designer.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.Designer.cs",
+              "ViewState": "AgIAAOkFAAAAAAAAAAAvwPUFAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T01:25:49.624Z",
+              "WhenOpened": "2025-01-09T00:12:27.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "Admin.cs [Design]",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T05:01:36.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Admin.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T01:43:45.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Login.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Login.cs",
               "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Login.cs [Design]",
               "RelativeToolTip": "WinFormsApp1\\Views\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T00:51:59.777Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-05T00:51:59.777Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Login.cs",
               "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Login.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Login.cs",
               "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Login.cs",
               "RelativeToolTip": "WinFormsApp1\\Views\\Login.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAtwCQAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAcwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T01:24:16.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T01:24:16.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Program.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Program.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Program.cs",
+              "RelativeToolTip": "WinFormsApp1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T01:25:49.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cs [Design]",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Register.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Register.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Register.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Register.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T04:55:10.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Register.cs",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Register.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Register.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Register.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Register.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwD4AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T01:12:49.097Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.cs",
-              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
-              "RelativeToolTip": "WinFormsApp1\\Views\\User.cs",
-              "ViewState": "AgIAAFgBAAAAAAAAAAAgwCABAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T00:33:38.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "User.cs [Design]",
               "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
               "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.cs",
               "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs [Design]",
               "RelativeToolTip": "WinFormsApp1\\Views\\User.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T00:33:30.687Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-05T00:33:30.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\User.cs",
+              "ViewState": "AgIAAIIBAAAAAAAAAAAcwH0BAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T00:33:38.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Report.cs",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Report.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Report.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Report.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Report.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBYAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T03:37:55.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.Designer.cs",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.Designer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.Designer.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.Designer.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\User.Designer.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAIAwwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T03:15:59.065Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Register.cs",
-              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Register.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Register.cs",
-              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Register.cs",
-              "RelativeToolTip": "WinFormsApp1\\Views\\Register.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAowCUAAAA4AAAAAAAAAA==",
+              "Title": "Report.Designer.cs",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Report.Designer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\Report.Designer.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Report.Designer.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\Report.Designer.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAIAwwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T01:12:49.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T04:43:19.258Z"
             }
           ]
         },

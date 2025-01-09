@@ -19,6 +19,7 @@ namespace WinFormsApp1.Views
         {
             _context = new GcsmanagerContext();
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -62,6 +63,10 @@ namespace WinFormsApp1.Views
                         _context.SaveChanges(); // Lưu Customer
 
                         MessageBox.Show("Tạo thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        this.Hide();
+                        Admin admin = new Admin();
+                        admin.Show();
                     }
                     catch (Exception ex)
                     {

@@ -37,6 +37,7 @@ namespace WinFormsApp1.Views
         public Admin()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             _context = new GcsmanagerContext();
             LoadData();
             BindControls();
@@ -147,7 +148,7 @@ namespace WinFormsApp1.Views
             dgvPayment.DataSource = payment;
 
             // Customer
-            var customer = _context.Customers.Where(c => c.IsActive == true).ToList();
+            var customer = _context.Customers.ToList();
             customerBindingSource.DataSource = customer;
 
             // Computer
@@ -976,5 +977,13 @@ namespace WinFormsApp1.Views
             registerForm.Show();  // Mở form người dùng
         }
 
+        private void btnChart_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Report chart = new Report();
+            chart.FormClosed += (s, args) => this.Show();
+            chart.Show();
+        }
     }
 }

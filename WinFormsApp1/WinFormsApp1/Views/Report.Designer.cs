@@ -56,11 +56,12 @@
             // 
             // SaveChartDataToExcel
             // 
+            SaveChartDataToExcel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             SaveChartDataToExcel.Location = new Point(933, 469);
             SaveChartDataToExcel.Name = "SaveChartDataToExcel";
             SaveChartDataToExcel.Size = new Size(94, 29);
             SaveChartDataToExcel.TabIndex = 2;
-            SaveChartDataToExcel.Text = "button1";
+            SaveChartDataToExcel.Text = "Export";
             SaveChartDataToExcel.UseVisualStyleBackColor = true;
             SaveChartDataToExcel.Click += SaveChartDataToExcel_Click_1;
             // 
