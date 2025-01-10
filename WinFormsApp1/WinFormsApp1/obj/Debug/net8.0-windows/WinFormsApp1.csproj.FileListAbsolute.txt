@@ -679,5 +679,6 @@ D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\
 D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
 D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\System.IO.Packaging.dll
 D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\QRCoder.dll
-D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.CreateQRCode.resources
-D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.demo.resources
+D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Views.QR_Payment.resources
+D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\IT\Lap Trinh Truc Quan\BTL\GSCManagement\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows\RestSharp.dll

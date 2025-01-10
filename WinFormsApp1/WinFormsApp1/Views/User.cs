@@ -352,7 +352,9 @@ namespace WinFormsApp1.Views
                 LoadCartData();
                 lblTotalAll.Text = "0";
 
-                MessageBox.Show("Đã mua thành công!");
+                QR_Payment qR_Payment = new QR_Payment((int)Math.Round(newBooking.TotalAmount.Value)); // Làm tròn giá trị trước khi chuyển đổi sang int
+                qR_Payment.ShowDialog();
+
             }
             catch (Exception ex)
             {

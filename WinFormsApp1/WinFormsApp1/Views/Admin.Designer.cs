@@ -162,72 +162,15 @@
             categoryBindingSource = new BindingSource(components);
             tcBooking = new TabPage();
             panel45 = new Panel();
+            btnChart = new Button();
             dgvBooking = new DataGridView();
             tcPayment = new TabPage();
             dgvPayment = new DataGridView();
-            paymentIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            customerIdDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            amountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            paymentDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            paymentMethodDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             paymentBindingSource = new BindingSource(components);
-            Employee = new TabPage();
-            tcService = new TabPage();
-            flowLayoutPanel3 = new FlowLayoutPanel();
-            panel34 = new Panel();
-            txtServiceID = new TextBox();
-            lblServiceID = new Label();
-            panel35 = new Panel();
-            txtServiceName = new TextBox();
-            lblServiceName = new Label();
-            panel36 = new Panel();
-            txtServicePrice = new TextBox();
-            lblServicePrice = new Label();
-            panel37 = new Panel();
-            txtServiceDes = new TextBox();
-            lblServiceDesciption = new Label();
-            panel38 = new Panel();
-            txtBookingServices = new TextBox();
-            lblBookingServices = new Label();
-            panel39 = new Panel();
-            btnServiceAdd = new Button();
-            btnServiceDelete = new Button();
-            btnServiceEdit = new Button();
-            panel33 = new Panel();
-            dgvService = new DataGridView();
-            serviceIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            serviceNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            priceDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            descriptionDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
-            serviceBindingSource = new BindingSource(components);
-            tcServiceBooking = new TabPage();
-            flowLayoutPanel4 = new FlowLayoutPanel();
-            panel41 = new Panel();
-            txtServiceBookingID = new TextBox();
-            lblServiceBookingID = new Label();
-            panel42 = new Panel();
-            txtServiceBookingServiceID = new TextBox();
-            lblServiceBookingServiceID = new Label();
-            panel43 = new Panel();
-            txtBookingServiceQuantity = new TextBox();
-            lblServiceBookingQuantity = new Label();
-            panel44 = new Panel();
-            txtServiceBookingTotalPrice = new TextBox();
-            lblServiceBookingTotalPrice = new Label();
-            panel40 = new Panel();
-            dgvServiceBooking = new DataGridView();
-            dataGridViewTextBoxColumn9 = new DataGridViewTextBoxColumn();
-            serviceIdDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            quantityDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            totalPriceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            CreateDate = new DataGridViewTextBoxColumn();
-            serviceBookingBindingSource = new BindingSource(components);
             textBox2 = new TextBox();
             label1 = new Label();
             textBox1 = new TextBox();
             computerBindingSource = new BindingSource(components);
-            btnChart = new Button();
             tabAdmin.SuspendLayout();
             tbComputer.SuspendLayout();
             panel29.SuspendLayout();
@@ -279,26 +222,6 @@
             tcPayment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPayment).BeginInit();
             ((System.ComponentModel.ISupportInitialize)paymentBindingSource).BeginInit();
-            tcService.SuspendLayout();
-            flowLayoutPanel3.SuspendLayout();
-            panel34.SuspendLayout();
-            panel35.SuspendLayout();
-            panel36.SuspendLayout();
-            panel37.SuspendLayout();
-            panel38.SuspendLayout();
-            panel39.SuspendLayout();
-            panel33.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvService).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)serviceBindingSource).BeginInit();
-            tcServiceBooking.SuspendLayout();
-            flowLayoutPanel4.SuspendLayout();
-            panel41.SuspendLayout();
-            panel42.SuspendLayout();
-            panel43.SuspendLayout();
-            panel44.SuspendLayout();
-            panel40.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvServiceBooking).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)serviceBookingBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)computerBindingSource).BeginInit();
             SuspendLayout();
             // 
@@ -311,9 +234,6 @@
             tabAdmin.Controls.Add(tcCategories);
             tabAdmin.Controls.Add(tcBooking);
             tabAdmin.Controls.Add(tcPayment);
-            tabAdmin.Controls.Add(Employee);
-            tabAdmin.Controls.Add(tcService);
-            tabAdmin.Controls.Add(tcServiceBooking);
             tabAdmin.Location = new Point(12, 12);
             tabAdmin.Name = "tabAdmin";
             tabAdmin.SelectedIndex = 0;
@@ -1517,6 +1437,16 @@
             panel45.Size = new Size(949, 421);
             panel45.TabIndex = 0;
             // 
+            // btnChart
+            // 
+            btnChart.Location = new Point(858, 3);
+            btnChart.Name = "btnChart";
+            btnChart.Size = new Size(88, 415);
+            btnChart.TabIndex = 1;
+            btnChart.Text = "Chart";
+            btnChart.UseVisualStyleBackColor = true;
+            btnChart.Click += btnChart_Click;
+            // 
             // dgvBooking
             // 
             dgvBooking.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1535,534 +1465,20 @@
             tcPayment.TabIndex = 6;
             tcPayment.Text = "Payment";
             tcPayment.UseVisualStyleBackColor = true;
+            tcPayment.Click += tcPayment_Click;
             // 
             // dgvPayment
             // 
-            dgvPayment.AutoGenerateColumns = false;
             dgvPayment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPayment.Columns.AddRange(new DataGridViewColumn[] { paymentIdDataGridViewTextBoxColumn, customerIdDataGridViewTextBoxColumn1, amountDataGridViewTextBoxColumn, paymentDateDataGridViewTextBoxColumn, paymentMethodDataGridViewTextBoxColumn });
-            dgvPayment.DataSource = paymentBindingSource;
             dgvPayment.Location = new Point(3, 3);
             dgvPayment.Name = "dgvPayment";
             dgvPayment.RowHeadersWidth = 51;
-            dgvPayment.Size = new Size(947, 421);
+            dgvPayment.Size = new Size(949, 421);
             dgvPayment.TabIndex = 0;
-            // 
-            // paymentIdDataGridViewTextBoxColumn
-            // 
-            paymentIdDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            paymentIdDataGridViewTextBoxColumn.DataPropertyName = "PaymentId";
-            paymentIdDataGridViewTextBoxColumn.HeaderText = "PaymentId";
-            paymentIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            paymentIdDataGridViewTextBoxColumn.Name = "paymentIdDataGridViewTextBoxColumn";
-            paymentIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // customerIdDataGridViewTextBoxColumn1
-            // 
-            customerIdDataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            customerIdDataGridViewTextBoxColumn1.DataPropertyName = "CustomerId";
-            customerIdDataGridViewTextBoxColumn1.HeaderText = "CustomerId";
-            customerIdDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            customerIdDataGridViewTextBoxColumn1.Name = "customerIdDataGridViewTextBoxColumn1";
-            customerIdDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            amountDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            amountDataGridViewTextBoxColumn.HeaderText = "Amount";
-            amountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            amountDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // paymentDateDataGridViewTextBoxColumn
-            // 
-            paymentDateDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            paymentDateDataGridViewTextBoxColumn.DataPropertyName = "PaymentDate";
-            paymentDateDataGridViewTextBoxColumn.HeaderText = "PaymentDate";
-            paymentDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            paymentDateDataGridViewTextBoxColumn.Name = "paymentDateDataGridViewTextBoxColumn";
-            paymentDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // paymentMethodDataGridViewTextBoxColumn
-            // 
-            paymentMethodDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            paymentMethodDataGridViewTextBoxColumn.DataPropertyName = "PaymentMethod";
-            paymentMethodDataGridViewTextBoxColumn.HeaderText = "PaymentMethod";
-            paymentMethodDataGridViewTextBoxColumn.MinimumWidth = 6;
-            paymentMethodDataGridViewTextBoxColumn.Name = "paymentMethodDataGridViewTextBoxColumn";
-            paymentMethodDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // paymentBindingSource
             // 
             paymentBindingSource.DataSource = typeof(Models.Payment);
-            // 
-            // Employee
-            // 
-            Employee.Location = new Point(4, 29);
-            Employee.Name = "Employee";
-            Employee.Size = new Size(955, 427);
-            Employee.TabIndex = 8;
-            Employee.Text = "Employee";
-            Employee.UseVisualStyleBackColor = true;
-            // 
-            // tcService
-            // 
-            tcService.Controls.Add(flowLayoutPanel3);
-            tcService.Controls.Add(panel33);
-            tcService.Location = new Point(4, 29);
-            tcService.Name = "tcService";
-            tcService.Size = new Size(955, 427);
-            tcService.TabIndex = 9;
-            tcService.Text = "Service";
-            tcService.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel3
-            // 
-            flowLayoutPanel3.Controls.Add(panel34);
-            flowLayoutPanel3.Controls.Add(panel35);
-            flowLayoutPanel3.Controls.Add(panel36);
-            flowLayoutPanel3.Controls.Add(panel37);
-            flowLayoutPanel3.Controls.Add(panel38);
-            flowLayoutPanel3.Controls.Add(panel39);
-            flowLayoutPanel3.Location = new Point(665, 3);
-            flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(285, 421);
-            flowLayoutPanel3.TabIndex = 1;
-            // 
-            // panel34
-            // 
-            panel34.Controls.Add(txtServiceID);
-            panel34.Controls.Add(lblServiceID);
-            panel34.Location = new Point(3, 3);
-            panel34.Name = "panel34";
-            panel34.Size = new Size(282, 55);
-            panel34.TabIndex = 0;
-            // 
-            // txtServiceID
-            // 
-            txtServiceID.Location = new Point(127, 13);
-            txtServiceID.Name = "txtServiceID";
-            txtServiceID.ReadOnly = true;
-            txtServiceID.Size = new Size(139, 27);
-            txtServiceID.TabIndex = 1;
-            // 
-            // lblServiceID
-            // 
-            lblServiceID.AutoSize = true;
-            lblServiceID.Location = new Point(3, 16);
-            lblServiceID.Name = "lblServiceID";
-            lblServiceID.Size = new Size(74, 20);
-            lblServiceID.TabIndex = 0;
-            lblServiceID.Text = "ServiceID:";
-            // 
-            // panel35
-            // 
-            panel35.Controls.Add(txtServiceName);
-            panel35.Controls.Add(lblServiceName);
-            panel35.Location = new Point(3, 64);
-            panel35.Name = "panel35";
-            panel35.Size = new Size(282, 55);
-            panel35.TabIndex = 1;
-            // 
-            // txtServiceName
-            // 
-            txtServiceName.Location = new Point(127, 13);
-            txtServiceName.Name = "txtServiceName";
-            txtServiceName.ReadOnly = true;
-            txtServiceName.Size = new Size(139, 27);
-            txtServiceName.TabIndex = 1;
-            // 
-            // lblServiceName
-            // 
-            lblServiceName.AutoSize = true;
-            lblServiceName.Location = new Point(3, 16);
-            lblServiceName.Name = "lblServiceName";
-            lblServiceName.Size = new Size(99, 20);
-            lblServiceName.TabIndex = 0;
-            lblServiceName.Text = "ServiceName:";
-            // 
-            // panel36
-            // 
-            panel36.Controls.Add(txtServicePrice);
-            panel36.Controls.Add(lblServicePrice);
-            panel36.Location = new Point(3, 125);
-            panel36.Name = "panel36";
-            panel36.Size = new Size(282, 55);
-            panel36.TabIndex = 2;
-            // 
-            // txtServicePrice
-            // 
-            txtServicePrice.Location = new Point(127, 13);
-            txtServicePrice.Name = "txtServicePrice";
-            txtServicePrice.ReadOnly = true;
-            txtServicePrice.Size = new Size(139, 27);
-            txtServicePrice.TabIndex = 1;
-            // 
-            // lblServicePrice
-            // 
-            lblServicePrice.AutoSize = true;
-            lblServicePrice.Location = new Point(3, 16);
-            lblServicePrice.Name = "lblServicePrice";
-            lblServicePrice.Size = new Size(44, 20);
-            lblServicePrice.TabIndex = 0;
-            lblServicePrice.Text = "Price:";
-            // 
-            // panel37
-            // 
-            panel37.Controls.Add(txtServiceDes);
-            panel37.Controls.Add(lblServiceDesciption);
-            panel37.Location = new Point(3, 186);
-            panel37.Name = "panel37";
-            panel37.Size = new Size(282, 55);
-            panel37.TabIndex = 3;
-            // 
-            // txtServiceDes
-            // 
-            txtServiceDes.Location = new Point(127, 13);
-            txtServiceDes.Name = "txtServiceDes";
-            txtServiceDes.ReadOnly = true;
-            txtServiceDes.Size = new Size(139, 27);
-            txtServiceDes.TabIndex = 1;
-            // 
-            // lblServiceDesciption
-            // 
-            lblServiceDesciption.AutoSize = true;
-            lblServiceDesciption.Location = new Point(3, 16);
-            lblServiceDesciption.Name = "lblServiceDesciption";
-            lblServiceDesciption.Size = new Size(88, 20);
-            lblServiceDesciption.TabIndex = 0;
-            lblServiceDesciption.Text = "Description:";
-            // 
-            // panel38
-            // 
-            panel38.Controls.Add(txtBookingServices);
-            panel38.Controls.Add(lblBookingServices);
-            panel38.Location = new Point(3, 247);
-            panel38.Name = "panel38";
-            panel38.Size = new Size(282, 55);
-            panel38.TabIndex = 4;
-            // 
-            // txtBookingServices
-            // 
-            txtBookingServices.Location = new Point(127, 13);
-            txtBookingServices.Name = "txtBookingServices";
-            txtBookingServices.ReadOnly = true;
-            txtBookingServices.Size = new Size(139, 27);
-            txtBookingServices.TabIndex = 1;
-            // 
-            // lblBookingServices
-            // 
-            lblBookingServices.AutoSize = true;
-            lblBookingServices.Location = new Point(3, 16);
-            lblBookingServices.Name = "lblBookingServices";
-            lblBookingServices.Size = new Size(120, 20);
-            lblBookingServices.TabIndex = 0;
-            lblBookingServices.Text = "BookingServices:";
-            // 
-            // panel39
-            // 
-            panel39.Controls.Add(btnServiceAdd);
-            panel39.Controls.Add(btnServiceDelete);
-            panel39.Controls.Add(btnServiceEdit);
-            panel39.Location = new Point(3, 308);
-            panel39.Name = "panel39";
-            panel39.Size = new Size(282, 113);
-            panel39.TabIndex = 5;
-            // 
-            // btnServiceAdd
-            // 
-            btnServiceAdd.Location = new Point(20, 27);
-            btnServiceAdd.Name = "btnServiceAdd";
-            btnServiceAdd.Size = new Size(78, 35);
-            btnServiceAdd.TabIndex = 2;
-            btnServiceAdd.Text = "Add";
-            btnServiceAdd.UseVisualStyleBackColor = true;
-            btnServiceAdd.Click += btnServiceAdd_Click;
-            // 
-            // btnServiceDelete
-            // 
-            btnServiceDelete.Location = new Point(188, 27);
-            btnServiceDelete.Name = "btnServiceDelete";
-            btnServiceDelete.Size = new Size(78, 35);
-            btnServiceDelete.TabIndex = 1;
-            btnServiceDelete.Text = "Delete";
-            btnServiceDelete.UseVisualStyleBackColor = true;
-            btnServiceDelete.Click += btnServiceDelete_Click;
-            // 
-            // btnServiceEdit
-            // 
-            btnServiceEdit.Location = new Point(104, 27);
-            btnServiceEdit.Name = "btnServiceEdit";
-            btnServiceEdit.Size = new Size(78, 35);
-            btnServiceEdit.TabIndex = 0;
-            btnServiceEdit.Text = "Edit";
-            btnServiceEdit.UseVisualStyleBackColor = true;
-            btnServiceEdit.Click += btnServiceEdit_Click;
-            // 
-            // panel33
-            // 
-            panel33.Controls.Add(dgvService);
-            panel33.Location = new Point(3, 3);
-            panel33.Name = "panel33";
-            panel33.Size = new Size(656, 421);
-            panel33.TabIndex = 0;
-            // 
-            // dgvService
-            // 
-            dgvService.AutoGenerateColumns = false;
-            dgvService.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvService.Columns.AddRange(new DataGridViewColumn[] { serviceIdDataGridViewTextBoxColumn, serviceNameDataGridViewTextBoxColumn, priceDataGridViewTextBoxColumn1, descriptionDataGridViewTextBoxColumn1, dataGridViewTextBoxColumn8 });
-            dgvService.DataSource = serviceBindingSource;
-            dgvService.Location = new Point(3, 3);
-            dgvService.Name = "dgvService";
-            dgvService.RowHeadersWidth = 51;
-            dgvService.Size = new Size(650, 418);
-            dgvService.TabIndex = 0;
-            // 
-            // serviceIdDataGridViewTextBoxColumn
-            // 
-            serviceIdDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            serviceIdDataGridViewTextBoxColumn.DataPropertyName = "ServiceId";
-            serviceIdDataGridViewTextBoxColumn.HeaderText = "ServiceId";
-            serviceIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            serviceIdDataGridViewTextBoxColumn.Name = "serviceIdDataGridViewTextBoxColumn";
-            serviceIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // serviceNameDataGridViewTextBoxColumn
-            // 
-            serviceNameDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            serviceNameDataGridViewTextBoxColumn.DataPropertyName = "ServiceName";
-            serviceNameDataGridViewTextBoxColumn.HeaderText = "ServiceName";
-            serviceNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            serviceNameDataGridViewTextBoxColumn.Name = "serviceNameDataGridViewTextBoxColumn";
-            serviceNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn1
-            // 
-            priceDataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            priceDataGridViewTextBoxColumn1.DataPropertyName = "Price";
-            priceDataGridViewTextBoxColumn1.HeaderText = "Price";
-            priceDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
-            priceDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn1
-            // 
-            descriptionDataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            descriptionDataGridViewTextBoxColumn1.DataPropertyName = "Description";
-            descriptionDataGridViewTextBoxColumn1.HeaderText = "Description";
-            descriptionDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            descriptionDataGridViewTextBoxColumn1.Name = "descriptionDataGridViewTextBoxColumn1";
-            descriptionDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            dataGridViewTextBoxColumn8.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn8.DataPropertyName = "BookingServices";
-            dataGridViewTextBoxColumn8.HeaderText = "BookingServices";
-            dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // serviceBindingSource
-            // 
-            serviceBindingSource.DataSource = typeof(Models.Service);
-            // 
-            // tcServiceBooking
-            // 
-            tcServiceBooking.Controls.Add(flowLayoutPanel4);
-            tcServiceBooking.Controls.Add(panel40);
-            tcServiceBooking.Location = new Point(4, 29);
-            tcServiceBooking.Name = "tcServiceBooking";
-            tcServiceBooking.Size = new Size(955, 427);
-            tcServiceBooking.TabIndex = 10;
-            tcServiceBooking.Text = "ServiceBooking";
-            tcServiceBooking.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel4
-            // 
-            flowLayoutPanel4.Controls.Add(panel41);
-            flowLayoutPanel4.Controls.Add(panel42);
-            flowLayoutPanel4.Controls.Add(panel43);
-            flowLayoutPanel4.Controls.Add(panel44);
-            flowLayoutPanel4.Location = new Point(664, 3);
-            flowLayoutPanel4.Name = "flowLayoutPanel4";
-            flowLayoutPanel4.Size = new Size(286, 421);
-            flowLayoutPanel4.TabIndex = 1;
-            // 
-            // panel41
-            // 
-            panel41.Controls.Add(txtServiceBookingID);
-            panel41.Controls.Add(lblServiceBookingID);
-            panel41.Location = new Point(3, 3);
-            panel41.Name = "panel41";
-            panel41.Size = new Size(283, 54);
-            panel41.TabIndex = 0;
-            // 
-            // txtServiceBookingID
-            // 
-            txtServiceBookingID.Location = new Point(117, 11);
-            txtServiceBookingID.Name = "txtServiceBookingID";
-            txtServiceBookingID.ReadOnly = true;
-            txtServiceBookingID.Size = new Size(144, 27);
-            txtServiceBookingID.TabIndex = 1;
-            // 
-            // lblServiceBookingID
-            // 
-            lblServiceBookingID.AutoSize = true;
-            lblServiceBookingID.Location = new Point(3, 14);
-            lblServiceBookingID.Name = "lblServiceBookingID";
-            lblServiceBookingID.Size = new Size(82, 20);
-            lblServiceBookingID.TabIndex = 0;
-            lblServiceBookingID.Text = "BookingID:";
-            // 
-            // panel42
-            // 
-            panel42.Controls.Add(txtServiceBookingServiceID);
-            panel42.Controls.Add(lblServiceBookingServiceID);
-            panel42.Location = new Point(3, 63);
-            panel42.Name = "panel42";
-            panel42.Size = new Size(283, 54);
-            panel42.TabIndex = 1;
-            // 
-            // txtServiceBookingServiceID
-            // 
-            txtServiceBookingServiceID.Location = new Point(117, 11);
-            txtServiceBookingServiceID.Name = "txtServiceBookingServiceID";
-            txtServiceBookingServiceID.ReadOnly = true;
-            txtServiceBookingServiceID.Size = new Size(144, 27);
-            txtServiceBookingServiceID.TabIndex = 1;
-            // 
-            // lblServiceBookingServiceID
-            // 
-            lblServiceBookingServiceID.AutoSize = true;
-            lblServiceBookingServiceID.Location = new Point(3, 14);
-            lblServiceBookingServiceID.Name = "lblServiceBookingServiceID";
-            lblServiceBookingServiceID.Size = new Size(74, 20);
-            lblServiceBookingServiceID.TabIndex = 0;
-            lblServiceBookingServiceID.Text = "ServiceID:";
-            // 
-            // panel43
-            // 
-            panel43.Controls.Add(txtBookingServiceQuantity);
-            panel43.Controls.Add(lblServiceBookingQuantity);
-            panel43.Location = new Point(3, 123);
-            panel43.Name = "panel43";
-            panel43.Size = new Size(283, 54);
-            panel43.TabIndex = 2;
-            // 
-            // txtBookingServiceQuantity
-            // 
-            txtBookingServiceQuantity.Location = new Point(117, 11);
-            txtBookingServiceQuantity.Name = "txtBookingServiceQuantity";
-            txtBookingServiceQuantity.ReadOnly = true;
-            txtBookingServiceQuantity.Size = new Size(144, 27);
-            txtBookingServiceQuantity.TabIndex = 1;
-            // 
-            // lblServiceBookingQuantity
-            // 
-            lblServiceBookingQuantity.AutoSize = true;
-            lblServiceBookingQuantity.Location = new Point(3, 14);
-            lblServiceBookingQuantity.Name = "lblServiceBookingQuantity";
-            lblServiceBookingQuantity.Size = new Size(68, 20);
-            lblServiceBookingQuantity.TabIndex = 0;
-            lblServiceBookingQuantity.Text = "Quantity:";
-            // 
-            // panel44
-            // 
-            panel44.Controls.Add(txtServiceBookingTotalPrice);
-            panel44.Controls.Add(lblServiceBookingTotalPrice);
-            panel44.Location = new Point(3, 183);
-            panel44.Name = "panel44";
-            panel44.Size = new Size(283, 54);
-            panel44.TabIndex = 3;
-            // 
-            // txtServiceBookingTotalPrice
-            // 
-            txtServiceBookingTotalPrice.Location = new Point(117, 11);
-            txtServiceBookingTotalPrice.Name = "txtServiceBookingTotalPrice";
-            txtServiceBookingTotalPrice.ReadOnly = true;
-            txtServiceBookingTotalPrice.Size = new Size(144, 27);
-            txtServiceBookingTotalPrice.TabIndex = 1;
-            // 
-            // lblServiceBookingTotalPrice
-            // 
-            lblServiceBookingTotalPrice.AutoSize = true;
-            lblServiceBookingTotalPrice.Location = new Point(3, 14);
-            lblServiceBookingTotalPrice.Name = "lblServiceBookingTotalPrice";
-            lblServiceBookingTotalPrice.Size = new Size(81, 20);
-            lblServiceBookingTotalPrice.TabIndex = 0;
-            lblServiceBookingTotalPrice.Text = "Total Price:";
-            // 
-            // panel40
-            // 
-            panel40.Controls.Add(dgvServiceBooking);
-            panel40.Location = new Point(3, 3);
-            panel40.Name = "panel40";
-            panel40.Size = new Size(655, 421);
-            panel40.TabIndex = 0;
-            // 
-            // dgvServiceBooking
-            // 
-            dgvServiceBooking.AutoGenerateColumns = false;
-            dgvServiceBooking.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvServiceBooking.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn9, serviceIdDataGridViewTextBoxColumn1, quantityDataGridViewTextBoxColumn, totalPriceDataGridViewTextBoxColumn, CreateDate });
-            dgvServiceBooking.DataSource = serviceBookingBindingSource;
-            dgvServiceBooking.Location = new Point(3, 3);
-            dgvServiceBooking.Name = "dgvServiceBooking";
-            dgvServiceBooking.RowHeadersWidth = 51;
-            dgvServiceBooking.Size = new Size(649, 415);
-            dgvServiceBooking.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            dataGridViewTextBoxColumn9.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn9.DataPropertyName = "BookingId";
-            dataGridViewTextBoxColumn9.HeaderText = "BookingId";
-            dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // serviceIdDataGridViewTextBoxColumn1
-            // 
-            serviceIdDataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            serviceIdDataGridViewTextBoxColumn1.DataPropertyName = "ServiceId";
-            serviceIdDataGridViewTextBoxColumn1.HeaderText = "ServiceId";
-            serviceIdDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            serviceIdDataGridViewTextBoxColumn1.Name = "serviceIdDataGridViewTextBoxColumn1";
-            serviceIdDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            quantityDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            quantityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // totalPriceDataGridViewTextBoxColumn
-            // 
-            totalPriceDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            totalPriceDataGridViewTextBoxColumn.DataPropertyName = "TotalPrice";
-            totalPriceDataGridViewTextBoxColumn.HeaderText = "TotalPrice";
-            totalPriceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            totalPriceDataGridViewTextBoxColumn.Name = "totalPriceDataGridViewTextBoxColumn";
-            totalPriceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // CreateDate
-            // 
-            CreateDate.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            CreateDate.DataPropertyName = "BookingId";
-            CreateDate.HeaderText = "CreateDate";
-            CreateDate.MinimumWidth = 6;
-            CreateDate.Name = "CreateDate";
-            CreateDate.ReadOnly = true;
-            // 
-            // serviceBookingBindingSource
-            // 
-            serviceBookingBindingSource.DataSource = typeof(Models.BookingService);
             // 
             // textBox2
             // 
@@ -2090,16 +1506,6 @@
             // computerBindingSource
             // 
             computerBindingSource.DataSource = typeof(Models.Computer);
-            // 
-            // btnChart
-            // 
-            btnChart.Location = new Point(858, 3);
-            btnChart.Name = "btnChart";
-            btnChart.Size = new Size(88, 415);
-            btnChart.TabIndex = 1;
-            btnChart.Text = "Chart";
-            btnChart.UseVisualStyleBackColor = true;
-            btnChart.Click += btnChart_Click;
             // 
             // Admin
             // 
@@ -2186,35 +1592,6 @@
             tcPayment.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvPayment).EndInit();
             ((System.ComponentModel.ISupportInitialize)paymentBindingSource).EndInit();
-            tcService.ResumeLayout(false);
-            flowLayoutPanel3.ResumeLayout(false);
-            panel34.ResumeLayout(false);
-            panel34.PerformLayout();
-            panel35.ResumeLayout(false);
-            panel35.PerformLayout();
-            panel36.ResumeLayout(false);
-            panel36.PerformLayout();
-            panel37.ResumeLayout(false);
-            panel37.PerformLayout();
-            panel38.ResumeLayout(false);
-            panel38.PerformLayout();
-            panel39.ResumeLayout(false);
-            panel33.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvService).EndInit();
-            ((System.ComponentModel.ISupportInitialize)serviceBindingSource).EndInit();
-            tcServiceBooking.ResumeLayout(false);
-            flowLayoutPanel4.ResumeLayout(false);
-            panel41.ResumeLayout(false);
-            panel41.PerformLayout();
-            panel42.ResumeLayout(false);
-            panel42.PerformLayout();
-            panel43.ResumeLayout(false);
-            panel43.PerformLayout();
-            panel44.ResumeLayout(false);
-            panel44.PerformLayout();
-            panel40.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvServiceBooking).EndInit();
-            ((System.ComponentModel.ISupportInitialize)serviceBookingBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)computerBindingSource).EndInit();
             ResumeLayout(false);
         }
@@ -2227,7 +1604,6 @@
         private TabPage tcCategories;
         private TabPage tcBooking;
         private TabPage tcPayment;
-        private TabPage Employee;
         private TabPage tcCustomer;
         private BindingSource computerBindingSource;
         private DataGridViewTextBoxColumn bookingIdDataGridViewTextBoxColumn;
@@ -2239,7 +1615,6 @@
         private DataGridViewTextBoxColumn computerDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn customerDataGridViewTextBoxColumn;
         private BindingSource bindingSource1;
-        private DataGridView dgvPayment;
         private BindingSource paymentBindingSource;
         private FlowLayoutPanel flowLayoutPanel1;
         private Panel panel10;
@@ -2314,7 +1689,6 @@
         private Label lblProductStockQuantity;
         private Panel panel20;
         private Button button3;
-        private Button btnServiceDelete;
         private Button btnProductAdd;
         private Button btnProductDelete;
         private Button btnProductEdit;
@@ -2361,61 +1735,8 @@
         private TextBox txtStatus;
         private FlowLayoutPanel flpComputers;
         private Button btnLogOut;
-        private TabPage tcService;
-        private TabPage tcServiceBooking;
-        private Panel panel33;
-        private FlowLayoutPanel flowLayoutPanel3;
-        private DataGridView dgvService;
-        private Panel panel34;
-        private TextBox txtServiceID;
-        private Label lblServiceID;
-        private Panel panel35;
-        private TextBox txtServiceName;
-        private Label lblServiceName;
-        private Panel panel36;
-        private TextBox txtServicePrice;
-        private Label lblServicePrice;
-        private Panel panel37;
-        private TextBox txtServiceDes;
-        private Label lblServiceDesciption;
-        private Panel panel38;
-        private TextBox txtBookingServices;
-        private Label lblBookingServices;
-        private Panel panel39;
-        private Button btnServiceEdit;
-        private Button btnServiceAdd;
-        private FlowLayoutPanel flowLayoutPanel4;
-        private Panel panel41;
-        private Panel panel40;
-        private DataGridView dgvServiceBooking;
-        private TextBox txtServiceBookingID;
-        private Label lblServiceBookingID;
-        private Panel panel42;
-        private TextBox txtServiceBookingServiceID;
-        private Label lblServiceBookingServiceID;
-        private Panel panel43;
-        private TextBox txtBookingServiceQuantity;
-        private Label lblServiceBookingQuantity;
-        private Panel panel44;
-        private TextBox txtServiceBookingTotalPrice;
-        private Label lblServiceBookingTotalPrice;
         private Panel panel45;
         private DataGridView dgvBooking;
-        private DataGridViewTextBoxColumn serviceIdDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn serviceNameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private DataGridViewTextBoxColumn serviceIdDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn totalPriceDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn CreateDate;
-        private DataGridViewTextBoxColumn paymentIdDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn customerIdDataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn paymentDateDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn paymentMethodDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn accountIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn passwordHashDataGridViewTextBoxColumn;
@@ -2441,5 +1762,6 @@
         private TextBox txtAddBalance;
         private Button btnRegister;
         private Button btnChart;
+        private DataGridView dgvPayment;
     }
 }

@@ -13,6 +13,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Data.Entity.Infrastructure;
 using Button = System.Windows.Forms.Button;
 using Microsoft.Identity.Client.NativeInterop;
+using Newtonsoft.Json;
+using System.Net;
+using System.Text;
 
 namespace WinFormsApp1.Views
 {
@@ -30,8 +33,6 @@ namespace WinFormsApp1.Views
         private BindingSource bookingBindingSource = new BindingSource();
         private BindingSource accountBindingSource = new BindingSource();
         private BindingSource categoryBindingSource = new BindingSource();
-        private BindingSource serviceBindingSource = new BindingSource();
-        private BindingSource serviceBookingBindingSource = new BindingSource();
 
 
         public Admin()
@@ -79,18 +80,6 @@ namespace WinFormsApp1.Views
             txtCusRegisterDate.DataBindings.Clear();
             txtAccountName.DataBindings.Clear();
 
-            // Xóa binding cho các control trong Service Tab
-            txtServiceID.DataBindings.Clear();
-            txtServiceName.DataBindings.Clear();
-            txtServicePrice.DataBindings.Clear();
-            txtServiceDes.DataBindings.Clear();
-
-            // Xóa binding cho các control trong ServiceBooking Tab
-            txtServiceBookingID.DataBindings.Clear();
-            txtServiceBookingServiceID.DataBindings.Clear();
-            txtServiceBookingTotalPrice.DataBindings.Clear();
-            txtBookingServiceQuantity.DataBindings.Clear();
-
             // Account Tab
             txtAccountUserName.DataBindings.Add("Text", accountBindingSource, "Username");
             txtAccountPasswordHash.DataBindings.Add("Text", accountBindingSource, "PasswordHash");
@@ -123,18 +112,6 @@ namespace WinFormsApp1.Views
                 txtCusRegisterDate.DataBindings.Add("Text", customerBindingSource, "RegisterDate");
                 txtAccountName.DataBindings.Add("Text", customerBindingSource, "AccountName");
             }
-
-            // Service Tab
-            txtServiceID.DataBindings.Add("Text", serviceBindingSource, "ServiceID");
-            txtServiceName.DataBindings.Add("Text", serviceBindingSource, "ServiceName");
-            txtServicePrice.DataBindings.Add("Text", serviceBindingSource, "Price");
-            txtServiceDes.DataBindings.Add("Text", serviceBindingSource, "Description");
-
-            // Service Booking Tab
-            txtServiceBookingID.DataBindings.Add("Text", serviceBookingBindingSource, "BookingID");
-            txtServiceBookingServiceID.DataBindings.Add("Text", serviceBookingBindingSource, "ServiceID");
-            txtServiceBookingTotalPrice.DataBindings.Add("Text", serviceBookingBindingSource, "TotalPrice");
-            txtBookingServiceQuantity.DataBindings.Add("Text", serviceBookingBindingSource, "Quantity");
         }
 
         private void LoadData()
@@ -166,14 +143,6 @@ namespace WinFormsApp1.Views
             var product = _context.Products.Include(p => p.Category).ToList();
             productBindingSource.DataSource = product;
             LoadCategoryIDToComboBox();
-
-            // Service
-            var service = _context.Services.ToList();
-            serviceBindingSource.DataSource = service;
-
-            // Booking Service
-            var serviceBooking = _context.BookingServices.ToList();
-            serviceBookingBindingSource.DataSource = serviceBooking;
         }
 
         // Computer tab
@@ -422,9 +391,6 @@ namespace WinFormsApp1.Views
                 MessageBox.Show("Không có máy tính nào được chọn.");
             }
         }
-
-        // Booking tab
-
         // Account tab
         private void btnAccountEdit_Click(object sender, EventArgs e)
         {
@@ -567,6 +533,7 @@ namespace WinFormsApp1.Views
                     // Reset lại IDENTITY về ID lỡn nhất còn lại sau khi xóa
                     _context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT ('Categories', RESEED, {maxId})");
                     LoadData();
+                    MessageBox.Show("Xóa thành công!");
                 }
             }
             else
@@ -796,141 +763,6 @@ namespace WinFormsApp1.Views
             }
         }
 
-        // Service tab
-        private void btnServiceEdit_Click(object sender, EventArgs e)
-        {
-
-            if (!txtServiceName.ReadOnly && !txtServicePrice.ReadOnly && !txtServiceDes.ReadOnly)
-            {
-                var service = _context.Services.FirstOrDefault(s => s.ServiceId.ToString() == txtServiceID.Text);
-                if (service != null)
-                {
-
-                    bool isExist = _context.Services.Any(s => s.ServiceName == txtServiceName.Text);
-                    if (!isExist)
-                    {
-                        service.ServiceName = txtServiceName.Text;
-                        service.Price = decimal.Parse(txtServicePrice.Text);
-                        service.Description = txtServiceDes.Text;
-                        _context.SaveChanges();
-                        LoadData();
-                        MessageBox.Show("Chỉnh sửa thành công!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thông tin đã tồn tại!");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Bảng rỗng!");
-                }
-            }
-
-            txtServiceName.ReadOnly = false;
-            txtServicePrice.ReadOnly = false;
-            txtServiceDes.ReadOnly = false;
-
-        }
-
-        private void btnServiceAdd_Click(object sender, EventArgs e)
-        {
-            // Clear data bindings temporarily
-            txtServiceName.DataBindings.Clear();
-            txtServicePrice.DataBindings.Clear();
-            txtServiceDes.DataBindings.Clear();
-
-            if (txtServiceName.ReadOnly == false && txtServicePrice.ReadOnly == false && txtServiceDes.ReadOnly == false)
-            {
-                if (string.IsNullOrWhiteSpace(txtServiceName.Text))
-                {
-                    MessageBox.Show("Service name cannot be empty!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                else
-                {
-                    var isExist = _context.Services.Any(s => s.ServiceName == txtServiceName.Text);
-
-                    if (!isExist)
-                    {
-                        int maxId = _context.Services.Any() ? _context.Services.Max(p => p.ServiceId) : 0;
-                        txtServiceID.Text = (maxId + 1).ToString();
-                        // Create new Category object
-                        var newService = new Service
-                        {
-                            ServiceName = txtServiceName.Text,
-                            Price = decimal.Parse(txtServicePrice.Text),
-                            Description = txtServiceDes.Text
-                        };
-
-                        // Add the new category to the context
-                        _context.Services.Add(newService);
-
-                        // Save changes to the database
-                        try
-                        {
-                            MessageBox.Show("Tạo thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            _context.SaveChanges();
-                            LoadData();
-                            BindControls();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show($"Error while creating product: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Đã tồn tại!");
-                    }
-                }
-            }
-
-            txtServiceName.ReadOnly = false;
-            txtServicePrice.ReadOnly = false;
-            txtServiceDes.ReadOnly = false;
-
-        }
-
-        private void btnServiceDelete_Click(object sender, EventArgs e)
-        {
-            var service = _context.Services.FirstOrDefault(p => p.ServiceId.ToString() == txtServiceID.Text);
-
-            if (service != null)
-            {
-                var result = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    // Xóa tất cả các bản ghi trong bảng BookingService có ServiceID tương ứng
-                    var relatedBookings = _context.BookingServices.Where(bs => bs.ServiceId == service.ServiceId).ToList();
-                    if (relatedBookings.Any())
-                    {
-                        _context.BookingServices.RemoveRange(relatedBookings);
-                        _context.SaveChanges(); // Lưu các thay đổi trước khi xóa dịch vụ
-                    }
-
-                    // Xóa dịch vụ
-                    _context.Services.Remove(service);
-                    _context.SaveChanges(); // Lưu các thay đổi sau khi xóa dịch vụ
-
-                    // Tìm ID lớn nhất hiện tại sau khi xóa
-                    int maxId = _context.Services.Any() ? _context.Services.Max(p => p.ServiceId) : 0;
-
-                    // Reset lại giá trị IDENTITY
-                    _context.Database.ExecuteSqlRaw($"DBCC CHECKIDENT ('Service', RESEED, {maxId})");
-
-                    LoadData();
-                    MessageBox.Show("Xóa thành công!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy dịch vụ!");
-            }
-        }
-
         private void btnAddBalance_Click(object sender, EventArgs e)
         {
             // Lấy CustomerID từ TextBox txtCustomerID
@@ -984,6 +816,18 @@ namespace WinFormsApp1.Views
             Report chart = new Report();
             chart.FormClosed += (s, args) => this.Show();
             chart.Show();
+        }
+
+        // Bank
+        private void tcPayment_Click(object sender, EventArgs e)
+        {
+            using (WebClient client = new WebClient())
+            {
+                var htmlData = client.DownloadData("https://api.vietqr.io/v2/banks");
+                var bankRawJson = Encoding.UTF8.GetString(htmlData);
+                var listBankData = JsonConvert.DeserializeObject<Models.Bank>(bankRawJson);
+
+            }
         }
     }
 }

@@ -105,9 +105,17 @@
               "target": "Package",
               "version": "[8.0.1, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "QRCoder": {
               "target": "Package",
               "version": "[1.6.0, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[112.1.0, )"
             },
             "WinForms.DataVisualization": {
               "target": "Package",
