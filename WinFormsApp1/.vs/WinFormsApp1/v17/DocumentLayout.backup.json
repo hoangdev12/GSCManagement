@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\qr_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|d:\\it\\lap trinh truc quan\\btl\\gscmanagement\\winformsapp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D8C7817D-6537-4975-A32A-77851D5F6F51}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\views\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -38,21 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.cs",
-              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
-              "RelativeToolTip": "WinFormsApp1\\Views\\User.cs",
-              "ViewState": "AgIAADoBAAAAAAAAAADwv0wBAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T06:02:49.8Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -95,6 +82,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Views\\User.cs",
+              "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\User.cs",
+              "RelativeToolTip": "WinFormsApp1\\Views\\User.cs",
+              "ViewState": "AgIAAFUBAAAAAAAAAAAAAGsBAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T06:02:49.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Admin.cs [Design]",
               "DocumentMoniker": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs",
@@ -102,8 +102,7 @@
               "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\Admin.cs [Design]",
               "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T06:24:31.122Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-10T06:24:31.122Z"
             },
             {
               "$type": "Document",
@@ -139,8 +138,7 @@
               "ToolTip": "D:\\IT\\Lap Trinh Truc Quan\\BTL\\GSCManagement\\WinFormsApp1\\WinFormsApp1\\Views\\QR_Payment.cs [Design]",
               "RelativeToolTip": "WinFormsApp1\\Views\\QR_Payment.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T03:41:21.537Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-09T03:41:21.537Z"
             },
             {
               "$type": "Document",
@@ -152,8 +150,7 @@
               "RelativeToolTip": "WinFormsApp1\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:21:00.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:21:00.812Z"
             },
             {
               "$type": "Document",
@@ -165,8 +162,7 @@
               "RelativeToolTip": "WinFormsApp1\\Views\\Admin.cs",
               "ViewState": "AgIAAHMAAAAAAAAAAAAmwIgBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T03:34:49.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T03:34:49.429Z"
             }
           ]
         },

@@ -88,6 +88,8 @@ CREATE TABLE Booking (
     FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID),
     FOREIGN KEY (ComputerID) REFERENCES Computer(ComputerID)
 );
+ALTER TABLE Booking
+ADD IsActive BIT;
 
 -- Tạo bảng BookingService (liên kết giữa Booking và Service)
 CREATE TABLE BookingService (
@@ -131,3 +133,4 @@ CREATE TABLE Employee (
     HireDate DATETIME DEFAULT GETDATE(),
     Salary DECIMAL(10, 2) DEFAULT 0
 );
+

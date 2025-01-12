@@ -320,6 +320,16 @@ namespace WinFormsApp1.Views
                     TotalAmount = _TotalAmount // Tính tổng số tiền
                 };
 
+                // Tạo một Payment mới để lưu vào cơ sở dữ liệu
+                var newPayment = new Payment()
+                {
+                    CustomerId = userID,
+                    Amount = _TotalAmount.GetValueOrDefault(0),
+                    PaymentDate = DateTime.Now,
+                    PaymentMethod = "Tiền mặt"
+                };
+
+                _context.Payments.Add(newPayment);
                 _context.Bookings.Add(newBooking);
                 _context.SaveChanges(); // Lưu Booking để có BookingID
 
@@ -346,20 +356,37 @@ namespace WinFormsApp1.Views
                     }
                 }
 
-                _context.SaveChanges(); // Lưu BookingProducts vào cơ sở dữ liệu
+                // Hiển thị thông báo xác nhận
+                DialogResult result = MessageBox.Show(
+                    "Bạn có muốn thanh toán bằng ngân hàng?",
+                    "Xác nhận thanh toán",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
 
-                _cart.Clear(); // Xóa giỏ hàng sau khi lưu thành công
-                LoadCartData();
-                lblTotalAll.Text = "0";
-
-                QR_Payment qR_Payment = new QR_Payment((int)Math.Round(newBooking.TotalAmount.Value)); // Làm tròn giá trị trước khi chuyển đổi sang int
-                qR_Payment.ShowDialog();
+                // Kiểm tra kết quả trả về từ MessageBox
+                if (result == DialogResult.Yes)
+                {
+                    newPayment.PaymentMethod = "Chuyển khoản";
+                    // Hiển thị form thanh toán
+                    QR_Payment qR_Payment = new QR_Payment((int)Math.Round(newBooking.TotalAmount.Value)); // Làm tròn giá trị trước khi chuyển đổi sang int
+                    qR_Payment.ShowDialog();
+                }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi lưu giỏ hàng: " + ex.ToString());
             }
+
+
+            _context.SaveChanges(); // Lưu BookingProducts vào cơ sở dữ liệu
+
+                _cart.Clear(); // Xóa giỏ hàng sau khi lưu thành công
+                LoadCartData();
+                lblTotalAll.Text = "0";
+
+                
         }
 
         private void LoadCartData()
